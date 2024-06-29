@@ -1,0 +1,111 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgiwjvmxr14ox"]
+
+[ext_resource type="Texture2D" uid="uid://flu57ugipbh3" path="res://Assets/UI/ui.png" id="1_wgwur"]
+[ext_resource type="Script" path="res://BossHUD.gd" id="1_x0wvt"]
+[ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="2_fmexr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5gsa"]
+bg_color = Color(0, 0, 0, 0.333333)
+corner_detail = 1
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[node name="BossHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x0wvt")
+
+[node name="Ui" type="Sprite2D" parent="."]
+position = Vector2(587, 341)
+texture = ExtResource("1_wgwur")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+custom_minimum_size = Vector2(560, 70)
+layout_mode = 0
+offset_left = 318.0
+offset_top = 258.0
+offset_right = 878.0
+offset_bottom = 328.0
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 32
+placeholder_text = "Create a password..."
+alignment = 1
+max_length = 30
+
+[node name="SubmitButton" type="Button" parent="."]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 0
+offset_left = 537.0
+offset_top = 352.0
+offset_right = 657.0
+offset_bottom = 390.0
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_i5gsa")
+text = "Submit"
+
+[node name="ObjectiveLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 100.0
+offset_right = 963.0
+offset_bottom = 157.0
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_fmexr")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Objective: Reach 150 password strength points within 10 attempts to prevent Malware Master from cracking the passwords."
+
+[node name="Attempts" type="Polygon2D" parent="."]
+position = Vector2(-147, 193)
+scale = Vector2(1.21485, 1.77688)
+color = Color(0.0485531, 0.0947454, 0.126327, 1)
+polygon = PackedVector2Array(293, 133, 609.353, 133, 927, 133, 927, 172.806, 927, 213, 838.099, 212.72, 611.518, 212.008, 291, 211)
+
+[node name="AttemptCounterLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 452.0
+offset_right = 390.0
+offset_bottom = 475.0
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 16
+text = "Attempts: 1/10"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 480.0
+offset_right = 332.0
+offset_bottom = 498.0
+theme_override_colors/font_color = Color(1, 0.4, 0.4, 1)
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 16
+text = "iloveITDT"
+
+[node name="ScoreLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 220.0
+offset_right = 714.0
+offset_bottom = 260.0
+theme_override_fonts/normal_font = ExtResource("2_fmexr")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[center]Score: 0/150[/center]"
+
+[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]

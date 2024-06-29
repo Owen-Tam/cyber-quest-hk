@@ -1,0 +1,173 @@
+[gd_scene load_steps=13 format=3 uid="uid://bkae77amxx8fy"]
+
+[ext_resource type="PackedScene" uid="uid://1dtxowdctfhd" path="res://tile_map.tscn" id="1_4nj6k"]
+[ext_resource type="Script" path="res://main.gd" id="1_8a75u"]
+[ext_resource type="PackedScene" uid="uid://duoyc7oh0whk3" path="res://player.tscn" id="2_fcc4d"]
+[ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="4_vsnvu"]
+[ext_resource type="Texture2D" uid="uid://da6jftsswx83r" path="res://Assets/Tiles/Individual/cc_1.png" id="4_yt8j0"]
+[ext_resource type="Texture2D" uid="uid://bamb4anncbunx" path="res://Assets/Tiles/Individual/cc_2.png" id="5_womuc"]
+[ext_resource type="Texture2D" uid="uid://c7hld0wwkyww5" path="res://Assets/Tiles/Individual/cr_1.png" id="6_5unlw"]
+[ext_resource type="PackedScene" uid="uid://bpqsf3ndj1xhl" path="res://explosion.tscn" id="6_gfjq4"]
+[ext_resource type="Texture2D" uid="uid://ctlo2nv13hh5j" path="res://Assets/Tiles/Individual/ch_1.png" id="6_lfxxk"]
+[ext_resource type="PackedScene" uid="uid://xk82i8t1bcka" path="res://mchud.tscn" id="7_huymo"]
+[ext_resource type="PackedScene" uid="uid://bktkk5s5agwy4" path="res://malwaremaster.tscn" id="10_dbtrv"]
+[ext_resource type="PackedScene" uid="uid://bgiwjvmxr14ox" path="res://BossHUD.tscn" id="11_vpfdv"]
+
+[node name="main" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_8a75u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -951.0
+offset_top = -420.0
+offset_right = 1121.0
+offset_bottom = 246.0
+color = Color(0.83, 0.79265, 0.747, 1)
+
+[node name="Area1" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Label" type="Label" parent="Area1"]
+top_level = true
+anchors_preset = -1
+anchor_left = -0.0373264
+anchor_top = -0.00462963
+anchor_right = -0.0373264
+anchor_bottom = -0.00462963
+offset_left = -143.0
+offset_top = -166.0
+offset_right = -7.0
+offset_bottom = -141.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("4_vsnvu")
+theme_override_font_sizes/font_size = 8
+text = "Press [F] to start challenge"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Cc3" type="Sprite2D" parent="Area1"]
+position = Vector2(-109, -151)
+texture = ExtResource("4_yt8j0")
+
+[node name="Cc1" type="Sprite2D" parent="Area1"]
+position = Vector2(-141, -135)
+texture = ExtResource("4_yt8j0")
+
+[node name="Ch1" type="Sprite2D" parent="Area1"]
+position = Vector2(-77, -135)
+texture = ExtResource("6_lfxxk")
+
+[node name="Cc2" type="Sprite2D" parent="Area1"]
+position = Vector2(-109, -119)
+texture = ExtResource("5_womuc")
+
+[node name="Explosion" parent="Area1" instance=ExtResource("6_gfjq4")]
+position = Vector2(-125, -143)
+
+[node name="Explosion2" parent="Area1" instance=ExtResource("6_gfjq4")]
+position = Vector2(-109, -145)
+
+[node name="Area2" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Label" type="Label" parent="Area2"]
+top_level = true
+anchors_preset = -1
+anchor_left = -0.0373264
+anchor_top = -0.00462963
+anchor_right = -0.0373264
+anchor_bottom = -0.00462963
+offset_left = 136.0
+offset_top = -206.0
+offset_right = 272.0
+offset_bottom = -181.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("4_vsnvu")
+theme_override_font_sizes/font_size = 8
+text = "Press [F] to start challenge"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Cr1" type="Sprite2D" parent="Area2"]
+position = Vector2(211, -183)
+texture = ExtResource("6_5unlw")
+
+[node name="Cc1" type="Sprite2D" parent="Area2"]
+position = Vector2(179, -167)
+texture = ExtResource("4_yt8j0")
+
+[node name="Cc2" type="Sprite2D" parent="Area2"]
+position = Vector2(147, -183)
+texture = ExtResource("5_womuc")
+
+[node name="Cc3" type="Sprite2D" parent="Area2"]
+position = Vector2(179, -199)
+texture = ExtResource("4_yt8j0")
+
+[node name="Player" parent="." instance=ExtResource("2_fcc4d")]
+position = Vector2(-321.5, -129.25)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(9, 7)
+zoom = Vector2(4, 4)
+
+[node name="TileMap" parent="." instance=ExtResource("1_4nj6k")]
+position = Vector2(-301, -127)
+layer_0/tile_data = PackedInt32Array(196607, 2, 0, 393215, 65538, 0, 262143, 65538, 0, 327679, 65538, 0, -65538, 65538, 0, 65534, 65538, 0, 131070, 65538, 0, 65535, 2, 0, 131071, 2, 0, 327680, 262146, 0, 262144, 262146, 0, 196608, 262146, 0, 131072, 262146, 0, 65536, 262146, 0, 0, 589826, 0, -65535, 65538, 0, -1, 262146, 0, -131074, 196610, 0, -131073, 131074, 0, -2, 65538, 0, 196606, 524290, 0, 1, 196610, 0, -65537, 2, 0, -131072, 327682, 0, -131071, 2, 0, -196608, 2, 0, -131070, 2, 0, -262144, 2, 0, -196607, 262148, 0, -262143, 262148, 0, -262142, 262148, 0, -196606, 262148, 0, -327677, 2, 0, -393211, 262146, 0, -327676, 327682, 0, -327675, 393218, 0, -393213, 65538, 0, -458749, 65538, 0, -524285, 65538, 0, -458747, 262146, 0, -589821, 196610, 0, -393212, 2, 0, -458748, 2, 0, -524283, 589826, 0, -524284, 131074, 0, -589820, 262148, 0, -655356, 262148, 0, -655355, 262148, 0, -589819, 262148, 0, -262141, 393218, 0, -786427, 196610, 0, -720891, 65538, 0, -786426, 393218, 0, -851962, 2, 0, -851961, 393218, 0, -917498, 196610, 0, -917497, 2, 0, -917496, 327682, 0, -917495, 393218, 0, -983032, 65540, 0, -1048568, 65540, 0, -983031, 4, 0, -1048567, 65540, 0, -983033, 65538, 0, -1048569, 65540, 0, -1114105, 4, 0, -1114104, 131076, 0, -1114103, 65540, 0)
+
+[node name="Spawn" type="Marker2D" parent="."]
+position = Vector2(-391, -67)
+
+[node name="RespawnTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="MCLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="MCLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.529412)
+
+[node name="MCHUD" parent="MCLayer" instance=ExtResource("7_huymo")]
+offset_left = -596.0
+offset_top = -344.0
+offset_right = -556.0
+offset_bottom = -304.0
+
+[node name="Malwaremaster" parent="." instance=ExtResource("10_dbtrv")]
+z_index = 1
+position = Vector2(507, -253)
+
+[node name="BossLevelLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="BossLevelLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.529412)
+
+[node name="BossHUD" parent="BossLevelLayer" instance=ExtResource("11_vpfdv")]
+offset_left = -596.0
+offset_top = -344.0
+offset_right = -556.0
+offset_bottom = -304.0
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[connection signal="timeout" from="RespawnTimer" to="." method="respawn"]
+[connection signal="completedChallenge" from="MCLayer/MCHUD" to="." method="_on_mchud_completed_challenge"]
+[connection signal="completedBoss" from="BossLevelLayer/BossHUD" to="." method="_on_boss_hud_completed_boss"]

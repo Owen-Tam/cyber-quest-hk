@@ -1,0 +1,204 @@
+[gd_scene load_steps=7 format=3 uid="uid://xk82i8t1bcka"]
+
+[ext_resource type="Texture2D" uid="uid://flu57ugipbh3" path="res://Assets/UI/ui.png" id="1_0yh6u"]
+[ext_resource type="Script" path="res://mchud.gd" id="1_kr2yo"]
+[ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="2_eny24"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_luduc"]
+bg_color = Color(0.165656, 0.165656, 0.165656, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1mkn"]
+bg_color = Color(0, 0.556863, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6vogy"]
+size = Vector2(366, 116)
+
+[node name="MCHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kr2yo")
+
+[node name="Ui" type="Sprite2D" parent="."]
+position = Vector2(587, 341)
+texture = ExtResource("1_0yh6u")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 321.0
+offset_top = 506.0
+offset_right = 791.0
+offset_bottom = 533.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_luduc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e1mkn")
+value = 5.0
+
+[node name="Question_Box" type="Polygon2D" parent="."]
+position = Vector2(-222.51, -11)
+scale = Vector2(1.31447, 1)
+color = Color(0.8924, 0.89286, 0.92, 1)
+polygon = PackedVector2Array(293, 133, 927, 133, 927, 172.62, 927, 213, 291, 211)
+
+[node name="Question_Label" type="Label" parent="."]
+offset_left = 203.0
+offset_top = 142.0
+offset_right = 975.0
+offset_bottom = 177.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 8
+theme_override_fonts/font = ExtResource("2_eny24")
+theme_override_font_sizes/font_size = 24
+text = "Question"
+autowrap_mode = 3
+
+[node name="Answer_Box_1" type="Polygon2D" parent="."]
+position = Vector2(14.8815, 47.15)
+scale = Vector2(0.575101, 1.45)
+color = Color(0.8924, 0.89286, 0.92, 1)
+polygon = PackedVector2Array(293, 133, 609.353, 133, 927, 133, 927, 172.806, 927, 213, 838.099, 212.72, 611.518, 212.008, 291, 211)
+
+[node name="Letter_Box_1" type="Polygon2D" parent="."]
+position = Vector2(4.92192, 106.482)
+scale = Vector2(0.609218, 0.970951)
+polygon = PackedVector2Array(254.553, 127.213, 254.553, 168.41, 324.335, 168.41, 324.335, 127.754)
+
+[node name="Letter_1" type="Label" parent="."]
+offset_left = 174.0
+offset_top = 243.0
+offset_right = 214.0
+offset_bottom = 266.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_eny24")
+text = "A"
+
+[node name="Answer_Label_1" type="Label" parent="."]
+offset_left = 209.0
+offset_top = 253.0
+offset_right = 515.0
+offset_bottom = 331.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("2_eny24")
+theme_override_font_sizes/font_size = 14
+text = "Answer 1"
+autowrap_mode = 2
+
+[node name="Answer_Area_1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Answer_Area_1"]
+position = Vector2(365, 298)
+shape = SubResource("RectangleShape2D_6vogy")
+
+[node name="Answer_Box_2" type="Polygon2D" parent="."]
+position = Vector2(462.915, 47.15)
+scale = Vector2(0.575, 1.45)
+color = Color(0.8924, 0.89286, 0.92, 1)
+polygon = PackedVector2Array(293, 133, 609.353, 133, 927, 133, 927, 172.806, 927, 213, 838.099, 212.72, 611.518, 212.008, 291, 211)
+
+[node name="Letter_Box_2" type="Polygon2D" parent="."]
+position = Vector2(447.922, 106.482)
+scale = Vector2(0.609218, 0.970951)
+polygon = PackedVector2Array(254.553, 127.213, 254.553, 168.41, 324.335, 168.41, 324.335, 127.754)
+
+[node name="Letter_2" type="Label" parent="."]
+offset_left = 617.0
+offset_top = 243.0
+offset_right = 657.0
+offset_bottom = 266.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_eny24")
+text = "B"
+
+[node name="Answer_Label_2" type="Label" parent="."]
+offset_left = 652.0
+offset_top = 253.0
+offset_right = 980.0
+offset_bottom = 351.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("2_eny24")
+theme_override_font_sizes/font_size = 14
+text = "Answer 2"
+autowrap_mode = 2
+
+[node name="Answer_Box_3" type="Polygon2D" parent="."]
+position = Vector2(11.9146, 195.15)
+scale = Vector2(0.575, 1.45)
+color = Color(0.8924, 0.89286, 0.92, 1)
+polygon = PackedVector2Array(293, 133, 609.353, 133, 927, 133, 927, 172.806, 927, 213, 838.099, 212.72, 611.518, 212.008, 291, 211)
+
+[node name="Letter_Box_3" type="Polygon2D" parent="."]
+position = Vector2(-3.07806, 254.482)
+scale = Vector2(0.609218, 0.970951)
+polygon = PackedVector2Array(254.553, 127.213, 254.553, 168.41, 324.335, 168.41, 324.335, 127.754)
+
+[node name="Letter_3" type="Label" parent="."]
+offset_left = 166.0
+offset_top = 391.0
+offset_right = 206.0
+offset_bottom = 414.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_eny24")
+text = "C"
+
+[node name="Answer_Label_3" type="Label" parent="."]
+offset_left = 201.0
+offset_top = 401.0
+offset_right = 507.0
+offset_bottom = 479.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("2_eny24")
+theme_override_font_sizes/font_size = 14
+text = "Answer 3"
+autowrap_mode = 2
+
+[node name="Answer_Box_4" type="Polygon2D" parent="."]
+position = Vector2(462.915, 195.15)
+scale = Vector2(0.575, 1.45)
+color = Color(0.8924, 0.89286, 0.92, 1)
+polygon = PackedVector2Array(293, 133, 609.353, 133, 927, 133, 927, 172.806, 927, 213, 838.099, 212.72, 611.518, 212.008, 291, 211)
+
+[node name="Letter_Box_4" type="Polygon2D" parent="."]
+position = Vector2(447.922, 254.482)
+scale = Vector2(0.609218, 0.970951)
+polygon = PackedVector2Array(254.553, 127.213, 254.553, 168.41, 324.335, 168.41, 324.335, 127.754)
+
+[node name="Letter_4" type="Label" parent="."]
+offset_left = 617.0
+offset_top = 391.0
+offset_right = 657.0
+offset_bottom = 414.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_eny24")
+text = "D"
+
+[node name="Answer_Label_4" type="Label" parent="."]
+offset_left = 652.0
+offset_top = 401.0
+offset_right = 958.0
+offset_bottom = 479.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("2_eny24")
+theme_override_font_sizes/font_size = 14
+text = "Answer 4
+"
+autowrap_mode = 2

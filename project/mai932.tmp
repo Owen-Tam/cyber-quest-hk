@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkae77amxx8fy"]
+
+[ext_resource type="PackedScene" uid="uid://1dtxowdctfhd" path="res://tile_map.tscn" id="1_4nj6k"]
+[ext_resource type="Script" path="res://main.gd" id="1_8a75u"]
+[ext_resource type="PackedScene" uid="uid://duoyc7oh0whk3" path="res://player.tscn" id="2_fcc4d"]
+
+[node name="main" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_8a75u")
+
+[node name="TileMap" parent="." instance=ExtResource("1_4nj6k")]
+position = Vector2(-301, -127)
+
+[node name="Player" parent="." instance=ExtResource("2_fcc4d")]
+position = Vector2(-321.5, -129.25)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(9, 7)
+zoom = Vector2(4, 4)
