@@ -11,16 +11,14 @@ var is_chatting = false
 
 func _ready():
 	Dialogic.signal_event.connect(DialogicSignal)
-	print(chosen_dialogue)
 
 func _input(event):
 	if player_in_area and event.is_action_pressed("accept_dialogue") and !is_chatting:
 		is_chatting = true
 		chatting.emit(true)
-		await run_dialogue(chosen_dialogue)
-
-
-
+		$Label.visible = false
+		run_dialogue(chosen_dialogue)
+		
 
 func _on_area_2d_body_entered(body):
 	if body.has_method("player"):
