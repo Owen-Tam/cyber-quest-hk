@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="16mm"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="favicon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.8970539"
+     inkscape:cx="-7.9390999"
+     inkscape:cy="17.431502"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#008eff;stroke:none;stroke-width:0.594584;fill-opacity:1"
+       id="rect1"
+       width="16"
+       height="16"
+       x="0.0073175486"
+       y="-0.0026292403"
+       ry="0" />
+    <path
+       style="font-size:11.0888px;font-family:'Pixelify Sans';-inkscape-font-specification:'Pixelify Sans';fill:#ffffff;stroke-width:0.757246"
+       d="M 3.3424665,11.368897 V 10.370905 H 2.3333856 V 5.2478786 H 3.3424665 V 4.2387977 H 6.4695082 V 5.2478786 H 7.4896778 V 6.8181962 H 6.3586202 V 5.3587666 H 3.4533545 V 10.260017 H 6.3586202 V 9.0752265 H 7.4896778 V 10.370905 H 6.4695082 v 0.997992 z"
+       id="text1"
+       aria-label="C"
+       sodipodi:nodetypes="ccccccccccccccccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.0888px;font-family:Arial;-inkscape-font-specification:Arial;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.757243"
+       x="7.8617787"
+       y="11.265283"
+       id="text1-6"><tspan
+         sodipodi:role="line"
+         id="tspan1-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Pixelify Sans';-inkscape-font-specification:'Pixelify Sans';fill:#ffffff;stroke-width:0.757246"
+         x="7.8617787"
+         y="11.265283">Q</tspan></text>
+  </g>
+</svg>
