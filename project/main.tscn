@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bkae77amxx8fy"]
+[gd_scene load_steps=15 format=3 uid="uid://bkae77amxx8fy"]
 
 [ext_resource type="PackedScene" uid="uid://1dtxowdctfhd" path="res://tile_map.tscn" id="1_4nj6k"]
 [ext_resource type="Script" path="res://main.gd" id="1_8a75u"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bktkk5s5agwy4" path="res://malwaremaster.tscn" id="10_dbtrv"]
 [ext_resource type="PackedScene" uid="uid://bgiwjvmxr14ox" path="res://BossHUD.tscn" id="11_vpfdv"]
 [ext_resource type="PackedScene" uid="uid://c8pvcmpbcn3nh" path="res://atmospheric_particles.tscn" id="13_wappy"]
+[ext_resource type="PackedScene" uid="uid://mlfqomdmme5v" path="res://cyberguardian.tscn" id="14_7gxvy"]
 
 [node name="main" type="Node2D"]
 y_sort_enabled = true
@@ -21,12 +22,13 @@ script = ExtResource("1_8a75u")
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
 offset_left = -951.0
-offset_top = -420.0
+offset_top = -598.0
 offset_right = 1121.0
-offset_bottom = 246.0
+offset_bottom = 1165.0
 color = Color(0.7371, 0.80514, 0.81, 1)
 
 [node name="AtmosphericParticles" parent="." instance=ExtResource("13_wappy")]
+position = Vector2(0, -145)
 
 [node name="Area1" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -172,6 +174,18 @@ offset_bottom = -304.0
 size_flags_horizontal = 4
 metadata/_edit_use_anchors_ = true
 
+[node name="Cyberguardian 1" parent="." instance=ExtResource("14_7gxvy")]
+z_index = 1
+position = Vector2(-235, -184)
+
+[node name="Cyberguardian 2" parent="." instance=ExtResource("14_7gxvy")]
+visible = false
+z_index = 1
+position = Vector2(85, -165)
+chosen_dialogue = "password_safeguard"
+
 [connection signal="timeout" from="RespawnTimer" to="." method="respawn"]
 [connection signal="completedChallenge" from="MCLayer/MCHUD" to="." method="_on_mchud_completed_challenge"]
 [connection signal="completedBoss" from="BossLevelLayer/BossHUD" to="." method="_on_boss_hud_completed_boss"]
+[connection signal="chatting" from="Cyberguardian 1" to="." method="_on_cyberguardian_chatting"]
+[connection signal="chatting" from="Cyberguardian 2" to="." method="_on_cyberguardian_chatting"]

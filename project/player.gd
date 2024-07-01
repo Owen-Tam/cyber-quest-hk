@@ -54,3 +54,5 @@ func _physics_process(delta):
 	if !isMovementDisabled:
 		move_and_slide()
 	
+func player():
+	pass

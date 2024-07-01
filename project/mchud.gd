@@ -7,34 +7,73 @@ signal completedChallenge
 
 var isQuestioning = false
 var questionDB = [[{
-	"question": "Why is safeguarding passwords so important?",
-	"answers": ["Passwords are not actually important, and can be easily shared with others.",
-	"Passwords prevent unauthorized access to personal or sensitive information.",
-	"Passwords can be easily remembered, so there's no need to keep them secure.",
-	"Passwords are only needed for logging into websites, not for accessing important accounts or devices."],
-	"correctIndex": 2 #1-based 
+"question": "What is the primary purpose of using a password?",
+"answers": [
+	"To make it easier to remember account login information",
+	"To prevent unauthorized access to personal or sensitive information",
+	"To comply with website security policies",
+	"To avoid having to type in a username every time"
+], "correctIndex": 2 },
+{
+"question": "What are the risks of not properly safeguarding your passwords?",
+"answers": [
+	"Someone could gain access to your accounts and personal information",
+	"There are no real risks, passwords aren't that important",
+	"Your accounts may become unusable if you forget your passwords",
+	"Your friends and family won't be able to access your accounts"
+], "correctIndex": 1 },
+{
+"question": "Which of the following does not need a password?",
+"answers": [
+	"Mobile Phone",
+	"Mobile banking",
+	"Program installation",
+	"Scientific calculator"
+], "correctIndex": 4 },
+{
+"question": "Is it necessary to keep passwords secure even if they’re easy to remember?",
+"answers": [
+	"No, because easy-to-remember passwords are inherently secure",
+	"Yes, because attackers can exploit weak passwords.",
+	"Easy-to-remember passwords are always secure",
+	"Only websites require secure passwords"
+], "correctIndex": 2 }], 
+[{
+"question": "What makes a password considered 'strong' and secure?",
+"answers": [
+	"A password that is easy to remember, like your birthdate",
+	"A short, simple password that is the same across all your accounts",
+	"A long, complex password with a mix of characters and numbers",
+	"A password that is automatically generated and stored in your browser"
+], "correctIndex": 3
 }, {
-	"question": "Why is safeguarding passwords so important?",
-	"answers": ["Passwords are not actually important, and can be easily shared with others.",
-	"Passwords prevent unauthorized access to personal or sensitive information.",
-	"Passwords can be easily remembered, so there's no need to keep them secure.",
-	"Passwords are only needed for logging into websites, not for accessing important accounts or devices."],
-	"correctIndex": 2 #1-based 
-}], [{
-	"question": "Why is safeguarding passwords so important?",
-	"answers": ["Passwords are not actually important, and can be easily shared with others.",
-	"Passwords prevent unauthorized access to personal or sensitive information.",
-	"Passwords can be easily remembered, so there's no need to keep them secure.",
-	"Passwords are only needed for logging into websites, not for accessing important accounts or devices."],
-	"correctIndex": 2 #1-based 
-}, {
-	"question": "Why is safeguarding passwords so important?",
-	"answers": ["Passwords are not actually important, and can be easily shared with others.",
-	"Passwords prevent unauthorized access to personal or sensitive information.",
-	"Passwords can be easily remembered, so there's no need to keep them secure.",
-	"Passwords are only needed for logging into websites, not for accessing important accounts or devices."],
-	"correctIndex": 2 #1-based 
+"question": "What characters should you include in a password?",
+"answers": [
+	"Special characters like @",
+	"Both upper and lower case letters",
+	"Numbers",
+	"All of the above"
+], "correctIndex": 4
+},
+{
+"question": "Your friend asks for your gmail account's password, should you...",
+"answers": [
+	"Refuse; Never tell anyone your passwords",
+	"Tell him",
+	"Tell him if you know him in real life",
+	"Ask for his password first"
+], "correctIndex": 1
+}, 
+{
+"question": "Longer passwords are stronger because...",
+"answers": [
+	"They must be more complex",
+	"They take longer to bruteforce",
+	"They are more difficult to remember",
+	"Hackers are confused by longer passwords"
+], "correctIndex": 2
 }]]
+
 var currentQuestionObj
 func startQuestioning(questionSet): #questionSet is the area number (which is 0 based)
 	var questions = questionDB[questionSet]

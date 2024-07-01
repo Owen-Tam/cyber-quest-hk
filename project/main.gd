@@ -101,13 +101,19 @@ func triggerCompleteEffect(currentCorruptedArea):
 	for i in explosionNodes:
 		i.explode()
 
+func changeCyberguardian():
+	get_node("Cyberguardian " + str(currentCorruptedArea + 1)).visible = false
+	var next = get_node("Cyberguardian " + str(currentCorruptedArea + 2))
+	if (next):
+		next.visible = true
+
+
 func _on_mchud_completed_challenge():
 	$Player.isMovementDisabled = false
 	$MCLayer.visible = false
 	triggerCompleteEffect(currentCorruptedArea)
+	changeCyberguardian()
 	clearArea(currentCorruptedArea)
-
-
 
 
 func _on_boss_hud_completed_boss(failed):
@@ -121,3 +127,7 @@ func _on_boss_hud_completed_boss(failed):
 	else:
 		triggered = false
 		respawn()
+
+
+func _on_cyberguardian_chatting(is_chatting):
+	$Player.isMovementDisabled = is_chatting

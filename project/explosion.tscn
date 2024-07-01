@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpqsf3ndj1xhl"]
+[gd_scene load_steps=5 format=3 uid="uid://bpqsf3ndj1xhl"]
 
 [ext_resource type="Script" path="res://Explosion.gd" id="1_8aaf6"]
 
@@ -8,6 +8,14 @@ point_count = 3
 
 [sub_resource type="Gradient" id="Gradient_trpq0"]
 colors = PackedColorArray(1, 1, 1, 1, 0.83, 0.76609, 0.1909, 1)
+
+[sub_resource type="Environment" id="Environment_1ji64"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 4.68
+glow_strength = 1.21
+glow_blend_mode = 0
+glow_hdr_scale = 0.34
 
 [node name="Explosion" type="Node2D"]
 top_level = true
@@ -27,3 +35,6 @@ scale_amount_min = 4.0
 scale_amount_max = 8.0
 scale_amount_curve = SubResource("Curve_ukg1x")
 color_ramp = SubResource("Gradient_trpq0")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1ji64")
