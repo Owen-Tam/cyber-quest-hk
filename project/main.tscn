@@ -1,275 +1,93 @@
-[gd_scene load_steps=20 format=3 uid="uid://bkae77amxx8fy"]
+[gd_scene load_steps=14 format=3 uid="uid://cphb2ckctsc7u"]
 
-[ext_resource type="PackedScene" uid="uid://1dtxowdctfhd" path="res://tile_map.tscn" id="1_4nj6k"]
 [ext_resource type="Script" path="res://main.gd" id="1_8a75u"]
-[ext_resource type="PackedScene" uid="uid://duoyc7oh0whk3" path="res://player.tscn" id="2_fcc4d"]
-[ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="4_vsnvu"]
-[ext_resource type="Texture2D" uid="uid://da6jftsswx83r" path="res://Assets/Tiles/Individual/cc_1.png" id="4_yt8j0"]
-[ext_resource type="Texture2D" uid="uid://bamb4anncbunx" path="res://Assets/Tiles/Individual/cc_2.png" id="5_womuc"]
-[ext_resource type="Texture2D" uid="uid://c7hld0wwkyww5" path="res://Assets/Tiles/Individual/cr_1.png" id="6_5unlw"]
-[ext_resource type="PackedScene" uid="uid://bpqsf3ndj1xhl" path="res://explosion.tscn" id="6_gfjq4"]
-[ext_resource type="Texture2D" uid="uid://ctlo2nv13hh5j" path="res://Assets/Tiles/Individual/ch_1.png" id="6_lfxxk"]
-[ext_resource type="PackedScene" uid="uid://xk82i8t1bcka" path="res://mchud.tscn" id="7_huymo"]
-[ext_resource type="PackedScene" uid="uid://bktkk5s5agwy4" path="res://malwaremaster.tscn" id="10_dbtrv"]
-[ext_resource type="PackedScene" uid="uid://bgiwjvmxr14ox" path="res://BossHUD.tscn" id="11_vpfdv"]
-[ext_resource type="PackedScene" uid="uid://c8pvcmpbcn3nh" path="res://atmospheric_particles.tscn" id="13_wappy"]
-[ext_resource type="PackedScene" uid="uid://mlfqomdmme5v" path="res://cyberguardian.tscn" id="14_7gxvy"]
-[ext_resource type="Script" path="res://ConfirmLayer.gd" id="15_4roe0"]
-[ext_resource type="PackedScene" uid="uid://cb6avn7nld8w6" path="res://confirm.tscn" id="15_qas1g"]
+[ext_resource type="PackedScene" uid="uid://bu1l7dbfn36u" path="res://inital_ui.tscn" id="1_tul74"]
+[ext_resource type="Theme" uid="uid://buvprqdtk5upv" path="res://themes/main_ui_theme.tres" id="2_t7j0p"]
+[ext_resource type="Script" path="res://levels_ui.gd" id="3_0o3c3"]
+[ext_resource type="Texture2D" uid="uid://bx1hsokp5qhk4" path="res://Assets/Texture/Chapter1.png" id="3_2hbg7"]
+[ext_resource type="Texture2D" uid="uid://whjj2m1uhybg" path="res://Assets/Texture/Chapter2.png" id="4_kxvff"]
+[ext_resource type="Texture2D" uid="uid://drmye20quna2s" path="res://Assets/Texture/Chapter3.png" id="5_0bgna"]
+[ext_resource type="Script" path="res://chapter_script.gd" id="5_1qpg5"]
+[ext_resource type="PackedScene" uid="uid://xpd26s8dm5g5" path="res://confirm_layer.tscn" id="9_4mr0k"]
 
-[sub_resource type="Animation" id="Animation_wni50"]
-resource_name = "camera_animation"
-length = 6.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(1.5, 4.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(504, -243), Vector2(-366, -76)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/Fade:color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.6, 0.9, 5.8, 6.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
+[sub_resource type="Gradient" id="Gradient_tvnnq"]
+colors = PackedColorArray(1, 0.92549, 0.878431, 1, 0.741176, 0.886275, 1, 1)
 
-[sub_resource type="Animation" id="Animation_gfdmw"]
-resource_name = "fade_animation"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/Fade:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_leldv"]
+gradient = SubResource("Gradient_tvnnq")
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_khix7"]
+[sub_resource type="Animation" id="Animation_pfx6n"]
+resource_name = "load_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pyyb4"]
 _data = {
-"camera_animation": SubResource("Animation_wni50"),
-"fade_animation": SubResource("Animation_gfdmw")
+"load_animation": SubResource("Animation_pfx6n")
 }
 
 [node name="main" type="Node2D"]
-y_sort_enabled = true
 script = ExtResource("1_8a75u")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-z_index = -1
-offset_left = -951.0
-offset_top = -598.0
-offset_right = 1121.0
-offset_bottom = 1165.0
-color = Color(0.7371, 0.80514, 0.81, 1)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="AtmosphericParticles" parent="." instance=ExtResource("13_wappy")]
-position = Vector2(0, -145)
-
-[node name="Area1" type="Node2D" parent="."]
-y_sort_enabled = true
-
-[node name="Label" type="Label" parent="Area1"]
-top_level = true
-anchors_preset = -1
-anchor_left = -0.0373264
-anchor_top = -0.00462963
-anchor_right = -0.0373264
-anchor_bottom = -0.00462963
-offset_left = -143.0
-offset_top = -166.0
-offset_right = -7.0
-offset_bottom = -141.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("4_vsnvu")
-theme_override_font_sizes/font_size = 8
-text = "Press [F] to start challenge"
-horizontal_alignment = 1
-autowrap_mode = 3
-metadata/_edit_use_anchors_ = true
-
-[node name="Cc3" type="Sprite2D" parent="Area1"]
-position = Vector2(-109, -151)
-texture = ExtResource("4_yt8j0")
-
-[node name="Cc1" type="Sprite2D" parent="Area1"]
-position = Vector2(-141, -135)
-texture = ExtResource("4_yt8j0")
-
-[node name="Ch1" type="Sprite2D" parent="Area1"]
-position = Vector2(-77, -135)
-texture = ExtResource("6_lfxxk")
-
-[node name="Cc2" type="Sprite2D" parent="Area1"]
-position = Vector2(-109, -119)
-texture = ExtResource("5_womuc")
-
-[node name="Explosion" parent="Area1" instance=ExtResource("6_gfjq4")]
-position = Vector2(-125, -143)
-
-[node name="Area2" type="Node2D" parent="."]
-y_sort_enabled = true
-
-[node name="Explosion" parent="Area2" instance=ExtResource("6_gfjq4")]
-position = Vector2(194, -199)
-
-[node name="Label" type="Label" parent="Area2"]
-top_level = true
-anchors_preset = -1
-anchor_left = -0.0373264
-anchor_top = -0.00462963
-anchor_right = -0.0373264
-anchor_bottom = -0.00462963
-offset_left = 136.0
-offset_top = -206.0
-offset_right = 272.0
-offset_bottom = -181.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("4_vsnvu")
-theme_override_font_sizes/font_size = 8
-text = "Press [F] to start challenge"
-horizontal_alignment = 1
-autowrap_mode = 3
-metadata/_edit_use_anchors_ = true
-
-[node name="Cr1" type="Sprite2D" parent="Area2"]
-position = Vector2(211, -183)
-texture = ExtResource("6_5unlw")
-
-[node name="Cc1" type="Sprite2D" parent="Area2"]
-position = Vector2(179, -167)
-texture = ExtResource("4_yt8j0")
-
-[node name="Cc2" type="Sprite2D" parent="Area2"]
-position = Vector2(147, -183)
-texture = ExtResource("5_womuc")
-
-[node name="Cc3" type="Sprite2D" parent="Area2"]
-position = Vector2(179, -199)
-texture = ExtResource("4_yt8j0")
-
-[node name="Player" parent="." instance=ExtResource("2_fcc4d")]
-position = Vector2(-321.5, -129.25)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(9, 7)
-zoom = Vector2(4, 4)
-
-[node name="TileMap" parent="." instance=ExtResource("1_4nj6k")]
-position = Vector2(-301, -127)
-layer_0/tile_data = PackedInt32Array(196607, 2, 0, 393215, 65538, 0, 262143, 65538, 0, 327679, 65538, 0, -65538, 65538, 0, 65534, 65538, 0, 131070, 65538, 0, 65535, 2, 0, 131071, 2, 0, 327680, 262146, 0, 262144, 262146, 0, 196608, 262146, 0, 131072, 262146, 0, 65536, 262146, 0, 0, 589826, 0, -65535, 65538, 0, -1, 262146, 0, -131074, 196610, 0, -131073, 131074, 0, -2, 65538, 0, 196606, 524290, 0, 1, 196610, 0, -65537, 2, 0, -131072, 327682, 0, -131071, 2, 0, -196608, 2, 0, -131070, 2, 0, -262144, 2, 0, -196607, 262148, 0, -262143, 262148, 0, -262142, 262148, 0, -196606, 262148, 0, -327677, 2, 0, -393211, 262146, 0, -327676, 327682, 0, -327675, 393218, 0, -393213, 65538, 0, -458749, 65538, 0, -524285, 65538, 0, -458747, 262146, 0, -589821, 196610, 0, -393212, 2, 0, -458748, 2, 0, -524283, 589826, 0, -524284, 131074, 0, -589820, 262148, 0, -655356, 262148, 0, -655355, 262148, 0, -589819, 262148, 0, -262141, 393218, 0, -786427, 196610, 0, -720891, 65538, 0, -786426, 393218, 0, -851962, 2, 0, -851961, 393218, 0, -917498, 196610, 0, -917497, 2, 0, -917496, 2, 0, -983032, 65540, 0, -1048568, 65540, 0, -983031, 4, 0, -1048567, 65540, 0, -983033, 65538, 0, -1048569, 65540, 0, -1114105, 4, 0, -1114104, 131076, 0, -1114103, 65540, 0, -917495, 393218, 0)
-
-[node name="Spawn" type="Marker2D" parent="."]
-position = Vector2(-413, -56)
-
-[node name="RespawnTimer" type="Timer" parent="."]
-wait_time = 3.0
-one_shot = true
-
-[node name="MCLayer" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="MCLayer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.529412)
+texture = SubResource("GradientTexture2D_leldv")
 
-[node name="MCHUD" parent="MCLayer" instance=ExtResource("7_huymo")]
-offset_left = -596.0
-offset_top = -344.0
-offset_right = -556.0
-offset_bottom = -304.0
-
-[node name="Malwaremaster" parent="." instance=ExtResource("10_dbtrv")]
-z_index = 1
-position = Vector2(507, -253)
-
-[node name="BossLevelLayer" type="CanvasLayer" parent="."]
+[node name="initial_ui" parent="CanvasLayer" instance=ExtResource("1_tul74")]
+unique_name_in_owner = true
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="BossLevelLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.529412)
-
-[node name="BossHUD" parent="BossLevelLayer" instance=ExtResource("11_vpfdv")]
-offset_left = -596.0
-offset_top = -344.0
-offset_right = -556.0
-offset_bottom = -304.0
-size_flags_horizontal = 4
-metadata/_edit_use_anchors_ = true
-
-[node name="Cyberguardian 1" parent="." instance=ExtResource("14_7gxvy")]
-z_index = 1
-position = Vector2(-235, -184)
-
-[node name="Cyberguardian 2" parent="." instance=ExtResource("14_7gxvy")]
-visible = false
-z_index = 1
-position = Vector2(85, -165)
-chosen_dialogue = "password_safeguard"
-
-[node name="Cyberguardian 3" parent="." instance=ExtResource("14_7gxvy")]
-visible = false
-z_index = 1
-position = Vector2(538, -257)
-chosen_dialogue = "password_complete"
-
-[node name="ConfirmLayer" type="CanvasLayer" parent="."]
-script = ExtResource("15_4roe0")
-confirmHUD_scene = ExtResource("15_qas1g")
-
-[node name="CinematicCamera" type="Camera2D" parent="."]
-position = Vector2(504, -243)
-scale = Vector2(-16.5215, -1878.69)
-zoom = Vector2(3, 3)
-position_smoothing_enabled = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CinematicCamera"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
 libraries = {
-"": SubResource("AnimationLibrary_khix7")
+"": SubResource("AnimationLibrary_pyyb4")
 }
-movie_quit_on_finish = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="CinematicCamera"]
-
-[node name="Fade" type="ColorRect" parent="CinematicCamera/CanvasLayer"]
+[node name="levels_ui" type="Control" parent="CanvasLayer"]
+unique_name_in_owner = true
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("3_0o3c3")
 
-[connection signal="timeout" from="RespawnTimer" to="." method="respawn"]
-[connection signal="completedChallenge" from="MCLayer/MCHUD" to="." method="_on_mchud_completed_challenge"]
-[connection signal="completedBoss" from="BossLevelLayer/BossHUD" to="." method="_on_boss_hud_completed_boss"]
-[connection signal="chatting" from="Cyberguardian 1" to="." method="_on_cyberguardian_chatting"]
-[connection signal="chatting" from="Cyberguardian 2" to="." method="_on_cyberguardian_chatting"]
-[connection signal="chatting" from="Cyberguardian 3" to="." method="_on_cyberguardian_chatting"]
+[node name="Chapter1" type="Sprite2D" parent="CanvasLayer/levels_ui"]
+position = Vector2(281, 304)
+scale = Vector2(0.423664, 0.423664)
+texture = ExtResource("3_2hbg7")
+script = ExtResource("5_1qpg5")
+
+[node name="Chapter2" type="Sprite2D" parent="CanvasLayer/levels_ui"]
+position = Vector2(716, 304)
+scale = Vector2(0.424, 0.424)
+texture = ExtResource("4_kxvff")
+script = ExtResource("5_1qpg5")
+
+[node name="Chapter3" type="Sprite2D" parent="CanvasLayer/levels_ui"]
+position = Vector2(1152, 304)
+scale = Vector2(0.424, 0.424)
+texture = ExtResource("5_0bgna")
+script = ExtResource("5_1qpg5")
+
+[node name="home_button" type="Button" parent="CanvasLayer/levels_ui"]
+layout_mode = 1
+offset_left = 89.0
+offset_top = 52.0
+offset_right = 369.0
+offset_bottom = 102.0
+theme = ExtResource("2_t7j0p")
+text = "Back to Home"
+
+[node name="ConfirmLayer" parent="CanvasLayer" instance=ExtResource("9_4mr0k")]
+
+[connection signal="start_pressed" from="CanvasLayer/initial_ui" to="." method="_on_inital_ui_start_pressed"]
+[connection signal="switch_level" from="CanvasLayer/levels_ui" to="." method="_on_levels_ui_switch_level"]
+[connection signal="start_chapter" from="CanvasLayer/levels_ui/Chapter2" to="CanvasLayer/levels_ui" method="_on_chapter_2_start_chapter"]
+[connection signal="pressed" from="CanvasLayer/levels_ui/home_button" to="." method="_on_home_button_pressed"]

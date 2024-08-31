@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://bu1l7dbfn36u"]
+
+[ext_resource type="Texture2D" uid="uid://5hc52ubxxv5t" path="res://Assets/Texture/logo.png" id="1_assle"]
+[ext_resource type="Script" path="res://inital_ui.gd" id="1_mnfx2"]
+[ext_resource type="Theme" uid="uid://buvprqdtk5upv" path="res://themes/main_ui_theme.tres" id="2_e0dhl"]
+[ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="3_ib114"]
+
+[node name="Inital UI" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mnfx2")
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(19, -70)
+texture = ExtResource("1_assle")
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -144.0
+offset_top = 151.0
+offset_right = 140.0
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.993112)
+theme = ExtResource("2_e0dhl")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ib114")
+text = "Settings"
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -144.0
+offset_top = 78.0
+offset_right = 140.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.993112)
+theme = ExtResource("2_e0dhl")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ib114")
+text = "Start Game"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

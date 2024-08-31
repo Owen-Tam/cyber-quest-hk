@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://xpd26s8dm5g5"]
+
+[ext_resource type="Script" path="res://ConfirmLayer.gd" id="1_h1k36"]
+[ext_resource type="PackedScene" uid="uid://cb6avn7nld8w6" path="res://confirm.tscn" id="2_wbdu2"]
+
+[node name="ConfirmLayer" type="CanvasLayer"]
+script = ExtResource("1_h1k36")
+confirmHUD_scene = ExtResource("2_wbdu2")

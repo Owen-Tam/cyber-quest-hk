@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=3 uid="uid://cphb2ckctsc7u"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_8a75u"]
+[ext_resource type="PackedScene" uid="uid://bu1l7dbfn36u" path="res://inital_ui.tscn" id="1_tul74"]
+[ext_resource type="Theme" uid="uid://buvprqdtk5upv" path="res://themes/main_ui_theme.tres" id="2_t7j0p"]
+[ext_resource type="Script" path="res://levels_ui.gd" id="3_0o3c3"]
+[ext_resource type="Texture2D" uid="uid://bx1hsokp5qhk4" path="res://Assets/Texture/Chapter1.png" id="3_2hbg7"]
+[ext_resource type="Texture2D" uid="uid://whjj2m1uhybg" path="res://Assets/Texture/Chapter2.png" id="4_kxvff"]
+[ext_resource type="Texture2D" uid="uid://drmye20quna2s" path="res://Assets/Texture/Chapter3.png" id="5_0bgna"]
+[ext_resource type="Script" path="res://chapter_script.gd" id="5_1qpg5"]
+
+[sub_resource type="Gradient" id="Gradient_tvnnq"]
+colors = PackedColorArray(1, 0.92549, 0.878431, 1, 0.741176, 0.886275, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_leldv"]
+gradient = SubResource("Gradient_tvnnq")
+
+[sub_resource type="Animation" id="Animation_pfx6n"]
+resource_name = "load_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pyyb4"]
+_data = {
+"load_animation": SubResource("Animation_pfx6n")
+}
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_8a75u")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_leldv")
+
+[node name="initial_ui" parent="CanvasLayer" instance=ExtResource("1_tul74")]
+unique_name_in_owner = true
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_pyyb4")
+}
+
+[node name="levels_ui" type="Control" parent="CanvasLayer"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("3_0o3c3")
+
+[node name="Chapter1" type="Sprite2D" parent="CanvasLayer/levels_ui"]
+position = Vector2(281, 304)
+scale = Vector2(0.423664, 0.423664)
+texture = ExtResource("3_2hbg7")
+script = ExtResource("5_1qpg5")
+
+[node name="Chapter2" type="Sprite2D" parent="CanvasLayer/levels_ui"]
+position = Vector2(716, 304)
+scale = Vector2(0.424, 0.424)
+texture = ExtResource("4_kxvff")
+script = ExtResource("5_1qpg5")
+
+[node name="Chapter3" type="Sprite2D" parent="CanvasLayer/levels_ui"]
+position = Vector2(1152, 304)
+scale = Vector2(0.424, 0.424)
+texture = ExtResource("5_0bgna")
+script = ExtResource("5_1qpg5")
+
+[node name="Button" type="Button" parent="CanvasLayer/levels_ui"]
+layout_mode = 1
+offset_left = 89.0
+offset_top = 52.0
+offset_right = 369.0
+offset_bottom = 102.0
+theme = ExtResource("2_t7j0p")
+text = "Back to Home"
+
+[connection signal="start_pressed" from="CanvasLayer/initial_ui" to="." method="_on_inital_ui_start_pressed"]
+[connection signal="start_chapter" from="CanvasLayer/levels_ui/Chapter2" to="CanvasLayer/levels_ui" method="_on_chapter_2_start_chapter"]
