@@ -17,7 +17,7 @@ var cancelled_boss_battle = false
 @onready var allCells = $TileMap.get_used_cells($Player.z_index-1)
 func _ready():
 	spawnPlayer()
-
+	$Player.isMovementDisabled = true
 	for i in range(numberOfCorruptedAreas):
 		labelList.push_back(get_node("Area" + str(i+1) + "/Label"))
 
@@ -31,7 +31,17 @@ func _ready():
 					adjCont.push_back(adj)
 		adjCorrupted.push_back(adjCont)
 	print(adjCorrupted)
-	
+	play_starting_animation()
+
+func play_starting_animation():
+	$CinematicCamera.make_current()
+	$CinematicCamera/CanvasLayer.visible = true
+	$CinematicCamera/AnimationPlayer.play("camera_animation")
+	await $CinematicCamera/AnimationPlayer.animation_finished
+	$CinematicCamera/AnimationPlayer.play("fade_animation")
+	$Player/Camera2D.make_current()
+	$Player.isMovementDisabled = false
+
 func spawnPlayer():
 	$Player.global_position = $Spawn.global_position
 

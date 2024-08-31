@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bkae77amxx8fy"]
+[gd_scene load_steps=20 format=3 uid="uid://bkae77amxx8fy"]
 
 [ext_resource type="PackedScene" uid="uid://1dtxowdctfhd" path="res://tile_map.tscn" id="1_4nj6k"]
 [ext_resource type="Script" path="res://main.gd" id="1_8a75u"]
@@ -16,6 +16,55 @@
 [ext_resource type="PackedScene" uid="uid://mlfqomdmme5v" path="res://cyberguardian.tscn" id="14_7gxvy"]
 [ext_resource type="Script" path="res://ConfirmLayer.gd" id="15_4roe0"]
 [ext_resource type="PackedScene" uid="uid://cb6avn7nld8w6" path="res://confirm.tscn" id="15_qas1g"]
+
+[sub_resource type="Animation" id="Animation_wni50"]
+resource_name = "camera_animation"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.5, 4.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(504, -243), Vector2(-366, -76)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Fade:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6, 0.9, 5.8, 6.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gfdmw"]
+resource_name = "fade_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_khix7"]
+_data = {
+"camera_animation": SubResource("Animation_wni50"),
+"fade_animation": SubResource("Animation_gfdmw")
+}
 
 [node name="main" type="Node2D"]
 y_sort_enabled = true
@@ -195,6 +244,28 @@ chosen_dialogue = "password_complete"
 [node name="ConfirmLayer" type="CanvasLayer" parent="."]
 script = ExtResource("15_4roe0")
 confirmHUD_scene = ExtResource("15_qas1g")
+
+[node name="CinematicCamera" type="Camera2D" parent="."]
+position = Vector2(504, -243)
+scale = Vector2(-16.5215, -1878.69)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CinematicCamera"]
+libraries = {
+"": SubResource("AnimationLibrary_khix7")
+}
+movie_quit_on_finish = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CinematicCamera"]
+
+[node name="Fade" type="ColorRect" parent="CinematicCamera/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
 
 [connection signal="timeout" from="RespawnTimer" to="." method="respawn"]
 [connection signal="completedChallenge" from="MCLayer/MCHUD" to="." method="_on_mchud_completed_challenge"]
