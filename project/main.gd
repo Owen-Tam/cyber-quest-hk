@@ -8,11 +8,12 @@ var showPurifyDialog = false
 const numberOfCorruptedAreas = 2
 var labelList = []
 var currentCorruptedArea #0-based
-
+var guardianNumber = 3
 
 var triggerFinalBoss = [Vector2i(7, -14), Vector2i(8, -14), Vector2i(9, -14), Vector2i(7, -15)]
 var finalBossCorruptedTiles = [Vector2i(7, -17), Vector2i(7, -16), Vector2i(8, -17), Vector2i(8, -16), Vector2i(8, -15), Vector2i(9, -17), Vector2i(9, -16), Vector2i(9, -15)]
-var triggered = false
+var triggering_boss_battle = false
+var cancelled_boss_battle = false
 @onready var allCells = $TileMap.get_used_cells($Player.z_index-1)
 func _ready():
 	spawnPlayer()
@@ -63,11 +64,24 @@ func _process(delta):
 		for k in labelList:
 			k.visible = false
 	
-	if triggerFinalBoss.has(playerCell) and !triggered:
-		$Player.isMovementDisabled = true
-		$BossLevelLayer.visible = true
-		$BossLevelLayer/BossHUD.startBossBattle()
-		triggered = true
+	if triggerFinalBoss.has(playerCell) and !triggering_boss_battle:
+		if !cancelled_boss_battle and !$ConfirmLayer.triggered:
+			$ConfirmLayer.addConfimScreen("Enter the boss battle with Malware Master?", "Nevermind...", "Let's go!")
+			var answer = await $ConfirmLayer.submittedAnswer
+
+			if (answer == 2) :
+				$Player.isMovementDisabled = true
+				triggering_boss_battle = true
+				$Malwaremaster.run_boss_dialogue()
+				await $Malwaremaster.finishedChatting
+				$BossLevelLayer.visible = true
+				$BossLevelLayer/BossHUD.startBossBattle()
+				
+			else:
+				cancelled_boss_battle = true
+	if !triggerFinalBoss.has(playerCell):
+		cancelled_boss_battle = false
+		$ConfirmLayer.removeConfirm()
 	
 func _input(event):
 	if event.is_action_pressed("accept_challenge") and showPurifyDialog == true:
@@ -96,7 +110,6 @@ func triggerCompleteEffect(currentCorruptedArea):
 	var explosionNodes = []
 	for i in areaNodes:
 		if i.name.begins_with("Explosion"):
-			print(i.name)
 			explosionNodes.push_back(i)
 	for i in explosionNodes:
 		i.explode()
@@ -104,7 +117,7 @@ func triggerCompleteEffect(currentCorruptedArea):
 func changeCyberguardian():
 	get_node("Cyberguardian " + str(currentCorruptedArea + 1)).visible = false
 	var next = get_node("Cyberguardian " + str(currentCorruptedArea + 2))
-	if (next):
+	if (next and currentCorruptedArea+2 != guardianNumber):
 		next.visible = true
 
 
@@ -124,8 +137,11 @@ func _on_boss_hud_completed_boss(failed):
 		$Malwaremaster.visible = false
 		for tile in finalBossCorruptedTiles:
 			$TileMap.set_cell($Player.z_index-1, tile, 2, Vector2i(0, 0))
+		if currentCorruptedArea:
+			get_node("Cyberguardian " + str(currentCorruptedArea + 1)).visible = false
+			get_node("Cyberguardian " + str(guardianNumber)).visible = true
 	else:
-		triggered = false
+		triggering_boss_battle = false
 		respawn()
 
 

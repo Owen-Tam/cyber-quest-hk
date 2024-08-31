@@ -23,10 +23,13 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "cyberguardian": "res://Dialogic/Characters/cyberguardian.dch",
-"cybertim": "res://Assets/Characters/cybertim.dch"
+"cybertim": "res://Assets/Characters/cybertim.dch",
+"malwaremaster": "res://Dialogic/Characters/malwaremaster.dch"
 }
 directories/dtl_directory={
 "password_basics": "res://Dialogic/Characters/password_basics.dtl",
+"password_boss": "res://Dialogic/Characters/password_boss.dtl",
+"password_complete": "res://Dialogic/Characters/password_complete.dtl",
 "password_safeguard": "res://Dialogic/Characters/password_safeguard.dtl"
 }
 variables={}

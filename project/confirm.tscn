@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb6avn7nld8w6"]
+
+[ext_resource type="Script" path="res://confirm.gd" id="1_h8ltx"]
+[ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="2_7k3dk"]
+
+[node name="ConfirmHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h8ltx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.0
+offset_top = -97.0
+offset_right = 236.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.113725, 0.188235, 0.239216, 1)
+
+[node name="Question" type="Label" parent="."]
+layout_mode = 0
+offset_left = -203.0
+offset_top = -73.0
+offset_right = 203.0
+offset_bottom = -19.0
+theme_override_fonts/font = ExtResource("2_7k3dk")
+theme_override_font_sizes/font_size = 16
+text = "Question"
+autowrap_mode = 3
+
+[node name="Answer 2" type="Button" parent="."]
+layout_mode = 0
+offset_left = -51.0
+offset_top = 23.0
+offset_right = 92.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("2_7k3dk")
+theme_override_font_sizes/font_size = 16
+text = "Answer 2"
+
+[node name="Answer 1" type="Button" parent="."]
+layout_mode = 0
+offset_left = -203.0
+offset_top = 23.0
+offset_right = -60.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("2_7k3dk")
+theme_override_font_sizes/font_size = 16
+text = "Answer 1"
+
+[connection signal="pressed" from="Answer 2" to="." method="_on_answer_2_pressed"]
+[connection signal="pressed" from="Answer 1" to="." method="_on_answer_1_pressed"]
