@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://bkae77amxx8fy"]
+[gd_scene load_steps=26 format=3 uid="uid://bkae77amxx8fy"]
 
-[ext_resource type="Script" path="res://levels/level_2/level_2.gd" id="1_jjire"]
+[ext_resource type="Script" path="res://level_2.gd" id="1_jjire"]
 [ext_resource type="PackedScene" uid="uid://c8pvcmpbcn3nh" path="res://atmospheric_particles.tscn" id="2_u0wmy"]
 [ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="3_02yi7"]
 [ext_resource type="Texture2D" uid="uid://da6jftsswx83r" path="res://Assets/Tiles/Individual/cc_1.png" id="4_c4fyn"]
@@ -15,6 +15,81 @@
 [ext_resource type="PackedScene" uid="uid://bgiwjvmxr14ox" path="res://levels/level_2/BossHUD.tscn" id="13_1rioo"]
 [ext_resource type="PackedScene" uid="uid://mlfqomdmme5v" path="res://cyberguardian.tscn" id="14_xh8lu"]
 [ext_resource type="PackedScene" uid="uid://xpd26s8dm5g5" path="res://confirm_layer.tscn" id="15_ypd8s"]
+[ext_resource type="PackedScene" uid="uid://j6bxkhjmwff" path="res://portal.tscn" id="16_43q1k"]
+
+[sub_resource type="Animation" id="Animation_j1per"]
+resource_name = "clear_area_animation"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(21, 21, 21, 1), Color(21, 21, 21, 1), Color(21, 21, 21, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ok07m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7m3yx"]
+_data = {
+"RESET": SubResource("Animation_ok07m"),
+"clear_area_animation": SubResource("Animation_j1per")
+}
+
+[sub_resource type="Animation" id="Animation_jnj7m"]
+resource_name = "clear_area_animation"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("corruptedBlocks:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(21, 21, 21, 1), Color(21, 21, 21, 1), Color(21, 21, 21, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gslib"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("corruptedBlocks:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sm51d"]
+_data = {
+"RESET": SubResource("Animation_gslib"),
+"clear_area_animation": SubResource("Animation_jnj7m")
+}
 
 [sub_resource type="Animation" id="Animation_wni50"]
 resource_name = "camera_animation"
@@ -65,7 +140,7 @@ _data = {
 "fade_animation": SubResource("Animation_gfdmw")
 }
 
-[node name="level3" type="Node2D"]
+[node name="level_2" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_jjire")
 
@@ -82,6 +157,12 @@ position = Vector2(0, -145)
 
 [node name="Area1" type="Node2D" parent="."]
 y_sort_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area1"]
+root_node = NodePath("../corruptedBlocks/Cc2")
+libraries = {
+"": SubResource("AnimationLibrary_7m3yx")
+}
 
 [node name="Label" type="Label" parent="Area1"]
 top_level = true
@@ -104,30 +185,34 @@ horizontal_alignment = 1
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="Cc3" type="Sprite2D" parent="Area1"]
-position = Vector2(-109, -151)
-texture = ExtResource("4_c4fyn")
+[node name="corruptedBlocks" type="Node2D" parent="Area1"]
+y_sort_enabled = true
+position = Vector2(-186, -169)
 
-[node name="Cc1" type="Sprite2D" parent="Area1"]
-position = Vector2(-141, -135)
-texture = ExtResource("4_c4fyn")
-
-[node name="Ch1" type="Sprite2D" parent="Area1"]
-position = Vector2(-77, -135)
-texture = ExtResource("5_ypm3h")
-
-[node name="Cc2" type="Sprite2D" parent="Area1"]
-position = Vector2(-109, -119)
+[node name="Cc2" type="Sprite2D" parent="Area1/corruptedBlocks"]
+position = Vector2(77, 50)
 texture = ExtResource("6_024us")
 
+[node name="Cc1" type="Sprite2D" parent="Area1/corruptedBlocks"]
+position = Vector2(45, 34)
+texture = ExtResource("4_c4fyn")
+
+[node name="Ch1" type="Sprite2D" parent="Area1/corruptedBlocks"]
+position = Vector2(109, 34)
+texture = ExtResource("5_ypm3h")
+
+[node name="Cc3" type="Sprite2D" parent="Area1/corruptedBlocks"]
+position = Vector2(77, 18)
+texture = ExtResource("4_c4fyn")
+
 [node name="Explosion" parent="Area1" instance=ExtResource("7_wiyro")]
-position = Vector2(-125, -143)
+position = Vector2(-109, -145)
 
 [node name="Area2" type="Node2D" parent="."]
 y_sort_enabled = true
 
 [node name="Explosion" parent="Area2" instance=ExtResource("7_wiyro")]
-position = Vector2(194, -199)
+position = Vector2(181, -194)
 
 [node name="Label" type="Label" parent="Area2"]
 top_level = true
@@ -150,21 +235,29 @@ horizontal_alignment = 1
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="Cr1" type="Sprite2D" parent="Area2"]
+[node name="corruptedBlocks" type="Node2D" parent="Area2"]
+y_sort_enabled = true
+
+[node name="Cr1" type="Sprite2D" parent="Area2/corruptedBlocks"]
 position = Vector2(211, -183)
 texture = ExtResource("8_03gyu")
 
-[node name="Cc1" type="Sprite2D" parent="Area2"]
+[node name="Cc1" type="Sprite2D" parent="Area2/corruptedBlocks"]
 position = Vector2(179, -167)
 texture = ExtResource("4_c4fyn")
 
-[node name="Cc2" type="Sprite2D" parent="Area2"]
+[node name="Cc2" type="Sprite2D" parent="Area2/corruptedBlocks"]
 position = Vector2(147, -183)
 texture = ExtResource("6_024us")
 
-[node name="Cc3" type="Sprite2D" parent="Area2"]
+[node name="Cc3" type="Sprite2D" parent="Area2/corruptedBlocks"]
 position = Vector2(179, -199)
 texture = ExtResource("4_c4fyn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2"]
+libraries = {
+"": SubResource("AnimationLibrary_sm51d")
+}
 
 [node name="Player" parent="." instance=ExtResource("9_8babn")]
 position = Vector2(-321.5, -129.25)
@@ -178,7 +271,7 @@ position = Vector2(-301, -127)
 layer_0/tile_data = PackedInt32Array(196607, 2, 0, 393215, 65538, 0, 262143, 65538, 0, 327679, 65538, 0, -65538, 65538, 0, 65534, 65538, 0, 131070, 65538, 0, 65535, 2, 0, 131071, 2, 0, 327680, 262146, 0, 262144, 262146, 0, 196608, 262146, 0, 131072, 262146, 0, 65536, 262146, 0, 0, 589826, 0, -65535, 65538, 0, -1, 262146, 0, -131074, 196610, 0, -131073, 131074, 0, -2, 65538, 0, 196606, 524290, 0, 1, 196610, 0, -65537, 2, 0, -131072, 327682, 0, -131071, 2, 0, -196608, 2, 0, -131070, 2, 0, -262144, 2, 0, -196607, 262148, 0, -262143, 262148, 0, -262142, 262148, 0, -196606, 262148, 0, -327677, 2, 0, -393211, 262146, 0, -327676, 327682, 0, -327675, 393218, 0, -393213, 65538, 0, -458749, 65538, 0, -524285, 65538, 0, -458747, 262146, 0, -589821, 196610, 0, -393212, 2, 0, -458748, 2, 0, -524283, 589826, 0, -524284, 131074, 0, -589820, 262148, 0, -655356, 262148, 0, -655355, 262148, 0, -589819, 262148, 0, -262141, 393218, 0, -786427, 196610, 0, -720891, 65538, 0, -786426, 393218, 0, -851962, 2, 0, -851961, 393218, 0, -917498, 196610, 0, -917497, 2, 0, -917496, 2, 0, -983032, 65540, 0, -1048568, 65540, 0, -983031, 4, 0, -1048567, 65540, 0, -983033, 65538, 0, -1048569, 65540, 0, -1114105, 4, 0, -1114104, 131076, 0, -1114103, 65540, 0, -917495, 393218, 0)
 
 [node name="Spawn" type="Marker2D" parent="."]
-position = Vector2(-413, -56)
+position = Vector2(-209, -159)
 
 [node name="RespawnTimer" type="Timer" parent="."]
 wait_time = 3.0
@@ -237,10 +330,16 @@ chosen_dialogue = "password_safeguard"
 [node name="Cyberguardian 3" parent="." instance=ExtResource("14_xh8lu")]
 visible = false
 z_index = 1
-position = Vector2(538, -257)
+position = Vector2(550, -249)
 chosen_dialogue = "password_complete"
 
+[node name="ConfirmLayer_Next" parent="." instance=ExtResource("15_ypd8s")]
+
 [node name="ConfirmLayer" parent="." instance=ExtResource("15_ypd8s")]
+
+[node name="Portal" parent="." instance=ExtResource("16_43q1k")]
+z_index = 1
+position = Vector2(495, -275)
 
 [node name="CinematicCamera" type="Camera2D" parent="."]
 position = Vector2(504, -243)
@@ -267,6 +366,10 @@ color = Color(0, 0, 0, 1)
 [connection signal="timeout" from="RespawnTimer" to="." method="respawn"]
 [connection signal="completedChallenge" from="MCLayer/MCHUD" to="." method="_on_mchud_completed_challenge"]
 [connection signal="completedBoss" from="BossLevelLayer/BossHUD" to="." method="_on_boss_hud_completed_boss"]
-[connection signal="chatting" from="Cyberguardian 1" to="." method="_on_cyberguardian_chatting"]
-[connection signal="chatting" from="Cyberguardian 2" to="." method="_on_cyberguardian_chatting"]
-[connection signal="chatting" from="Cyberguardian 3" to="." method="_on_cyberguardian_chatting"]
+[connection signal="finishedChat" from="Cyberguardian 1" to="." method="_on_cyberguardian_finished_chatting"]
+[connection signal="startedChat" from="Cyberguardian 1" to="." method="_on_cyberguardian_chatting"]
+[connection signal="finishedChat" from="Cyberguardian 2" to="." method="_on_cyberguardian_finished_chatting"]
+[connection signal="startedChat" from="Cyberguardian 2" to="." method="_on_cyberguardian_chatting"]
+[connection signal="finishedChat" from="Cyberguardian 3" to="." method="_on_cyberguardian_finished_chatting"]
+[connection signal="startedChat" from="Cyberguardian 3" to="." method="_on_cyberguardian_chatting"]
+[connection signal="entered_portal" from="Portal" to="." method="_on_portal_entered_portal"]

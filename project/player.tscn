@@ -101,7 +101,7 @@ _data = {
 "idle_front": SubResource("Animation_305wl")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 z_index = 1
 collision_layer = 6
 collision_mask = 2

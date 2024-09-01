@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxl75vo33xwsq"]
+
+[ext_resource type="Script" path="res://levels_ui.gd" id="1_hk507"]
+[ext_resource type="Texture2D" uid="uid://bx1hsokp5qhk4" path="res://Assets/Texture/Chapter1.png" id="2_vfk5a"]
+[ext_resource type="Script" path="res://chapter_script.gd" id="3_6j7vu"]
+[ext_resource type="Texture2D" uid="uid://whjj2m1uhybg" path="res://Assets/Texture/Chapter2.png" id="4_ks31t"]
+[ext_resource type="Texture2D" uid="uid://drmye20quna2s" path="res://Assets/Texture/Chapter3.png" id="5_r1vlv"]
+[ext_resource type="Theme" uid="uid://buvprqdtk5upv" path="res://themes/main_ui_theme.tres" id="6_dav8j"]
+
+[node name="levels_ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_hk507")
+
+[node name="Chapter1" type="Sprite2D" parent="."]
+position = Vector2(281, 304)
+scale = Vector2(0.423664, 0.423664)
+texture = ExtResource("2_vfk5a")
+script = ExtResource("3_6j7vu")
+
+[node name="Chapter2" type="Sprite2D" parent="."]
+position = Vector2(716, 304)
+scale = Vector2(0.424, 0.424)
+texture = ExtResource("4_ks31t")
+script = ExtResource("3_6j7vu")
+
+[node name="Chapter3" type="Sprite2D" parent="."]
+position = Vector2(1152, 304)
+scale = Vector2(0.424, 0.424)
+texture = ExtResource("5_r1vlv")
+script = ExtResource("3_6j7vu")
+
+[node name="home_button" type="Button" parent="."]
+layout_mode = 1
+offset_left = 89.0
+offset_top = 52.0
+offset_right = 369.0
+offset_bottom = 102.0
+theme = ExtResource("6_dav8j")
+text = "Back to Home"
+
+[connection signal="start_chapter" from="Chapter2" to="." method="_on_chapter_2_start_chapter"]
+[connection signal="pressed" from="home_button" to="." method="_on_home_button_pressed"]

@@ -6,6 +6,7 @@ signal submittedAnswer
 var triggered = false
 var confirmHUD
 func addConfimScreen(question: String, answer1: String, answer2: String):
+	print("Adding confirm screen", triggered)
 	if (!triggered):
 		triggered = true
 		confirmHUD = confirmHUD_scene.instantiate()
@@ -25,6 +26,6 @@ func addConfimScreen(question: String, answer1: String, answer2: String):
 func removeConfirm():
 	if confirmHUD:
 		confirmHUD.queue_free()
-		confirmHUD = null
-		triggered=false
+	confirmHUD = null
+	triggered=false
 

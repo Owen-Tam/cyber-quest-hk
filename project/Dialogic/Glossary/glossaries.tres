@@ -5,6 +5,12 @@
 [resource]
 script = ExtResource("1_mf52u")
 entries = {
+"Cyberguardian": {
+"case_sensitive": false,
+"color": Color(0.234375, 0.694946, 1, 1),
+"name": "Cyberguardian",
+"text": "The sacred guardian of the cyber realms. "
+},
 "Cyberia": {
 "case_sensitive": false,
 "name": "Cyberia",
@@ -13,7 +19,7 @@ entries = {
 },
 "Malware Blight": {
 "case_sensitive": true,
-"color": Color(1, 1, 1, 1),
+"color": Color(0.960938, 0.202698, 0.558123, 1),
 "name": "Malware Blight",
 "text": "The corrupted magic of Malware Master",
 "title": "Malware Blight"

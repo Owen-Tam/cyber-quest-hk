@@ -5,7 +5,7 @@ signal completedBoss(failed)
 var allowed_characters = r'^[a-zA-Z\d!@#$%^&*(),.?":{}|<>\-_+=\/\\\[\]]+$'
 
 
-var inputtedPassword
+var inputtedPassword = ""
 const scoreGoal = 150
 const maxAttempts= 10
 var failed = false
@@ -54,6 +54,7 @@ func startBossBattle():
 	while score < scoreGoal:
 		await submittedPwd
 		var strength = check_password_strength(inputtedPassword, attempts)
+		print(attempts)
 		if strength >= 7:
 			score += 30
 		elif strength >= 5:
@@ -179,7 +180,7 @@ func check_password_strength(password: String, attempts: Array) -> int:
 	#print("CHECKING STRENGTH")
 	#return max(min(ceil(logWithBase(pow(pwd.length(), total), 2)/60),5),1)
 func _on_submit_button_pressed():
-	if inputtedPassword != "":
+	if inputtedPassword != "" and inputtedPassword:
 		submittedPwd.emit()
 
 

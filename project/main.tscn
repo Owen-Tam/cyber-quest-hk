@@ -1,13 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://cphb2ckctsc7u"]
+[gd_scene load_steps=9 format=3 uid="uid://cphb2ckctsc7u"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_8a75u"]
 [ext_resource type="PackedScene" uid="uid://bu1l7dbfn36u" path="res://inital_ui.tscn" id="1_tul74"]
-[ext_resource type="Theme" uid="uid://buvprqdtk5upv" path="res://themes/main_ui_theme.tres" id="2_t7j0p"]
-[ext_resource type="Script" path="res://levels_ui.gd" id="3_0o3c3"]
-[ext_resource type="Texture2D" uid="uid://bx1hsokp5qhk4" path="res://Assets/Texture/Chapter1.png" id="3_2hbg7"]
-[ext_resource type="Texture2D" uid="uid://whjj2m1uhybg" path="res://Assets/Texture/Chapter2.png" id="4_kxvff"]
-[ext_resource type="Texture2D" uid="uid://drmye20quna2s" path="res://Assets/Texture/Chapter3.png" id="5_0bgna"]
-[ext_resource type="Script" path="res://chapter_script.gd" id="5_1qpg5"]
+[ext_resource type="PackedScene" uid="uid://dxl75vo33xwsq" path="res://levels_ui.tscn" id="3_26vy1"]
 [ext_resource type="PackedScene" uid="uid://xpd26s8dm5g5" path="res://confirm_layer.tscn" id="9_4mr0k"]
 
 [sub_resource type="Gradient" id="Gradient_tvnnq"]
@@ -46,48 +41,11 @@ libraries = {
 "": SubResource("AnimationLibrary_pyyb4")
 }
 
-[node name="levels_ui" type="Control" parent="CanvasLayer"]
+[node name="levels_ui" parent="CanvasLayer" instance=ExtResource("3_26vy1")]
 unique_name_in_owner = true
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-script = ExtResource("3_0o3c3")
-
-[node name="Chapter1" type="Sprite2D" parent="CanvasLayer/levels_ui"]
-position = Vector2(281, 304)
-scale = Vector2(0.423664, 0.423664)
-texture = ExtResource("3_2hbg7")
-script = ExtResource("5_1qpg5")
-
-[node name="Chapter2" type="Sprite2D" parent="CanvasLayer/levels_ui"]
-position = Vector2(716, 304)
-scale = Vector2(0.424, 0.424)
-texture = ExtResource("4_kxvff")
-script = ExtResource("5_1qpg5")
-
-[node name="Chapter3" type="Sprite2D" parent="CanvasLayer/levels_ui"]
-position = Vector2(1152, 304)
-scale = Vector2(0.424, 0.424)
-texture = ExtResource("5_0bgna")
-script = ExtResource("5_1qpg5")
-
-[node name="home_button" type="Button" parent="CanvasLayer/levels_ui"]
-layout_mode = 1
-offset_left = 89.0
-offset_top = 52.0
-offset_right = 369.0
-offset_bottom = 102.0
-theme = ExtResource("2_t7j0p")
-text = "Back to Home"
 
 [node name="ConfirmLayer" parent="CanvasLayer" instance=ExtResource("9_4mr0k")]
 
 [connection signal="start_pressed" from="CanvasLayer/initial_ui" to="." method="_on_inital_ui_start_pressed"]
+[connection signal="home_button_pressed" from="CanvasLayer/levels_ui" to="." method="_on_levels_ui_home_button_pressed"]
 [connection signal="switch_level" from="CanvasLayer/levels_ui" to="." method="_on_levels_ui_switch_level"]
-[connection signal="start_chapter" from="CanvasLayer/levels_ui/Chapter2" to="CanvasLayer/levels_ui" method="_on_chapter_2_start_chapter"]
-[connection signal="pressed" from="CanvasLayer/levels_ui/home_button" to="." method="_on_home_button_pressed"]
