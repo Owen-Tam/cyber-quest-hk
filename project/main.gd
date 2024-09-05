@@ -16,7 +16,7 @@ const FILE_FORMAT_STRING = "res://levels/level_{level}/level_{level}.tscn"
 func _on_levels_ui_switch_level(level):
 	if (!%levels_ui.visible and %initial_ui.visible):
 		return
-	$CanvasLayer/ConfirmLayer.addConfimScreen("Enter Chapter %s" % str(level + 1), "Nevermind...", "Let's go!")
+	$CanvasLayer/ConfirmLayer.addConfimScreen("Enter Chapter %s" % str(level), "Nevermind...", "Let's go!")
 	var answer = await $CanvasLayer/ConfirmLayer.submittedAnswer
 	if not is_inside_tree():
 		return

@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cb6avn7nld8w6"]
+[gd_scene load_steps=5 format=3 uid="uid://cb6avn7nld8w6"]
 
 [ext_resource type="Script" path="res://confirm.gd" id="1_h8ltx"]
 [ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="2_7k3dk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yekfa"]
+bg_color = Color(0, 0.556863, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ywpog"]
+bg_color = Color(0, 0.3795, 0.69, 1)
 
 [node name="ConfirmHUD" type="Control"]
 layout_mode = 3
@@ -48,6 +54,8 @@ offset_right = 92.0
 offset_bottom = 54.0
 theme_override_fonts/font = ExtResource("2_7k3dk")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_yekfa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ywpog")
 text = "Answer 2"
 
 [node name="Answer 1" type="Button" parent="."]

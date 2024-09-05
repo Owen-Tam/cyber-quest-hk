@@ -179,7 +179,7 @@ func _on_portal_entered_portal():
 	$Player.isMovementDisabled = true
 	# Animation on player
 	# confirm pop up
-	$ConfirmLayer_Next.addConfimScreen("Move to the Chapter %s" % str(level), "Main Menu", "Let's go!")
+	$ConfirmLayer_Next.addConfimScreen("Move to the Chapter %s" % str(level + 1), "Main Menu", "Let's go!")
 	var answer = await $ConfirmLayer_Next.submittedAnswer
 	if not is_inside_tree():
 		return
