@@ -18,6 +18,7 @@ func _on_levels_ui_switch_level(level):
 		return
 	$CanvasLayer/ConfirmLayer.addConfimScreen("Enter Chapter %s" % str(level), "Nevermind...", "Let's go!")
 	var answer = await $CanvasLayer/ConfirmLayer.submittedAnswer
+	
 	if not is_inside_tree():
 		return
 	if answer == 2:

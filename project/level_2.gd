@@ -40,6 +40,8 @@ func play_starting_animation():
 	$CinematicCamera/AnimationPlayer.play("camera_animation")
 	await $CinematicCamera/AnimationPlayer.animation_finished
 	$Player/Camera2D.make_current()
+	$Player/Camera2D.position_smoothing_enabled = true
+	$Player/Camera2D.position_smoothing_speed = 15
 	$CinematicCamera/AnimationPlayer.play("fade_animation")
 	$Player.isMovementDisabled = false
 	$CinematicCamera/CanvasLayer.visible = false
@@ -54,7 +56,7 @@ func _process(delta):
 	if !allCells.has(playerCell) and !corrupted.has(playerCell)  and !$Player.isFalling:
 		#player falling!
 		$Player.isFalling = true
-		$RespawnTimer.start(1.2)
+		$RespawnTimer.start(1)
 		
 	# Check if adjacent to corrupted
 	var isAdjToCorrupted = false
@@ -75,12 +77,17 @@ func _process(delta):
 		showPurifyDialog = false
 		for k in labelList:
 			k.visible = false
-	
+	if !triggerFinalBoss.has(playerCell):
+		cancelled_boss_battle = false
+		$ConfirmLayer.removeConfirm()
+		
 	if triggerFinalBoss.has(playerCell) and !triggering_boss_battle:
 		if !cancelled_boss_battle and !$ConfirmLayer.triggered:
+			print("ADDED")
 			$ConfirmLayer.addConfimScreen("Enter the boss battle with Malware Master?", "Nevermind...", "Let's go!")
 			var answer = await $ConfirmLayer.submittedAnswer
-			if (answer == 2) :
+			
+			if (answer == 2 and !triggering_boss_battle) :
 				print("ENTERING BOSS BATTLE")
 				$Player.isMovementDisabled = true
 				triggering_boss_battle = true
@@ -90,9 +97,7 @@ func _process(delta):
 				$BossLevelLayer/BossHUD.startBossBattle()
 			else:
 				cancelled_boss_battle = true
-	if !triggerFinalBoss.has(playerCell):
-		cancelled_boss_battle = false
-		$ConfirmLayer.removeConfirm()
+	
 	
 func _input(event):
 	if event.is_action_pressed("accept_challenge") and showPurifyDialog == true:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cb6avn7nld8w6"]
+[gd_scene load_steps=8 format=3 uid="uid://cb6avn7nld8w6"]
 
 [ext_resource type="Script" path="res://confirm.gd" id="1_h8ltx"]
 [ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="2_7k3dk"]
@@ -9,6 +9,138 @@ bg_color = Color(0, 0.556863, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ywpog"]
 bg_color = Color(0, 0.3795, 0.69, 1)
 
+[sub_resource type="Animation" id="Animation_pcmge"]
+resource_name = "popup_appear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.63728, 0.63728),
+"update": 0,
+"values": [Vector2(471, 0), Vector2(471, 174)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Question:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Answer 1:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Answer 2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3qekg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(471, 174)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Question:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Answer 1:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Answer 2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fehyr"]
+_data = {
+"RESET": SubResource("Animation_3qekg"),
+"popup_appear": SubResource("Animation_pcmge")
+}
+
 [node name="ConfirmHUD" type="Control"]
 layout_mode = 3
 anchors_preset = 8
@@ -16,8 +148,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(0, -19)
+size_flags_horizontal = 6
 script = ExtResource("1_h8ltx")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -33,6 +169,7 @@ offset_right = 236.0
 offset_bottom = 77.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(236, 0)
 color = Color(0.113725, 0.188235, 0.239216, 1)
 
 [node name="Question" type="Label" parent="."]
@@ -67,6 +204,11 @@ offset_bottom = 54.0
 theme_override_fonts/font = ExtResource("2_7k3dk")
 theme_override_font_sizes/font_size = 16
 text = "Answer 1"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fehyr")
+}
 
 [connection signal="pressed" from="Answer 2" to="." method="_on_answer_2_pressed"]
 [connection signal="pressed" from="Answer 1" to="." method="_on_answer_1_pressed"]

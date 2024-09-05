@@ -54,7 +54,7 @@ func startBossBattle():
 	while score < scoreGoal:
 		await submittedPwd
 		var strength = check_password_strength(inputtedPassword, attempts)
-		print(attempts)
+		#print(attempts)
 		if strength >= 7:
 			score += 30
 		elif strength >= 5:
@@ -97,7 +97,10 @@ func _on_line_edit_text_changed(new_text):
 		if regex.search_all(char).size() > 0:
 			text += char
 	$LineEdit.set_text(text)
-	$LineEdit.caret_column = old_caret_position
+	if (text != new_text):
+		$LineEdit.caret_column = old_caret_position - 1
+	else:
+		$LineEdit.caret_column = old_caret_position
 	inputtedPassword = text
 
 func logWithBase(value, base): return log(value) / log(base)
