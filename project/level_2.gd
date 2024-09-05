@@ -44,6 +44,7 @@ func play_starting_animation():
 	$Player/Camera2D.position_smoothing_speed = 15
 	$CinematicCamera/AnimationPlayer.play("fade_animation")
 	$Player.isMovementDisabled = false
+	await $CinematicCamera/AnimationPlayer.animation_finished
 	$CinematicCamera/CanvasLayer.visible = false
 
 func spawnPlayer():
