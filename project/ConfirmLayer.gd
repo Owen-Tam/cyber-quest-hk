@@ -17,7 +17,6 @@ func get_all_children(in_node,arr:=[]):
 func addConfimScreen(question: String, answer1: String, answer2: String):
 	if (!triggered):
 		triggered = true
-		print("Triggered = true")
 		confirmHUD = confirmHUD_scene.instantiate()
 		confirmHUD.question = question
 		confirmHUD.answer1 = answer1
@@ -28,12 +27,12 @@ func addConfimScreen(question: String, answer1: String, answer2: String):
 		if (!confirmHUD.overwritten):
 			print("EMIT!")
 			submittedAnswer.emit(answer)
-			confirmHUD.queue_free()
+			confirmHUD.removeSelf()
 			confirmHUD = null
 			triggered=false
 			return answer
 		else:
-			confirmHUD.queue_free()
+			confirmHUD.removeSelf()
 			confirmHUD = null
 			triggered=false
 			return null
@@ -42,7 +41,8 @@ func addConfimScreen(question: String, answer1: String, answer2: String):
 func removeConfirm():
 	if confirmHUD:
 		confirmHUD.overwritten = true
-		confirmHUD.queue_free()
+		submittedAnswer.emit(null)
+		confirmHUD.removeSelf()
 	confirmHUD = null
 	triggered=false
 

@@ -87,7 +87,7 @@ func _process(delta):
 			print("ADDED")
 			$ConfirmLayer.addConfimScreen("Enter the boss battle with Malware Master?", "Nevermind...", "Let's go!")
 			var answer = await $ConfirmLayer.submittedAnswer
-			
+
 			if (answer == 2 and !triggering_boss_battle) :
 				print("ENTERING BOSS BATTLE")
 				$Player.isMovementDisabled = true
@@ -104,7 +104,10 @@ func _input(event):
 	if event.is_action_pressed("accept_challenge") and showPurifyDialog == true:
 		$Player.isMovementDisabled = true
 		$MCLayer.visible = true
+		$MCLayer/AnimationPlayer.play("mchud_appear_animation")
 		$MCLayer/MCHUD.startQuestioning(currentCorruptedArea)
+	elif event.is_action_pressed("toggle-ingame-menu"):
+		$"Escape UI".visible = !$"Escape UI".visible
 	
 func respawn():
 	$Player.isFalling = false
@@ -203,3 +206,8 @@ func _on_portal_entered_portal():
 			get_tree().change_scene_to_file("res://main.tscn")
 	
 
+
+
+func _on_escape_ui_restart_game():
+	var level_path = FILE_FORMAT_STRING.format({"level": str(level)})
+	var res = get_tree().change_scene_to_file(level_path)

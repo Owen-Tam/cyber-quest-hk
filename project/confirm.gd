@@ -16,6 +16,9 @@ func _ready():
 func play_appear_animation():
 	$AnimationPlayer.play("popup_appear")
 
+func removeSelf():
+	queue_free()
+
 func _on_answer_1_pressed():
 	answer = 1
 	submitAnswer.emit(1)
