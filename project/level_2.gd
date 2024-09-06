@@ -95,6 +95,7 @@ func _process(delta):
 				$Malwaremaster.run_boss_dialogue()
 				await $Malwaremaster.finishedChatting
 				$BossLevelLayer.visible = true
+				$BossLevelLayer/AnimationPlayer.play("bosshud_appear_animation")
 				$BossLevelLayer/BossHUD.startBossBattle()
 			else:
 				cancelled_boss_battle = true
