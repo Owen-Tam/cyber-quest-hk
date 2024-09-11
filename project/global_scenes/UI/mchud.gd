@@ -42,7 +42,7 @@ func startQuestioning(questionSet): #questionSet is the area number (which is 0 
 		$NextButton.visible = false
 		while(!isCorrect):
 			var selectedIndex = await self.selectedAnswer
-			print(selectedIndex, currentQuestionObj.correctIndex)
+
 			if selectedIndex != currentQuestionObj.correctIndex:
 				# BLANK OUT THE WRONG ONE
 				get_node("Answer_Box_" + str(selectedIndex)).self_modulate = Color(1, 1, 1, 0.3)

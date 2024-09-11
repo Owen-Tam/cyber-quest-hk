@@ -108,12 +108,10 @@ func _process(delta):
 		
 	if triggerFinalBoss.has(playerCell) and !triggering_boss_battle:
 		if !cancelled_boss_battle and !$ConfirmLayer.triggered:
-			print("ADDED")
 			$ConfirmLayer.addConfimScreen("Enter the boss battle with Malware Master?", "Nevermind...", "Let's go!")
 			var answer = await $ConfirmLayer.submittedAnswer
 
 			if (answer == 2 and !triggering_boss_battle) :
-				print("ENTERING BOSS BATTLE")
 				$Player.isMovementDisabled = true
 				triggering_boss_battle = true
 				$Malwaremaster.run_boss_dialogue()
@@ -143,7 +141,6 @@ func respawn():
 func _on_mchud_completed_challenge():
 	$Player.isMovementDisabled = false
 	$MCLayer.visible = false
-	print("COMPLETED MC")
 	triggerCompleteEffect(currentCorruptedArea)
 	changeCyberguardian(currentCorruptedArea, guardianNumber)
 	clearArea(corrupted, adjCorrupted, currentCorruptedArea)
@@ -152,7 +149,6 @@ func _on_mchud_completed_challenge():
 func _on_boss_hud_completed_boss(failed):
 	$Player.isMovementDisabled = false
 	$BossLevelLayer.visible = false
-	print(failed)
 	if !failed:
 		$Malwaremaster.visible = false
 		$ConfirmLayer.removeConfirm()
