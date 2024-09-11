@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://cphb2ckctsc7u"]
+
+[ext_resource type="Script" path="res://main_menu/main.gd" id="1_8a75u"]
+[ext_resource type="PackedScene" uid="uid://bu1l7dbfn36u" path="res://main_menu/inital_ui.tscn" id="1_tul74"]
+[ext_resource type="PackedScene" uid="uid://dxl75vo33xwsq" path="res://main_menu/levels_ui.tscn" id="3_26vy1"]
+[ext_resource type="PackedScene" uid="uid://xpd26s8dm5g5" path="res://global_scenes/UI/confirm_layer.tscn" id="9_4mr0k"]
+
+[sub_resource type="Gradient" id="Gradient_tvnnq"]
+colors = PackedColorArray(1, 0.92549, 0.878431, 1, 0.741176, 0.886275, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_leldv"]
+gradient = SubResource("Gradient_tvnnq")
+
+[sub_resource type="Animation" id="Animation_pfx6n"]
+resource_name = "load_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pyyb4"]
+_data = {
+"load_animation": SubResource("Animation_pfx6n")
+}
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_8a75u")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_leldv")
+
+[node name="initial_ui" parent="CanvasLayer" instance=ExtResource("1_tul74")]
+unique_name_in_owner = true
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_pyyb4")
+}
+
+[node name="levels_ui" parent="CanvasLayer" instance=ExtResource("3_26vy1")]
+unique_name_in_owner = true
+
+[node name="ConfirmLayer" parent="CanvasLayer" instance=ExtResource("9_4mr0k")]
+
+[connection signal="start_pressed" from="CanvasLayer/initial_ui" to="." method="_on_inital_ui_start_pressed"]
+[connection signal="home_button_pressed" from="CanvasLayer/levels_ui" to="." method="_on_levels_ui_home_button_pressed"]
+[connection signal="switch_level" from="CanvasLayer/levels_ui" to="." method="_on_levels_ui_switch_level"]

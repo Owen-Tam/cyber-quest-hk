@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpqsf3ndj1xhl"]
+
+[ext_resource type="Script" path="res://global_scenes/Asset/Explosion.gd" id="1_8aaf6"]
+
+[sub_resource type="Curve" id="Curve_57d3k"]
+max_value = 100.0
+_data = [Vector2(0.466077, 0), 0.0, 16.9625, 0, 0, Vector2(0.979351, 78.9108), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_ukg1x"]
+_data = [Vector2(0, 1), 0.0, -3.59835e-07, 0, 0, Vector2(0.165644, 0.992112), 0.0, 0.0, 0, 0, Vector2(1, 0.22907), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_trpq0"]
+colors = PackedColorArray(1, 1, 1, 1, 0.2871, 0.87, 0.81171, 1)
+
+[sub_resource type="Environment" id="Environment_1ji64"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 4.68
+glow_strength = 1.21
+glow_blend_mode = 0
+glow_hdr_scale = 0.48
+
+[node name="Explosion" type="Node2D"]
+top_level = true
+script = ExtResource("1_8aaf6")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 60
+lifetime = 0.7
+one_shot = true
+explosiveness = 0.6
+lifetime_randomness = 0.21
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+damping_max = 3.0
+damping_curve = SubResource("Curve_57d3k")
+scale_amount_min = 4.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_ukg1x")
+color_ramp = SubResource("Gradient_trpq0")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1ji64")

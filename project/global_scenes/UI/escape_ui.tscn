@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch1004wqj36ks"]
+
+[ext_resource type="Theme" uid="uid://buvprqdtk5upv" path="res://themes/main_ui_theme.tres" id="1_0qruf"]
+[ext_resource type="Script" path="res://global_scenes/Asset/escape_ui.gd" id="1_n64bv"]
+[ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="1_wofk2"]
+[ext_resource type="PackedScene" uid="uid://xpd26s8dm5g5" path="res://global_scenes/UI/confirm_layer.tscn" id="3_c8e7o"]
+
+[node name="Escape UI" type="CanvasLayer"]
+script = ExtResource("1_n64bv")
+
+[node name="Control" type="Control" parent="."]
+top_level = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeaveButton" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -72.0
+offset_right = 175.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0qruf")
+theme_override_fonts/font = ExtResource("1_wofk2")
+theme_override_font_sizes/font_size = 24
+text = "Main Menu"
+
+[node name="RestartButton" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = 14.0
+offset_right = 175.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0qruf")
+theme_override_fonts/font = ExtResource("1_wofk2")
+theme_override_font_sizes/font_size = 24
+text = "Restart Level"
+
+[node name="ConfirmLayer" parent="." instance=ExtResource("3_c8e7o")]
+layer = 2
+
+[connection signal="pressed" from="Control/LeaveButton" to="." method="_on_leave_button_pressed"]
+[connection signal="pressed" from="Control/RestartButton" to="." method="_on_restart_button_pressed"]

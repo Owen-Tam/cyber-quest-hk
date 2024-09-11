@@ -1,0 +1,14 @@
+join malwaremaster center
+malwaremaster: Hello there, Tim.
+malwaremaster: I'm surprised that you've managed to cleanse so much Malware Blight in such a short period of time.
+malwaremaster: But your efforts are futile. My power has become so powerful that I control the gateways in all of Cyberia.
+cyberguardian: Wait what..?
+malwaremaster: You are correct. My Malware Blight has corrupted the realm to its deepest core.
+malwaremaster: Tim cannot possibly escape while my power is over the five worlds; and you cannot possibly defeat me.
+cyberguardian: You’re bluffing, Malwaremaster! Tim has the skills to fight back, and we won’t let you win.
+malwaremaster: You think your little heroics can save you? The moment you stepped into my domain, you became part of my game.
+malwaremaster: Let's see how you fend off against Confusion Cascade.
+- Confusion Cascade? What are you talking about?
+malwaremaster: It’s simple, really. I’ll bombard you with distractions in the form of true or false questions. Let’s see how well you can think under pressure!
+[signal arg="exit_malwaremaster"]
+leave malwaremaster

@@ -1,0 +1,39 @@
+join cyberguardian center
+cyberguardian: Nice work, Tim! We did it!
+cyberguardian: At least we know that Malware Blight can be removed with the combination of our powers!
+cyberguardian: As you gain more knowledge of cybersecurity, you'll only become more powerful!
+cyberguardian: It would be unfair of me to ask of you to stay here to restore Cyberia with me though...
+- I don't know how to leave the realm actually.
+cyberguardian: Oh? That's scary! Perhaps someone in the five worlds of Cyberia would know how to leave...
+cyberguardian: To travel between worlds, we must restore the portal found at the edge of the world!
+cyberguardian: We're just going to have to make our way there slowly and steadily by teaching you more about cybersecurity then!
+- What world are we in right now?
+cyberguardian: We're in the first world of the five; This is the world where personal information is kept.
+cyberguardian: Malware Blight has been running rampant here unfortunately. That may be because people in the real world rarely keep their personal information safe enough.
+- What do you mean by personal information?
+cyberguardian: Personal information is like your secret treasure! It includes things like your name, where you live, your phone number, and even your favorite games. We need to keep this treasure safe!
+cyberguardian: Let me test you: which of the following can be categorized as personal information?
+- Your phone number
+- Your address
+- Your email
+- Your class and class number
+cyberguardian: You're right! Actually that was a trick question; All those are personal information!
+- Why shouldn’t I share my personal information online?
+cyberguardian: Great question! Sharing personal information online can be risky.
+cyberguardian: Imagine if a stranger found out your address and showed up at your house — that would be scary, right?
+cyberguardian: It could also lead to someone pretending to be you and getting into trouble or stealing your stuff!
+- Are there any examples of this happening?
+cyberguardian: In April 2024, a woman fraudulantly scammed five victims out of over 6 million dollars!
+cyberguardian: The victims only trusted her because she knew their personal information, such as their full names, addresses, phone numbers etc.
+cyberguardian: It's suspected that the victims revealed such information somewhere online before, and the scammer utilized that to gain their trust. 
+- Well what if a website asks for my personal information?
+cyberguardian: That's why we need to be able to distinguish who we share information with.
+cyberguardian: As a rule of thumb, you should avoid sharing sensitive personal information that can be used to identify you easily. Examples are
+- Your full name
+- Your student ID
+- Your phone number
+- Your age
+cyberguardian: That's right! Avoid sharing information like that if it's something that the receiver doesn't need to know.
+cyberguardian: Now that you know more about cybersecurity, let's deal with that patch of Malware Blight over there.
+[signal arg="exit_cyberguardian"]
+leave cyberguardian

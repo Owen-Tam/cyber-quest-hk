@@ -1,0 +1,31 @@
+join cyberguardian center
+cyberguardian: We make a great team! We're nearly there at the portal.
+cyberguardian: While we almost know everything about personal information in cybersecurity, there are scenarios where information needs to be shared.
+cyberguardian: Some personal information are less sensitive, like your favorite colour, or your favourite star! 
+cyberguardian: But if you're inputting key information like your phone number or class and class number, you need to be on extra high alert!
+cyberguardian: Which of these scenarios should you share your home address?
+- A form asking for your details that you know is from the school
+	cyberguardian: Correct. You should generally be safe given that you know you're giving the information to someone you trust, such as the school. We'll discuss phishing sites later on.
+- An in-game friend asking for your name
+	cyberguardian: Now, that would be dangerous. You don't know who that is and what they will do with your full name.
+	cyberguardian: They could be trying to get your full name so that they can impersonate you.
+- A website asking you to put your name in for registering an account
+	cyberguardian: Now, that would be dangerous. You don't know who that is and what they will do with your full name.
+	cyberguardian: They could be trying to get your full name so that they can impersonate you.
+cyberguardian: The most important tip here, is to always think it through before sharing personal information.
+cyberguardian: If a site asks for your favorite color, that’s okay, but if it asks for your address or phone number, say "No thanks!"
+cyberguardian: Remember, if you have any doubts about whether you should share your personal information, don't hesitate to approach your teachers, parents or guardian to ask for advice!
+unknown: Well, well well. Looks who's here!
+unknown: Cyberguardian...
+unknown: and a player? Now that's interesting...
+- Who is this? 
+unknown: Player, I can grant you a wish. What do you want? 
+- I want to escape Cyberia
+unknown: Sure I'll get that done it a second...
+unknown: HA! Just kidding!
+unknown: My malware blight has corrupted Cyberia already. You cannot leave.
+cyberguardian: Oh no...
+cyberguardian: Your corruption of Cyberia stops today, Malware Master!
+cyberguardian: Quick, Tim! Go and restore that piece of Malware Blight!
+[signal arg="exit_cyberguardian"]
+leave cyberguardian

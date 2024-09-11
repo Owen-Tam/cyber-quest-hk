@@ -1,0 +1,127 @@
+[
+	[
+	 {
+		"question": "What is the main goal of cybersecurity?",
+		"answers": [
+		  "To improve internet speed",
+		  "To protect systems and data from cyber threats",
+		  "To enhance user experience on websites",
+		  "To reduce the cost of technology"
+		],
+		"correctIndex": 2
+	  },
+	  {
+		"question": "How can strong cybersecurity practices impact personal safety?",
+		"answers": [
+		  "By preventing data breaches and identity theft",
+		  "By making devices run faster",
+		  "By reducing the need for backups",
+		  "By simplifying software updates"
+		],
+		"correctIndex": 1
+	  },
+	  {
+		"question": "What can happen if cybersecurity measures are ignored?",
+		"answers": [
+		  "Improved online reputation",
+		  "Enhanced innovation in technology",
+		  "Increased risk of cyber attacks and data loss",
+		  "Better collaboration among teams"
+		],
+		"correctIndex": 3
+	  },
+		{
+		"question": "Why is cybersecurity important for businesses?",
+		"answers": [
+		  "It helps in marketing strategies",
+		  "It protects customer data and maintains trust",
+		  "It increases employee productivity",
+		  "It reduces the need for customer service"
+		],
+		"correctIndex": 2
+		},
+	],
+	[
+	  {
+	"question": "What is personal information?",
+	"answers": [
+	  "Your favorite color and hobbies",
+	  "The games you like to play",
+	  "The food you enjoy",
+	 "Your name, address, and phone number"
+	],
+	"correctIndex": 4
+  },
+  {
+	"question": "Why is it important to keep your personal information safe?",
+	"answers": [
+	  "To prevent strangers from finding you and causing trouble",
+	  "To win more games",
+	  "So you can share more things online",
+	  "To make new friends"
+	],
+	"correctIndex": 1
+  },
+  {
+	"question": "Which of these is safe to share online?",
+	"answers": [
+	  "Your home address",
+	  "Your favorite ice cream flavor",
+	  "Your phone number",
+	  "Your school name and address"
+	],
+	"correctIndex": 2
+  },
+  {
+	"question": "What should you do if a website asks for personal information?",
+	"answers": [
+	  "Ask a parent or guardian if it’s safe",
+	  "Share it right away",
+	  "Ignore the website",
+	  "Make up a fake name"
+	],
+	"correctIndex": 1
+  },
+	], 
+	[
+		{
+			"question": "When is it safe to share your personal information?",
+			"answers": [
+			  "When signing up for a trusted game or website with a parent’s help",
+			  "When a stranger asks for it in a chat",
+			  "When you see it on social media",
+			  "When you’re playing games with friends"
+			],
+			"correctIndex": 1
+		  },
+		  {
+			"question": "If a website you trust asks for your email to send updates, is it safe to share?",
+			"answers": [
+			  "Yes, if you're sure it's a website you and your parent know",
+			  "No, never share your email with anyone",
+			  "Yes, always share your email with anyone who asks",
+			  "No, it's better to keep it a secret"
+			],
+			"correctIndex": 1
+		  },
+		  {
+			"question": "What should you do if you’re unsure about sharing sensitive information?",
+			"answers": [
+			  "Share it anyway, just in case",
+			  "Ask a trusted adult for their advice",
+			  "Ignore the request and keep playing",
+			  "Tell your friends to share it instead"
+			],
+			"correctIndex": 2
+		  }, {
+			"question": "If a game asks for your birthday, when is it okay to share it?",
+			"answers": [
+			  "Only if you're playing with friends you trust",
+			  "Only if a parent says it's okay",
+			  "When you want to join a special event in the game",
+			  "Whenever you feel like it"
+			],
+			"correctIndex": 2
+		  },
+	]
+]

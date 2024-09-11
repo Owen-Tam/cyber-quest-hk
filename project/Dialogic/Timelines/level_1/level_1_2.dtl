@@ -1,0 +1,49 @@
+join unknown center
+unknown: Huh? Someone?
+unknown: Woah you really are a player!
+unknown: What's your name?
+- Hold up, hold up. Who are you?
+unknown: How rude of me! Sorry about that. I'm known in Cyberia as the Cyberguardian!
+cyberguardian: I protect the realm from bad things! Well, I used to...
+- What on earth is Cyberia??
+cyberguardian: My bad. Cyberia is the realm that exists in the cyberspace. We're in the first of its five worlds right now.
+cyberguardian: Right now, the realm exists within computer networks, websites and more.
+cyberguardian: Speaking of which... how did you arrive here
+- (I should tell cyberguardian how I got here; they might be able to help me escape)
+cyberguardian: Wow, you really are a real player! We've haven't had any players join in
+cyberguardian: ...
+cyberguardian: a very long time that is.
+cyberguardian: The realm used to be a lot more friendly...
+- What happened?
+cyberguardian: Well, Cyberia mirrors the cybersecurity situation in the real world.
+- What's cybersecurity?
+	cyberguardian: Cybersecurity is the set of practices and technologies we use to protect our realm from threats and attacks. Just like in your world, we have to guard against malicious entities that want to steal data or disrupt our systems.
+	- Why is cybersecurity important?
+	cyberguardian: Well, without strong cybersecurity, our data can be stolen, corrupted, or destroyed. It’s about protecting our identities, our secrets, and even our way of life.
+	cyberguardian: Imagine if someone can stole your school email account and started sending emails in your name! or worse, someone steals a bank account and spends money on it!
+	cyberguardian: We usually call these people hackers or cybercriminals.
+	cyberguardian: Cybersecurity experts work constantly to make sure that this doesn't happen, but it also depends a lot on people!
+	cyberguardian: If everyone knew how to defend their digital assets properly, cybercriminals wouldn't be able to do anything against us!
+- I know what cybersecurity is
+cyberguardian: When people are well aware of cybersecurity and safeguard themselves, the realm is great!
+- So when people don't...
+cyberguardian: Yeah. Things become bad. Very bad.
+cyberguardian: but things were fine just a while back before Malware Master suddenly became much stronger.
+cyberguardian: He's the mysterious red figure who's been spreading what we call "Malware Blight" all around cyberealm
+- What's Malware Blight?
+cyberguardian: That's the disgusting, gooey and red things that you see on the ground.
+cyberguardian: I don't know how, but he was able to overpower my protective magic and spread Malware Blight everywhere...
+cyberguardian: Since then, I've been growing weaker and weaker, unable to stop him. I can't even cleanse that little part of malware blight over there.
+cyberguardian: If I continue to grow weaker, I'll soon be taken by the Malware Blight along with Cyberia...
+- Oh no!
+cyberguardian: Yeah that would be really bad. I've been thinking and thinking...
+cyberguardian: but I have no idea how to stop the Malware Blight anymore.
+- Can I help?
+cyberguardian: wait.. WAIT...
+cyberguardian: You might be able to help!
+cyberguardian: Remember what I told you about Cyberia reflecting the cybersecurity knowledge and skills of real people?
+- Yeah..?
+cyberguardian: Well, you're a real person! Together, we might have the power to cleanse Malware Blight!
+cyberguardian: Let's try to cleanse that patch of Malware Blight to the right. Just walk over there and accept the challenge.
+[signal arg="exit_cyberguardian"]
+leave

@@ -1,0 +1,10 @@
+join cyberguardian center
+malwaremaster: This is impossible! You... you weakened me by purifying my malware blight! Impossible!
+cyberguardian: Wow! Look at him run!
+cyberguardian: Turns out learning about cybersecurity really makes your abilities skyrocket; You just blocked all of Malware Master's attacks!
+cyberguardian: But he also revealed something very important...
+- I need to remove all his Malware Blight to return to the real world
+cyberguardian: Yeah... but that's fine! I'm with you! Together, we can finally restore Cyberia!
+cyberguardian: Enter the portal on your left to move to the next world. Hurry! We've got to stop Malware Master from wreaking any more havoc!
+[signal arg="exit_cyberguardian"]
+leave cyberguardian

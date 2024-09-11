@@ -1,0 +1,10 @@
+join cybertim center
+cybertim: Ugh... where am I...
+cybertim: The last thing I remember...
+cybertim: I was going on a web game called... cyberquest..?
+cybertim: Now it seems that I'm in the game itself!
+cybertim: I need to get out of here!
+cybertim: but how...
+cybertim: (I should explore where I am)
+[signal arg="exit_beginning"]
+leave cybertim

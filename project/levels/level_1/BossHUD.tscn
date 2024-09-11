@@ -1,0 +1,290 @@
+[gd_scene load_steps=15 format=3 uid="uid://db7jfhd0cmlc1"]
+
+[ext_resource type="Script" path="res://levels/level_1/BossHUD.gd" id="1_h1bs5"]
+[ext_resource type="Texture2D" uid="uid://flu57ugipbh3" path="res://Assets/UI/ui.png" id="1_wgwur"]
+[ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="2_fmexr"]
+[ext_resource type="Theme" uid="uid://d1v3fjwrmfl25" path="res://themes/confirm_theme.tres" id="4_exv05"]
+[ext_resource type="Texture2D" uid="uid://vb38pxbeel3s" path="res://Assets/Texture/timer_icon.png" id="5_tvlmj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17i15"]
+bg_color = Color(0.2904, 0.595027, 0.88, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_umrsw"]
+bg_color = Color(0.2475, 0.507125, 0.75, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5e61t"]
+bg_color = Color(0.2666, 0.289023, 0.31, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tut1u"]
+bg_color = Color(0.88, 0.3344, 0.398053, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1w7t0"]
+bg_color = Color(0.67, 0.2546, 0.303063, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_duapd"]
+bg_color = Color(0.309804, 0.266667, 0.27451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yd4jw"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 0.843137)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxkba"]
+bg_color = Color(0.165656, 0.165656, 0.165656, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sotfq"]
+bg_color = Color(1, 0.392157, 0, 1)
+
+[node name="BossHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h1bs5")
+
+[node name="Ui" type="Sprite2D" parent="."]
+position = Vector2(587, 341)
+texture = ExtResource("1_wgwur")
+
+[node name="Objective_label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+offset_left = 219.0
+offset_top = 104.0
+offset_right = 934.0
+offset_bottom = 143.0
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 16
+text = "Objective:  Distinguish whether Malware Master's statements are TRUE or FALSE under the time limit"
+autowrap_mode = 2
+
+[node name="start_button" type="Button" parent="."]
+visible = false
+layout_mode = 1
+offset_left = 497.0
+offset_top = 328.0
+offset_right = 699.0
+offset_bottom = 378.0
+theme = ExtResource("4_exv05")
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 16
+text = "Start"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="Q&A_UI" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -38.0
+offset_right = 2.0
+offset_bottom = 40.0
+
+[node name="TimerControl" type="Control" parent="Q&A_UI"]
+anchors_preset = 0
+offset_top = -18.0
+offset_right = 40.0
+offset_bottom = 22.0
+
+[node name="ColorRect" type="ColorRect" parent="Q&A_UI/TimerControl"]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 103.0
+offset_right = 580.0
+offset_bottom = 143.0
+scale = Vector2(3.92, 1.38783)
+color = Color(0.176, 0.197267, 0.22, 1)
+
+[node name="TimerIcon" type="Sprite2D" parent="Q&A_UI/TimerControl"]
+position = Vector2(560.5, 130)
+scale = Vector2(1.3125, 1.3125)
+texture = ExtResource("5_tvlmj")
+
+[node name="time_left_label" type="Label" parent="Q&A_UI/TimerControl"]
+layout_mode = 0
+offset_left = 580.5
+offset_top = 123.0
+offset_right = 710.5
+offset_bottom = 146.0
+theme_override_fonts/font = ExtResource("2_fmexr")
+text = "Time left:"
+
+[node name="timer_label" type="RichTextLabel" parent="Q&A_UI/TimerControl"]
+layout_mode = 0
+offset_left = 681.0
+offset_top = 123.0
+offset_right = 713.0
+offset_bottom = 143.0
+theme_override_fonts/normal_font = ExtResource("2_fmexr")
+theme_override_font_sizes/normal_font_size = 16
+text = "10s"
+
+[node name="ColorRect" type="ColorRect" parent="Q&A_UI"]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 157.0
+offset_right = 444.0
+offset_bottom = 421.0
+scale = Vector2(3.92, 1.38783)
+color = Color(0.176, 0.197267, 0.22, 1)
+
+[node name="Statement_label" type="Label" parent="Q&A_UI"]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 185.0
+offset_right = 968.0
+offset_bottom = 260.0
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 16
+text = "Statement:
+Your unofficial English first name e.g. Owen is a piece of personal information"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="true_button" type="Button" parent="Q&A_UI"]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 323.0
+offset_right = 623.0
+offset_bottom = 523.0
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_17i15")
+theme_override_styles/hover = SubResource("StyleBoxFlat_umrsw")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_5e61t")
+text = "TRUE"
+
+[node name="false_button" type="Button" parent="Q&A_UI"]
+layout_mode = 0
+offset_left = 623.0
+offset_top = 323.0
+offset_right = 989.0
+offset_bottom = 523.0
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_tut1u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1w7t0")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_duapd")
+text = "FALSE"
+
+[node name="explanation_label" type="Label" parent="Q&A_UI"]
+layout_mode = 0
+offset_left = 301.0
+offset_top = 241.0
+offset_right = 951.0
+offset_bottom = 264.0
+theme_override_colors/font_color = Color(0.91, 0.3458, 0.3458, 1)
+theme_override_fonts/font = ExtResource("2_fmexr")
+text = "Correct! This is an explanation of the question"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="next_button" type="Button" parent="Q&A_UI"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 96.0
+offset_right = 723.0
+offset_bottom = 131.0
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yd4jw")
+text = "Next Question"
+
+[node name="ProgressBar" type="ProgressBar" parent="Q&A_UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.393
+anchor_right = 0.393
+offset_left = 372.28
+offset_top = 560.0
+offset_right = 842.28
+offset_bottom = 601.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_bxkba")
+theme_override_styles/fill = SubResource("StyleBoxFlat_sotfq")
+max_value = 8.0
+step = 1.0
+value = 8.0
+show_percentage = false
+
+[node name="HealthStatusLabel" type="Label" parent="Q&A_UI/ProgressBar"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 28.0
+offset_top = -8.5
+offset_right = 128.0
+offset_bottom = 14.5
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_fmexr")
+text = "Health"
+
+[node name="Completed_UI" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="leave_button" type="Button" parent="Completed_UI"]
+offset_left = 497.0
+offset_top = 362.0
+offset_right = 699.0
+offset_bottom = 412.0
+theme = ExtResource("4_exv05")
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 16
+text = "Leave"
+
+[node name="CompletedText" type="Label" parent="Completed_UI"]
+offset_left = 139.0
+offset_top = 285.0
+offset_right = 1073.0
+offset_bottom = 321.0
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 32
+text = "You've blocked Malware Master's attacks"
+horizontal_alignment = 1
+
+[node name="Failed_UI" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="failed_button" type="Button" parent="Failed_UI"]
+offset_left = 497.0
+offset_top = 381.0
+offset_right = 699.0
+offset_bottom = 431.0
+theme = ExtResource("4_exv05")
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 16
+text = "Try again later"
+
+[node name="FailedText" type="Label" parent="Failed_UI"]
+offset_left = 139.0
+offset_top = 285.0
+offset_right = 1073.0
+offset_bottom = 360.0
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 32
+text = "Malware Master stole all your personal information..."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Q&A_UI/true_button" to="." method="_on_true_button_pressed"]
+[connection signal="pressed" from="Q&A_UI/false_button" to="." method="_on_false_button_pressed"]
+[connection signal="pressed" from="Completed_UI/leave_button" to="." method="_on_leave_button_pressed"]
+[connection signal="pressed" from="Failed_UI/failed_button" to="." method="_on_failed_button_pressed"]

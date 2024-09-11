@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="Cyber Quest Hk"
-run/main_scene="res://main.tscn"
+run/main_scene="res://main_menu/main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
@@ -24,14 +23,21 @@ global="*res://global.gd"
 
 directories/dch_directory={
 "cyberguardian": "res://Dialogic/Characters/cyberguardian.dch",
-"cybertim": "res://Assets/Characters/cybertim.dch",
-"malwaremaster": "res://Dialogic/Characters/malwaremaster.dch"
+"cybertim": "res://Dialogic/Characters/cybertim.dch",
+"malwaremaster": "res://Dialogic/Characters/malwaremaster.dch",
+"unknown": "res://Dialogic/Characters/unknown.dch"
 }
 directories/dtl_directory={
-"password_basics": "res://Dialogic/Characters/password_basics.dtl",
-"password_boss": "res://Dialogic/Characters/password_boss.dtl",
-"password_complete": "res://Dialogic/Characters/password_complete.dtl",
-"password_safeguard": "res://Dialogic/Characters/password_safeguard.dtl"
+"level_1_1": "res://Dialogic/Timelines/level_1/level_1_1.dtl",
+"level_1_2": "res://Dialogic/Timelines/level_1/level_1_2.dtl",
+"level_1_3": "res://Dialogic/Timelines/level_1/level_1_3.dtl",
+"level_1_4": "res://Dialogic/Timelines/level_1/level_1_4.dtl",
+"level_1_boss": "res://Dialogic/Timelines/level_1/level_1_boss.dtl",
+"level_1_complete": "res://Dialogic/Timelines/level_1/level_1_complete.dtl",
+"level_2_1": "res://Dialogic/Timelines/level_2/level_2_1.dtl",
+"level_2_2": "res://Dialogic/Timelines/level_2/level_2_2.dtl",
+"level_2_boss": "res://Dialogic/Timelines/level_2/level_2_boss.dtl",
+"level_2_complete": "res://Dialogic/Timelines/level_2/level_2_complete.dtl"
 }
 variables={}
 extensions_folder="res://addons/dialogic_additions"
