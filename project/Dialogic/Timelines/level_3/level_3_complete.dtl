@@ -1,0 +1,5 @@
+join cyberguardian center
+cyberguardian: Phew! Seems like... Malware Master is heading to the fourth realm. Conveniently enough, they've also shown us where the portal is!
+cyberguardian: Let's not waste any time! We can't let Malware Master use his weapon and destroy Cyberia. Enter the portal on the left now!
+[signal arg="exit_cyberguardian"]
+leave cyberguardian

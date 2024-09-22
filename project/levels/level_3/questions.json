@@ -1,0 +1,86 @@
+[
+	[
+	  {
+			"question": "What is cyberbullying?",
+			"answers": [
+				"Using social media to share funny memes",
+				"Online harassment or intimidation through digital platforms",
+				"Making new friends on the internet",
+				"Posting positive comments about others"
+			],
+			"correctIndex": 2
+		},
+		{
+			"question": "Which of the following is an example of cyberbullying?",
+			"answers": [
+				"Sharing a funny video with friends",
+				"Sending mean messages to someone on social media",
+				"Complimenting someone’s photo",
+				"Joining a group chat to discuss hobbies"
+			],
+			"correctIndex": 2
+		},
+		{
+			"question": "What should you do if you witness cyberbullying?",
+			"answers": [
+				"Ignore it and hope it stops",
+				"Join in and make fun of the person being bullied",
+				"Report it to a trusted adult or the platform",
+				"Post a mean comment to defend the bully"
+			],
+			"correctIndex": 3
+		},
+		{
+			"question": "Why is it important to talk to someone if you are being cyberbullied?",
+			"answers": [
+				"Because it can make you feel better and get support",
+				"Because it will make the bullying worse",
+				"Because no one will care about your problems",
+				"Because it’s easier to handle it alone"
+			],
+			"correctIndex": 1
+		}
+	],
+	[
+	  {
+			"question": "What is a safe practice when sharing photos on social media?",
+			"answers": [
+				"Post anything without thinking",
+				"Share your location at all times",
+				"Use filters to make it look better",
+				"Check if there are any identifiable landmarks in the background",
+			],
+			"correctIndex": 4
+		},
+		{
+			"question": "How can you protect your personal information on social media?",
+			"answers": [
+				"By sharing everything with everyone",
+				"By ignoring privacy settings altogether",
+				"By making your account private and adjusting your settings",
+				"By only posting at night"
+			],
+			"correctIndex": 3
+		},
+		{
+			"question": "Why is it important to check your privacy settings?",
+			"answers": [
+				"To control who can see your information and posts",
+				"To see how many followers you have",
+				"To make your profile look cooler",
+				"To get more likes on your photos"
+			],
+			"correctIndex": 1
+		},
+		{
+			"question": "What is a digital footprint?",
+			"answers": [
+				"The amount of data stored on your computer's hard drive",
+				"The trail of data you leave behind when you use the internet",
+				"The number of social media accounts you have",
+				"The total time spent online each day"
+			],
+			"correctIndex": 2
+		}
+	]
+]

@@ -1,0 +1,298 @@
+[gd_scene load_steps=12 format=3 uid="uid://bgiwjvmxr14ox"]
+
+[ext_resource type="Texture2D" uid="uid://flu57ugipbh3" path="res://Assets/UI/ui.png" id="1_wgwur"]
+[ext_resource type="Script" path="res://levels/level_3/BossHUD.gd" id="1_x0wvt"]
+[ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="2_fmexr"]
+[ext_resource type="Texture2D" uid="uid://cp6wcp4nm8qrm" path="res://levels/level_3/Post1.png" id="4_gjcj2"]
+[ext_resource type="Texture2D" uid="uid://bpme60mvbtgxp" path="res://levels/level_3/Post2.png" id="5_xbmxg"]
+[ext_resource type="Texture2D" uid="uid://bip5kswkinrjx" path="res://levels/level_3/Post3.png" id="6_55j1d"]
+[ext_resource type="Texture2D" uid="uid://cfq7h4xgbl2o5" path="res://levels/level_3/Post4.png" id="7_fxrxo"]
+[ext_resource type="Texture2D" uid="uid://bol3mw7mfygya" path="res://levels/level_3/Post5.png" id="8_rwm41"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_symw1"]
+bg_color = Color(0, 0, 0, 0.333333)
+corner_detail = 1
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vw22c"]
+bg_color = Color(0.165656, 0.165656, 0.165656, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_21kpp"]
+bg_color = Color(0.87, 0.37932, 0.0522, 1)
+
+[node name="BossHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_x0wvt")
+
+[node name="Ui" type="Sprite2D" parent="."]
+position = Vector2(645, 357)
+texture = ExtResource("1_wgwur")
+
+[node name="ObjectiveLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 89.0
+offset_right = 1054.0
+offset_bottom = 149.0
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_fmexr")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Objective: Identify the information potentially leaked in the social media posts to find Malware Master"
+
+[node name="ControlBox" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 683.0
+offset_top = 154.0
+offset_right = 1055.0
+offset_bottom = 565.0
+
+[node name="ColorRect" type="ColorRect" parent="ControlBox"]
+offset_left = -49.0
+offset_right = 372.0
+offset_bottom = 411.0
+color = Color(0.217514, 0.33376, 0.413499, 1)
+
+[node name="Label" type="Label" parent="ControlBox"]
+layout_mode = 0
+offset_left = -15.0
+offset_top = 21.0
+offset_right = 205.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("2_fmexr")
+text = "Leaked information:"
+
+[node name="CheckboxContainer" type="VBoxContainer" parent="ControlBox"]
+layout_mode = 0
+offset_left = -15.0
+offset_top = 56.0
+offset_right = 186.0
+offset_bottom = 242.0
+
+[node name="FullNameCheck" type="CheckBox" parent="ControlBox/CheckboxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fmexr")
+text = "Full Name"
+
+[node name="LocationCheck" type="CheckBox" parent="ControlBox/CheckboxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fmexr")
+text = "Location"
+
+[node name="SchoolCheck" type="CheckBox" parent="ControlBox/CheckboxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fmexr")
+text = "School"
+
+[node name="PhoneCheck" type="CheckBox" parent="ControlBox/CheckboxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fmexr")
+text = "Phone Number"
+
+[node name="BirthdayCheck" type="CheckBox" parent="ControlBox/CheckboxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fmexr")
+text = "Birthday"
+
+[node name="PhotoCheck" type="CheckBox" parent="ControlBox/CheckboxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fmexr")
+text = "Photo of Self"
+
+[node name="SubmitButton" type="Button" parent="ControlBox"]
+custom_minimum_size = Vector2(120, 0)
+offset_left = -15.0
+offset_top = 250.0
+offset_right = 105.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_symw1")
+text = "Submit"
+
+[node name="BottomText" type="Label" parent="ControlBox"]
+layout_mode = 0
+offset_left = -15.0
+offset_top = 306.0
+offset_right = 245.0
+offset_bottom = 392.0
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 16
+text = "Explanation:"
+autowrap_mode = 2
+
+[node name="SubmitButton2" type="Button" parent="ControlBox"]
+visible = false
+custom_minimum_size = Vector2(120, 0)
+offset_left = -15.0
+offset_top = 250.0
+offset_right = 105.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_symw1")
+text = "Next"
+
+[node name="Post" type="Control" parent="."]
+anchors_preset = 0
+offset_top = -28.0
+offset_right = 40.0
+offset_bottom = 12.0
+
+[node name="Post1" type="Sprite2D" parent="Post"]
+visible = false
+position = Vector2(437, 387)
+scale = Vector2(0.337566, 0.333333)
+texture = ExtResource("4_gjcj2")
+
+[node name="Post2" type="Sprite2D" parent="Post"]
+visible = false
+position = Vector2(437, 387)
+scale = Vector2(0.337831, 0.333582)
+texture = ExtResource("5_xbmxg")
+
+[node name="Post3" type="Sprite2D" parent="Post"]
+visible = false
+position = Vector2(437, 387)
+scale = Vector2(0.337566, 0.332522)
+texture = ExtResource("6_55j1d")
+
+[node name="Post4" type="Sprite2D" parent="Post"]
+position = Vector2(437, 387)
+scale = Vector2(0.338, 0.338)
+texture = ExtResource("7_fxrxo")
+
+[node name="Post5" type="Sprite2D" parent="Post"]
+visible = false
+position = Vector2(437, 387)
+scale = Vector2(0.337698, 0.3326)
+texture = ExtResource("8_rwm41")
+
+[node name="CompletedText" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -467.0
+offset_top = -54.0
+offset_right = 467.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 32
+text = "You've traced Malware Master"
+horizontal_alignment = 1
+
+[node name="LeaveButton" type="Button" parent="."]
+visible = false
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = 16.0
+offset_right = 60.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_symw1")
+text = "Leave"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -235.0
+offset_top = -128.0
+offset_right = 235.0
+offset_bottom = -87.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_vw22c")
+theme_override_styles/fill = SubResource("StyleBoxFlat_21kpp")
+max_value = 5.0
+step = 1.0
+value = 5.0
+show_percentage = false
+
+[node name="PurifyStatusLabel" type="Label" parent="ProgressBar"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 28.0
+offset_top = -8.5
+offset_right = 128.0
+offset_bottom = 14.5
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_fmexr")
+text = "Health"
+
+[node name="FailedText" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -467.0
+offset_top = -54.0
+offset_right = 467.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 32
+text = "You lost Malware Master"
+horizontal_alignment = 1
+
+[node name="FailedButton" type="Button" parent="."]
+visible = false
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = 16.0
+offset_right = 60.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
+theme_override_fonts/font = ExtResource("2_fmexr")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_symw1")
+text = "Try again"
+
+[connection signal="pressed" from="LeaveButton" to="." method="_on_leave_button_pressed"]

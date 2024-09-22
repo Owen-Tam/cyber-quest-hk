@@ -1,0 +1,487 @@
+[gd_scene load_steps=31 format=3 uid="uid://bkae77amxx8fy"]
+
+[ext_resource type="Script" path="res://levels/level_3/level_3.gd" id="1_r8pp0"]
+[ext_resource type="PackedScene" uid="uid://c8pvcmpbcn3nh" path="res://global_scenes/Asset/atmospheric_particles.tscn" id="2_ikvq8"]
+[ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="3_xxo3l"]
+[ext_resource type="Texture2D" uid="uid://bamb4anncbunx" path="res://Assets/Tiles/Individual/cc_2.png" id="4_owgf8"]
+[ext_resource type="Texture2D" uid="uid://da6jftsswx83r" path="res://Assets/Tiles/Individual/cc_1.png" id="5_bmhap"]
+[ext_resource type="Texture2D" uid="uid://ctlo2nv13hh5j" path="res://Assets/Tiles/Individual/ch_1.png" id="6_afdwb"]
+[ext_resource type="PackedScene" uid="uid://bpqsf3ndj1xhl" path="res://global_scenes/Asset/explosion.tscn" id="7_ybwuc"]
+[ext_resource type="Texture2D" uid="uid://c7hld0wwkyww5" path="res://Assets/Tiles/Individual/cr_1.png" id="8_peyx4"]
+[ext_resource type="PackedScene" uid="uid://duoyc7oh0whk3" path="res://player.tscn" id="9_3pyqr"]
+[ext_resource type="PackedScene" uid="uid://1dtxowdctfhd" path="res://global_scenes/Asset/tile_map.tscn" id="10_8lfxa"]
+[ext_resource type="PackedScene" uid="uid://xk82i8t1bcka" path="res://global_scenes/UI/mchud.tscn" id="11_tdusq"]
+[ext_resource type="PackedScene" uid="uid://bktkk5s5agwy4" path="res://global_scenes/Character/malwaremaster.tscn" id="12_80g52"]
+[ext_resource type="PackedScene" uid="uid://bgiwjvmxr14ox" path="res://levels/level_3/BossHUD.tscn" id="13_5s1n0"]
+[ext_resource type="PackedScene" uid="uid://mlfqomdmme5v" path="res://global_scenes/Character/cyberguardian.tscn" id="14_1rf8b"]
+[ext_resource type="PackedScene" uid="uid://xpd26s8dm5g5" path="res://global_scenes/UI/confirm_layer.tscn" id="15_5eyfx"]
+[ext_resource type="PackedScene" uid="uid://j6bxkhjmwff" path="res://global_scenes/Asset/portal.tscn" id="16_cil1s"]
+[ext_resource type="PackedScene" uid="uid://ch1004wqj36ks" path="res://global_scenes/UI/escape_ui.tscn" id="17_17tsw"]
+
+[sub_resource type="Animation" id="Animation_ok07m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_j1per"]
+resource_name = "clear_area_animation"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(21, 21, 21, 1), Color(21, 21, 21, 1), Color(21, 21, 21, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7m3yx"]
+_data = {
+"RESET": SubResource("Animation_ok07m"),
+"clear_area_animation": SubResource("Animation_j1per")
+}
+
+[sub_resource type="Animation" id="Animation_jwvf6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.529412)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MCHUD:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ir1a4"]
+resource_name = "mchud_appear_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.529412)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MCHUD:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pyg68"]
+_data = {
+"RESET": SubResource("Animation_jwvf6"),
+"mchud_appear_animation": SubResource("Animation_ir1a4")
+}
+
+[sub_resource type="Animation" id="Animation_1cesk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.529412)]
+}
+
+[sub_resource type="Animation" id="Animation_rmlfe"]
+resource_name = "bosshud_appear_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.529412)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q0yii"]
+_data = {
+"RESET": SubResource("Animation_1cesk"),
+"bosshud_appear_animation": SubResource("Animation_rmlfe")
+}
+
+[sub_resource type="Animation" id="Animation_cj5ov"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(265, -357)]
+}
+
+[sub_resource type="Animation" id="Animation_wni50"]
+resource_name = "camera_animation"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.5, 4.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(276, -357), Vector2(-312, -127)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Fade:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6, 0.9, 5.8, 6.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gfdmw"]
+resource_name = "fade_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_khix7"]
+_data = {
+"RESET": SubResource("Animation_cj5ov"),
+"camera_animation": SubResource("Animation_wni50"),
+"fade_animation": SubResource("Animation_gfdmw")
+}
+
+[node name="level_3" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_r8pp0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -972.0
+offset_top = -682.0
+offset_right = 1100.0
+offset_bottom = 1165.0
+color = Color(0.70987, 0.837801, 0.773993, 1)
+
+[node name="AtmosphericParticles" parent="." instance=ExtResource("2_ikvq8")]
+position = Vector2(0, -145)
+
+[node name="Area1" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area1"]
+root_node = NodePath("../corruptedBlocks/Cc2")
+libraries = {
+"": SubResource("AnimationLibrary_7m3yx")
+}
+
+[node name="Label" type="Label" parent="Area1"]
+top_level = true
+anchors_preset = -1
+anchor_left = -0.0373264
+anchor_top = -0.00462963
+anchor_right = -0.0373264
+anchor_bottom = -0.00462963
+offset_left = -335.222
+offset_top = -267.667
+offset_right = -199.222
+offset_bottom = -242.667
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_xxo3l")
+theme_override_font_sizes/font_size = 8
+text = "Press [F] to start challenge"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="corruptedBlocks" type="Node2D" parent="Area1"]
+y_sort_enabled = true
+position = Vector2(-186, -169)
+
+[node name="Cc2" type="Sprite2D" parent="Area1/corruptedBlocks"]
+position = Vector2(-83, -94)
+texture = ExtResource("4_owgf8")
+
+[node name="Cc1_1" type="Sprite2D" parent="Area1/corruptedBlocks"]
+position = Vector2(-83, -62)
+texture = ExtResource("5_bmhap")
+
+[node name="Cc3" type="Sprite2D" parent="Area1/corruptedBlocks"]
+position = Vector2(-115, -110)
+texture = ExtResource("5_bmhap")
+
+[node name="Cc1_2" type="Sprite2D" parent="Area1/corruptedBlocks"]
+position = Vector2(-115, -78)
+texture = ExtResource("5_bmhap")
+
+[node name="Cc1_3" type="Sprite2D" parent="Area1/corruptedBlocks"]
+position = Vector2(-179, -78)
+texture = ExtResource("5_bmhap")
+
+[node name="Cr1" type="Sprite2D" parent="Area1/corruptedBlocks"]
+position = Vector2(-147, -94)
+texture = ExtResource("8_peyx4")
+
+[node name="Explosion" parent="Area1" instance=ExtResource("7_ybwuc")]
+position = Vector2(-312, -271)
+
+[node name="Area2" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2"]
+root_node = NodePath("../corruptedBlocks/Cc2")
+libraries = {
+"": SubResource("AnimationLibrary_7m3yx")
+}
+
+[node name="Label" type="Label" parent="Area2"]
+top_level = true
+anchors_preset = -1
+anchor_left = -0.0373264
+anchor_top = -0.00462963
+anchor_right = -0.0373264
+anchor_bottom = -0.00462963
+offset_left = -56.2222
+offset_top = -339.667
+offset_right = 79.7778
+offset_bottom = -314.667
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_xxo3l")
+theme_override_font_sizes/font_size = 8
+text = "Press [F] to start challenge"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="corruptedBlocks" type="Node2D" parent="Area2"]
+y_sort_enabled = true
+position = Vector2(-186, -169)
+
+[node name="Cc2" type="Sprite2D" parent="Area2/corruptedBlocks"]
+position = Vector2(173, -126)
+texture = ExtResource("4_owgf8")
+
+[node name="Cc3" type="Sprite2D" parent="Area2/corruptedBlocks"]
+position = Vector2(141, -142)
+texture = ExtResource("5_bmhap")
+
+[node name="Cc1_2" type="Sprite2D" parent="Area2/corruptedBlocks"]
+position = Vector2(141, -174)
+texture = ExtResource("5_bmhap")
+
+[node name="Cc1_3" type="Sprite2D" parent="Area2/corruptedBlocks"]
+position = Vector2(205, -142)
+texture = ExtResource("5_bmhap")
+
+[node name="Ch1" type="Sprite2D" parent="Area2/corruptedBlocks"]
+position = Vector2(173, -158)
+texture = ExtResource("6_afdwb")
+
+[node name="Explosion" parent="Area2" instance=ExtResource("7_ybwuc")]
+position = Vector2(-22, -328)
+
+[node name="Player" parent="." instance=ExtResource("9_3pyqr")]
+position = Vector2(-321.5, -129.25)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(9, 7)
+zoom = Vector2(4, 4)
+position_smoothing_speed = 15.0
+
+[node name="TileMap" parent="." instance=ExtResource("10_8lfxa")]
+position = Vector2(-301, -127)
+layer_0/tile_data = PackedInt32Array(196607, 2, 0, -65538, 2, 0, 65534, 2, 0, 131070, 2, 0, 65535, 2, 0, 131071, 2, 0, 131072, 2, 0, 65536, 2, 0, 0, 2, 0, -1, 2, 0, -131074, 2, 0, -131073, 2, 0, -2, 2, 0, 196606, 2, 0, 1, 2, 0, -65537, 2, 0, -65539, 2, 0, -131075, 2, 0, -131076, 2, 0, -131077, 2, 0, -65541, 2, 0, -65540, 2, 0, -5, 2, 0, -4, 2, 0, -3, 2, 0, -65542, 2, 0, -196611, 2, 0, -196610, 2, 0, 65537, 2, 0, 131073, 2, 0, -196613, 262148, 0, -196612, 262148, 0, -262149, 262148, 0, -196614, 262148, 0, -262151, 2, 0, -327687, 2, 0, -327688, 2, 0, -327686, 2, 0, -393223, 2, 0, -393222, 2, 0, -458758, 2, 0, -458759, 2, 0, -524295, 2, 0, -524296, 2, 0, -458760, 2, 0, -524294, 2, 0, -458757, 2, 0, -524293, 2, 0, -524292, 2, 0, -589828, 2, 0, -589829, 2, 0, -589830, 2, 0, -589831, 2, 0, -655366, 2, 0, -655367, 2, 0, -262150, 262148, 0, -655364, 262148, 0, -655363, 262148, 0, -589827, 262148, 0, -524291, 2, 0, -589826, 262148, 0, -720898, 2, 0, -720897, 2, 0, -655361, 2, 0, -589825, 2, 0, -786432, 2, 0, -851968, 2, 0, -786433, 2, 0, -786434, 2, 0, -851970, 2, 0, -851969, 2, 0, -917505, 2, 0, -917506, 2, 0, -1048576, 65540, 0, -983040, 131076, 0, -983039, 4, 0, -917503, 4, 0, -983038, 4, 0, -1048574, 196612, 0, -1114110, 4, 0, -1179647, 4, 0, -1179648, 4, 0, -1114112, 65540, 0, -983041, 4, 0, -1048575, 65540, 0, -917504, 4, 0, -131078, 262148, 0, -655362, 262148, 0, -1114111, 4, 0)
+
+[node name="Spawn" type="Marker2D" parent="."]
+position = Vector2(-301, -114)
+
+[node name="Spawn" type="Marker2D" parent="Spawn"]
+position = Vector2(-407, -57)
+
+[node name="RespawnTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="MCLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="MCLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.529412)
+
+[node name="MCHUD" parent="MCLayer" instance=ExtResource("11_tdusq")]
+anchors_preset = -1
+anchor_left = 0.511
+anchor_top = 0.482
+anchor_right = 0.511
+anchor_bottom = 0.482
+offset_left = -616.8
+offset_top = -360.56
+offset_right = 587.88
+offset_bottom = 375.84
+pivot_offset = Vector2(615, 361)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MCLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_pyg68")
+}
+
+[node name="Malwaremaster" parent="." instance=ExtResource("12_80g52")]
+z_index = 1
+position = Vector2(285, -374)
+chosen_dialogue = "level_3_boss"
+
+[node name="BossLevelLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="BossLevelLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color(0, 0, 0, 0.529412)
+
+[node name="BossHUD" parent="BossLevelLayer" instance=ExtResource("13_5s1n0")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BossLevelLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_q0yii")
+}
+
+[node name="Cyberguardian 1" parent="." instance=ExtResource("14_1rf8b")]
+z_index = 1
+position = Vector2(-235, -184)
+chosen_dialogue = "level_3_1"
+
+[node name="Cyberguardian 2" parent="." instance=ExtResource("14_1rf8b")]
+visible = false
+z_index = 1
+position = Vector2(-209, -357)
+chosen_dialogue = "level_3_2"
+
+[node name="Cyberguardian 3" parent="." instance=ExtResource("14_1rf8b")]
+visible = false
+z_index = 1
+position = Vector2(309, -357)
+chosen_dialogue = "level_3_complete"
+
+[node name="ConfirmLayer_Next" parent="." instance=ExtResource("15_5eyfx")]
+
+[node name="ConfirmLayer" parent="." instance=ExtResource("15_5eyfx")]
+
+[node name="Portal" parent="." instance=ExtResource("16_cil1s")]
+z_index = 1
+position = Vector2(294, -390)
+
+[node name="CinematicCamera" type="Camera2D" parent="."]
+position = Vector2(265, -357)
+scale = Vector2(-16.5215, -1878.69)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CinematicCamera"]
+libraries = {
+"": SubResource("AnimationLibrary_khix7")
+}
+movie_quit_on_finish = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CinematicCamera"]
+
+[node name="Fade" type="ColorRect" parent="CinematicCamera/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Escape UI" parent="." instance=ExtResource("17_17tsw")]
+visible = false
+
+[connection signal="timeout" from="RespawnTimer" to="." method="respawn"]
+[connection signal="completedChallenge" from="MCLayer/MCHUD" to="." method="_on_mchud_completed_challenge"]
+[connection signal="completedBoss" from="BossLevelLayer/BossHUD" to="." method="_on_boss_hud_completed_boss"]
+[connection signal="finishedChat" from="Cyberguardian 1" to="." method="_on_cyberguardian_finished_chatting"]
+[connection signal="startedChat" from="Cyberguardian 1" to="." method="_on_cyberguardian_chatting"]
+[connection signal="finishedChat" from="Cyberguardian 2" to="." method="_on_cyberguardian_finished_chatting"]
+[connection signal="startedChat" from="Cyberguardian 2" to="." method="_on_cyberguardian_chatting"]
+[connection signal="finishedChat" from="Cyberguardian 3" to="." method="_on_cyberguardian_finished_chatting"]
+[connection signal="startedChat" from="Cyberguardian 3" to="." method="_on_cyberguardian_chatting"]
+[connection signal="entered_portal" from="Portal" to="." method="_on_portal_entered_portal"]
+[connection signal="restartGame" from="Escape UI" to="." method="_on_escape_ui_restart_game"]

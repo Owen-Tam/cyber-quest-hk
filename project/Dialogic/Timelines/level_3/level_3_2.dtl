@@ -1,0 +1,35 @@
+join cyberguardian center 
+cyberguardian: Great work! We're getting better at cleansing Malware Blight!
+cyberguardian: Cyberbullying is only one part of this realm though; A big part of social media is about individual users, and that leads to issues with personal information.
+- What do you mean?
+cyberguardian: Remember the first realm where we explored personal information security? Well social media is a breeding ground where you can easily reveal your personal information.
+- I need a quick recap of what personal information is
+	cyberguardian: Personal information is like your secret treasure! It consists of details such as your name, address, phone number, and even your favorite games. 
+	cyberguardian: A rule of thumb is to only reveal information that is absolutely needed, and not any more. Make sure to also verify where the information goes to!
+- Got it!
+cyberguardian: People don't usually notice what they put on social media. 
+cyberguardian: Sometimes, they share things without thinking, like pictures of their home that show too much. Guess what the issue that is likely to arise!
+- They may reveal their class number
+	cyberguardian: That's not too likely... The most likely problem is that it can make it easy for anyone to figure out where they live!
+- They may reveal the address and location of their home
+	cyberguardian: Exactly!
+- They may reveal their email
+	cyberguardian: That's not too likely... The most likely problem is that it can make it easy for anyone to figure out where they live!
+cyberguardian: For example, if there is a landmark that is recognizable outside your window, like a particular park or a building, it's not that difficult to guess where the photo is taken!
+cyberguardian: No matter what you do on the internet, you will leave digital footprints - trails of data that contain information about you and what you've done! We want to minimize that in the case of social media. 
+- So how do we use social media safely...
+cyberguardian: Always ask yourself: "Is this something I want everyone to see?" If not, it’s better to keep it private!
+cyberguardian: This is because it's extremely difficult to take things back from the internet, once you've posted it online!
+cyberguardian: Also, check your privacy settings and make sure you know who can see your posts and information. If your account is public, make sure that you don't reveal sensitive personal information - you never know who's looking at your photos and videos. 
+join malwaremaster center
+malwaremaster: You two are really trying to destroy what I have built, aren't you. 
+malwaremaster: All I want is to spread Malware Blight and make myself all powerful that's all
+cyberguardian: Well, Malwaremaster, we’re here to protect everyone from the dangers of the internet, including you!
+malwaremaster: Ha! You think you can stop me? I still control 3 realms, including this one! Time to put an end to this bout. 
+malwaremaster: I've prepared a superweapon in my base known as Chaos Infector, capable of covering all 5 realms with Malware Blight. There isn't anything you can do once I activate it. 
+cyberguardian: A superweapon? That sounds really dangerous! We can’t let you do that!
+malwaremaster: It just needs a bit more power and calibration. Then Cyberia will fall, just as the real world is consumed by malware. 
+leave malwaremaster
+cyberguardian: Malware Master is teleporting away! We can't let them activate the weapon! Quick, cleanse the Malware Blight and follow them!
+[signal arg="exit_cyberguardian"]
+leave cyberguardian

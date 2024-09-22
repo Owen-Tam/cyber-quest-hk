@@ -174,7 +174,7 @@ func _on_portal_entered_portal():
 		if res == 19:
 			print("NEXT LEVEL NOT FOUND")
 			global.loadMainWithLevels = true
-			get_tree().change_scene_to_file("res://main.tscn")
+			get_tree().change_scene_to_file("res://main_menu/main.tscn")
 	
 
 

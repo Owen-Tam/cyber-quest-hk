@@ -26,7 +26,7 @@ entries = {
 },
 "Malware Master": {
 "case_sensitive": false,
-"color": Color(0.558594, 0, 0, 1),
+"color": Color(0.78125, 0, 0, 1),
 "name": "Malware Master",
 "text": "He has been using his magic to corrupt Cyberia, yet nobody knows who he really is",
 "title": "Malware Master"

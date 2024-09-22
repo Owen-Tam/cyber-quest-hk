@@ -1,0 +1,16 @@
+join malwaremaster center
+malwaremaster: ARGH! Stop following me! I'll let you two have a taste of Malware Eclipse.
+cyberguardian: AH! I can't see!
+- What did you do!
+malwaremaster: You weren't prepared for my Malware Eclipse, were you? Now you're lost in the shadows!
+malwaremaster: But don't worry, as soon as I go, you'll regain your sight. Just think of it as a little vacation in darkness!
+cyberguardian: A vacation? More like a trap! Tim! Malware Master is doing this so that we can't follow them to the weapon!
+malwaremaster: I'll be off now! At least you guys will have a great view as I destroy Cyberia!
+leave malwaremaster
+cyberguardian: My view is back! But... Malware Master is gone. How will we find the weapon and stop them in time... He didn't even leave crumbs!
+cyberguardian: ...
+cyberguardian: Wait, what's this?
+cyberguardian: Seems that Malware Master has left a trail of digital footprints... of posts on social media! They seem to be from his childhood.
+cyberguardian: Ha! Seems like Malware Master has fallen into their own trap of revealing personal information online. Let's try to follow Malware Master's footprints to find where they've gone!
+[signal arg="exit_malwaremaster"]
+leave cyberguardian
