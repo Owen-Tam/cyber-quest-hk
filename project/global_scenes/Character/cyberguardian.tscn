@@ -11,7 +11,7 @@ height = 70.0
 
 [node name="Cyberguardian" type="Sprite2D"]
 texture = ExtResource("1_3wexv")
-hframes = 2
+hframes = 3
 script = ExtResource("2_7jghc")
 
 [node name="Shadow" type="Sprite2D" parent="."]

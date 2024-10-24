@@ -26,27 +26,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -613.54
+offset_left = -640.0
 offset_top = -360.0
-offset_right = 613.54
+offset_right = 640.0
 offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
-pivot_offset = Vector2(616, 360)
+pivot_offset = Vector2(640, 360)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_kr2yo")
 
 [node name="Ui" type="Sprite2D" parent="."]
-position = Vector2(595.242, 361)
+position = Vector2(637.866, 361)
 scale = Vector2(1.19934, 1.19934)
 texture = ExtResource("1_0yh6u")
 
 [node name="NextButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 949.16
+offset_left = 991.784
 offset_top = 54.0
-offset_right = 1064.16
+offset_right = 1106.78
 offset_bottom = 98.0
 theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
 theme_override_fonts/font = ExtResource("2_eny24")
@@ -56,17 +56,17 @@ text = "Next"
 
 [node name="Question_Box" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 136.242
+offset_left = 178.866
 offset_top = 117.0
-offset_right = 1063.24
+offset_right = 1105.86
 offset_bottom = 225.0
 color = Color(0.894118, 0.894118, 0.921569, 1)
 
 [node name="Question_Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 172.242
+offset_left = 214.866
 offset_top = 140.0
-offset_right = 1038.24
+offset_right = 1080.86
 offset_bottom = 209.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 8
@@ -77,24 +77,24 @@ autowrap_mode = 3
 
 [node name="Answer_Box_1" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 163.0
+offset_left = 205.624
 offset_top = 265.0
-offset_right = 578.0
+offset_right = 620.624
 offset_bottom = 393.0
 color = Color(0.894118, 0.894118, 0.921569, 1)
 
 [node name="Letter_Box_1" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 136.242
+offset_left = 178.866
 offset_top = 255.0
-offset_right = 176.242
+offset_right = 218.866
 offset_bottom = 295.0
 
 [node name="Letter_1" type="Label" parent="."]
 layout_mode = 0
-offset_left = 150.242
+offset_left = 192.866
 offset_top = 268.0
-offset_right = 164.242
+offset_right = 206.866
 offset_bottom = 286.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_eny24")
@@ -102,9 +102,9 @@ text = "A"
 
 [node name="Answer_Label_1" type="Label" parent="."]
 layout_mode = 0
-offset_left = 185.0
+offset_left = 227.624
 offset_top = 285.0
-offset_right = 553.0
+offset_right = 595.624
 offset_bottom = 373.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 2
@@ -116,31 +116,31 @@ autowrap_mode = 2
 [node name="Answer_Button_1" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 163.0
+offset_left = 205.624
 offset_top = 265.0
-offset_right = 578.0
+offset_right = 620.624
 offset_bottom = 393.0
 
 [node name="Answer_Box_2" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 647.758
+offset_left = 690.382
 offset_top = 265.0
-offset_right = 1062.76
+offset_right = 1105.38
 offset_bottom = 393.0
 color = Color(0.894118, 0.894118, 0.921569, 1)
 
 [node name="Letter_Box_2" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 621.0
+offset_left = 663.624
 offset_top = 255.0
-offset_right = 661.0
+offset_right = 703.624
 offset_bottom = 295.0
 
 [node name="Letter_2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 635.0
+offset_left = 677.624
 offset_top = 268.0
-offset_right = 649.0
+offset_right = 691.624
 offset_bottom = 286.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_eny24")
@@ -148,9 +148,9 @@ text = "B"
 
 [node name="Answer_Label_2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 669.758
+offset_left = 712.382
 offset_top = 285.0
-offset_right = 1037.76
+offset_right = 1080.38
 offset_bottom = 373.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 2
@@ -162,31 +162,31 @@ autowrap_mode = 2
 [node name="Answer_Button_2" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 647.758
+offset_left = 690.382
 offset_top = 265.0
-offset_right = 1062.76
+offset_right = 1105.38
 offset_bottom = 393.0
 
 [node name="Answer_Box_3" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 162.758
+offset_left = 205.382
 offset_top = 429.0
-offset_right = 577.758
+offset_right = 620.382
 offset_bottom = 557.0
 color = Color(0.894118, 0.894118, 0.921569, 1)
 
 [node name="Letter_Box_3" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 136.0
+offset_left = 178.624
 offset_top = 419.0
-offset_right = 176.0
+offset_right = 218.624
 offset_bottom = 459.0
 
 [node name="Letter_3" type="Label" parent="."]
 layout_mode = 0
-offset_left = 150.0
+offset_left = 192.624
 offset_top = 432.0
-offset_right = 164.0
+offset_right = 206.624
 offset_bottom = 450.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_eny24")
@@ -194,9 +194,9 @@ text = "C"
 
 [node name="Answer_Label_3" type="Label" parent="."]
 layout_mode = 0
-offset_left = 184.758
+offset_left = 227.382
 offset_top = 449.0
-offset_right = 552.758
+offset_right = 595.382
 offset_bottom = 537.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 2
@@ -208,31 +208,31 @@ autowrap_mode = 2
 [node name="Answer_Button_3" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 162.758
+offset_left = 205.382
 offset_top = 429.0
-offset_right = 577.758
+offset_right = 620.382
 offset_bottom = 557.0
 
 [node name="Answer_Box_4" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 647.758
+offset_left = 690.382
 offset_top = 429.0
-offset_right = 1062.76
+offset_right = 1105.38
 offset_bottom = 557.0
 color = Color(0.894118, 0.894118, 0.921569, 1)
 
 [node name="Letter_Box_4" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 621.0
+offset_left = 663.624
 offset_top = 419.0
-offset_right = 661.0
+offset_right = 703.624
 offset_bottom = 459.0
 
 [node name="Letter_4" type="Label" parent="."]
 layout_mode = 0
-offset_left = 635.0
+offset_left = 677.624
 offset_top = 432.0
-offset_right = 649.0
+offset_right = 691.624
 offset_bottom = 450.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_eny24")
@@ -240,9 +240,9 @@ text = "D"
 
 [node name="Answer_Label_4" type="Label" parent="."]
 layout_mode = 0
-offset_left = 669.758
+offset_left = 712.382
 offset_top = 449.0
-offset_right = 1037.76
+offset_right = 1080.38
 offset_bottom = 537.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 2
@@ -254,9 +254,9 @@ autowrap_mode = 2
 [node name="Answer_Button_4" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 647.758
+offset_left = 690.382
 offset_top = 429.0
-offset_right = 1062.76
+offset_right = 1105.38
 offset_bottom = 557.0
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
@@ -266,9 +266,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -316.54
+offset_left = -273.916
 offset_top = -116.0
-offset_right = 263.46
+offset_right = 306.084
 offset_bottom = -70.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -299,9 +299,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 30.0003
+offset_left = 72.6243
 offset_top = 19.9999
-offset_right = 30.0003
+offset_right = 72.6243
 offset_bottom = 19.9999
 grow_horizontal = 2
 grow_vertical = 2

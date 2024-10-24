@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxl75vo33xwsq"]
+[gd_scene load_steps=8 format=3 uid="uid://dxl75vo33xwsq"]
 
 [ext_resource type="Script" path="res://main_menu/levels_ui.gd" id="1_hk507"]
 [ext_resource type="Texture2D" uid="uid://c51oocax2853v" path="res://Assets/Texture/Chapter1.png" id="2_vfk5a"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://whjj2m1uhybg" path="res://Assets/Texture/Chapter2.png" id="4_ks31t"]
 [ext_resource type="Texture2D" uid="uid://bfrqk0bnl63p0" path="res://Assets/Texture/Chapter3.png" id="5_r1vlv"]
 [ext_resource type="Theme" uid="uid://buvprqdtk5upv" path="res://themes/main_ui_theme.tres" id="6_dav8j"]
+[ext_resource type="Texture2D" uid="uid://b3yklqvbkwgnb" path="res://Assets/Texture/Chapter 4.png" id="7_ige1l"]
 
 [node name="levels_ui" type="Control"]
 layout_mode = 3
@@ -45,7 +46,14 @@ scale = Vector2(0.424, 0.424)
 texture = ExtResource("5_r1vlv")
 script = ExtResource("3_6j7vu")
 
+[node name="Chapter4" type="Sprite2D" parent="."]
+position = Vector2(281, 678)
+scale = Vector2(0.424, 0.424)
+texture = ExtResource("7_ige1l")
+script = ExtResource("3_6j7vu")
+
 [connection signal="start_chapter" from="Chapter1" to="." method="_on_chapter_1_start_chapter"]
 [connection signal="start_chapter" from="Chapter2" to="." method="_on_chapter_2_start_chapter"]
 [connection signal="pressed" from="home_button" to="." method="_on_home_button_pressed"]
 [connection signal="start_chapter" from="Chapter3" to="." method="_on_chapter_3_start_chapter"]
+[connection signal="start_chapter" from="Chapter4" to="." method="_on_chapter_4_start_chapter"]

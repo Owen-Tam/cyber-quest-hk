@@ -1,0 +1,24 @@
+join cyberguardian center
+cyberguardian: Help...
+- Cyberguardian! Are you ok?
+cyberguardian: Malware Master was so cunning! He took all my powers.
+cyberguardian: Good thing you still had the will to resist him, or you would have been corrupted.
+You try to help Cyberguardian up, but your hands passed through them. 
+
+- What??
+cyberguardian: With my power taken, I am losing my form. Soon enough Malware Master will completely control my form. Look, signs of his corruption are already showing on me...
+cyberguardian: Malware Master also seeks to escape into the internet, to wreak even mre havoc on your world.
+cyberguardian: Sorry, Tim. I don't think we can do anything to stop Malware Master.
+- No! We can still fight!
+cyberguardian: How? You don't even know where he is!
+- Malware Master mentioned that they were going to the fifth world
+cyberguardian: The fifth world... it's our last chance to stop him. But the risks are... unimaginable. I can't bear the thought of you putting yourself in danger.
+- We need to stop Malware Master! If there is still a chance, we must take it!
+cyberguardian: Are you sure you're willing to take that chance? I don't know if I can protect you, or even myself, from Malware Master's wrath. This could be a suicide mission.
+- Together, we can do it!
+cyberguardian: You're right, Tim. If there's even the slightest chance of stopping Malware Master, then we have to take it. The fate of Cyberia, and the whole digital world, is at stake.
+cyberguardian: I'm grateful to have you by my side. Even with my powers diminished, together, we just might stand a chance against Malware Master.
+cyberguardian: What do you say? Shall we go give  Malware Master a piece of our mind?
+
+[signal arg="exit_cyberguardian"]
+leave cyberguardian

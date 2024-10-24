@@ -60,19 +60,6 @@ var questions = [
 ];
 
 const LIVES_NUM = 3
-func scramble_array(array: Array) -> Array:
-	var scrambled = array.duplicate()  # Duplicate the original array
-	var length = scrambled.size()
-	
-	for i in range(length):
-		# Get a random index
-		var random_index = randi() % length
-		# Swap elements
-		scrambled[i] = scrambled[random_index]
-		scrambled[random_index] = scrambled[i]
-		
-	return scrambled
-	
 	
 
 func startBossBattle():

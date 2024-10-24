@@ -1,0 +1,31 @@
+join malwaremaster center 
+malwaremaster: Hmm...
+cyberguardian: Well well well...
+malwaremaster: ...
+cyberguardian: We've finally got you, Malware Master! Tim and I will destroy your weapon, and restore peace to Cyberia!
+malwaremaster: ...
+cyberguardian: Malware Master..?
+malwaremaster: I've got you exactly where I want you to be. 
+cyberguardian: OUCH! AH!
+Cyberguardian falls to the ground in pain.
+- What.. What have you done?
+malwaremaster: I've had enough of you two interferring in my plans. There was no weapon. 
+cyberguardian: What..? You fooled us this whole time! I will stop...
+malwaremaster: And by walking into my trap, all your power is now mine. 
+malwaremaster: What does it feel, to have all your power stripped away from you, as you two have been doing to me. 
+cyberguardian: No...
+malwaremaster: As for you, Cybertim. Thank you. 
+- What??? 
+malwaremaster: If you had't brought Cyberguardian here, I wouldn't have known that they still had so much power within her. And now that power is mine.
+malwaremaster: But... your use is over. With the combination of both Cyberguardian's and my own power, I can send you back to the real world. 
+malwaremaster: I'll send you back. 
+- But.. Cyberguardian...
+malwaremaster: I am just one step away from controlling the entirety of Cyberia, and escape to the internet through the fifth world. There isn't anything you can do for Cyberguardian anyways.
+- Ok send me back!
+	malwaremaster: You really are a fool aren't you.
+- No! I will stay and fight!
+	malwaremaster: Very well. 
+malwaremaster: Your powers have grown so much I must take it as well. You will fall under my control. 
+malwaremaster: Face my true power. Shadow Lure!
+[signal arg="exit_malwaremaster"]
+leave malwaremaster

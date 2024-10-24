@@ -1,0 +1,126 @@
+[
+	[
+		{
+			"question": "What is a cyberattack?",
+			"answers": [
+				"A way to improve your internet speed",
+				"A method used to back up your data",
+				"When cyber criminals attempt to hack into your devices",
+				"A tool for enhancing online security"
+			],
+			"correctIndex": 3
+		},
+	  {
+		"question": "Which of the following is a characteristic of ransomware?",
+		"answers": [
+			"It encrypts files and asks for payment to unlock them",
+			"It enhances system performance",
+			"It is always free to use",
+			"It acts as a firewall against other malware"
+		],
+		"correctIndex": 1
+	},
+	{
+		"question": "What is the primary purpose of spyware?",
+		"answers": [
+			"To protect against unauthorized access",
+			"To provide software updates",
+			"To enhance internet connection speed",
+			"To monitor user activity and gather personal information",
+		],
+		"correctIndex": 4
+	},
+	{
+		"question": "How do botnets typically operate?",
+		"answers": [
+			"As independent devices with no central control",
+			"As defensive networks protecting users from attacks",
+			"As a collection of devices controlled remotely by hackers for malicious purposes",
+			"As standalone applications that run on user devices"
+		],
+		"correctIndex": 3
+	},
+	],
+	[
+	  {
+		"question": "How do hackers commonly impersonate trusted individuals in social engineering attacks?",
+		"answers": [
+			"By sending physical letters",
+			"By calling on the phone only",
+			"By creating secure websites",
+			"By using fake email addresses or accounts",
+		],
+		"correctIndex": 4
+	},
+	{
+		"question": "Which of the following is a sign of a phishing attempt?",
+		"answers": [
+			"Personal greetings and clear language",
+			"Urgent or threatening language creating panic",
+			"Requests for information in a secure manner",
+			"Links that match the official website exactly"
+		],
+		"correctIndex": 2
+	},
+	{
+		"question": "Which type of information are phishing attempts most likely to request?",
+		"answers": [
+			"Your favorite color and hobbies",
+			"Your social media handles",
+			"Your passwords or credit card numbers",
+			"Your preferences for ads"
+		],
+		"correctIndex": 3
+	},
+	{
+		"question": "What should you be cautious of in suspicious emails?",
+		"answers": [
+			"Embedded links or attachments that seem out of place",
+			"Detailed information about the sender",
+			"Well-known company logos",
+			"Clear instructions on how to respond"
+		],
+		"correctIndex": 1
+	}
+	],
+	[{
+	"question": "What is a potential risk of using free antivirus software?",
+	"answers": [
+		"It may provide overly aggressive protection",
+		"It usually requires a subscription for full features",
+		"It can inadvertently install additional malware",
+		"It has a faster scanning process than paid software"
+	],
+	"correctIndex": 3
+},
+{
+	"question": "Why is it important to perform a full system restore after a malware infection?",
+	"answers": [
+		"To ensure all traces of malware are eliminated",
+		"To speed up the computer’s performance",
+		"To recover lost files and data",
+		"To reinstall all applications and updates"
+	],
+	"correctIndex": 1
+},
+{
+	"question": "What might indicate that malware is present on your computer?",
+	"answers": [
+		"Regular software updates",
+		"Frequent system crashes or slow performance",
+		"Consistent battery life on laptops",
+		"Improved internet speed and performance"
+	],
+	"correctIndex": 2
+},
+{
+	"question": "What is a common method used by malware to spread within a local network?",
+	"answers": [
+		"Through secure file sharing settings",
+		"Using advanced encryption techniques",
+		"By exploiting network vulnerabilities",
+		"Via legitimate software updates"
+	],
+	"correctIndex": 3
+}]
+]

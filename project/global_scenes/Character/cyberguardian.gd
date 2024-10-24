@@ -5,10 +5,13 @@ signal finishedChat
 var player_in_area = false
 var is_chatting = false
 @export var chosen_dialogue = "password_basics"
+@export var state = "normal"
 
 
 func _ready():
 	Dialogic.signal_event.connect(DialogicSignal)
+	if (state == "weakened"):
+		self.frame = 1
 
 func _input(event):
 	if player_in_area and event.is_action_pressed("accept_dialogue") and !is_chatting:

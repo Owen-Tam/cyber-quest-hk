@@ -1,0 +1,39 @@
+cyberguardian: Great work, Tim!
+
+cyberguardian: Now that we know what malware is, how do hackers get the malware onto your computer? 
+
+cyberguardian: We commonly refer to Malware getting into your computer, as your computer getting infected, like a virus infecting your body and getting you sick. 
+
+cyberguardian: The most common trick that hackers use to infect your computer is phishing - a type of social engineering attack. Do you know what they are?
+
+- Yes
+	cyberguardian: Then you know how dangerous they are!
+
+- No
+	cyberguardian: Social engineering is when hackers use psychological tricks to get you to reveal private data or grant them access to your systems. 
+	cyberguardian: Cyberattackers might try to impersonate someone trustworthy, like an IT support technician or a coworker.
+
+cyberguardian: Phishing is when cyber criminals send fake emails, messages or websites that try to trick you into revealing sensitive information or downloading malware, just like fishing for your information.
+
+cyberguardian: They might pretend to be from a legitimate company or organization, like your bank or a government agency. The goal is to get you to click on a malicious link or attachment that will infect your device.
+
+- I won’t fall for them!
+	cyberguardian: Well, among the 7,752 reported by HKCERT last year, nearly half of the cases came from phishing!
+	cyberguardian: It seems like Hong Kong citizens are really prone to phishing attacks. 
+
+- That sounds really dangerous! How can I spot these phishing attempts?
+	cyberguardian: Never fear, Cyber Guardian is here to help! There are a few telltale signs to watch out for, like
+- Suspicious email addresses or domain names
+- Urgent or threatening language trying to create a sense of panic
+- Requests for sensitive info like passwords or credit card numbers
+- Embedded links or attachments that seem out of place
+
+cyberguardian: Yeah! Hackers commonly use small differences like replacing an “O” with a “0” in a link to fool you. It’s very easy to miss these signs if you’re not careful!
+
+cyberguardian: When scrolling through emails, you have to take note of whether they are intentionally creating a sense of urgency, and asking you for personal information. 
+
+cyberguardian: It's better to be safe than sorry in these cases. Be sure to let an adult know if you have any doubts about the validity of an email. 
+
+cyberguardian: Let’s deal with the Malware Blight besides us and catch up to Malware Master!
+[signal arg="exit_cyberguardian"]
+leave cyberguardian

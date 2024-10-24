@@ -1,0 +1,48 @@
+cyberguardian: Now that we’ve learned all about Malware and how it can infect our computers, what can we do to prevent our computers from that?
+
+cyberguardian: First and foremost, keeping your software up-to-date is crucial. 
+
+cyberguardian: Developers are constantly patching vulnerabilities that malware exploits, so make sure you install those updates as soon as they're available.
+
+cyberguardian: For example, if your game version is outdated, you might want to check if the update includes security patches! There could be vulnerabilities that the developer has patched…
+
+- !s there anything we should do actively to help with that?
+cyberguardian: Well, a strong antivirus and anti-malware suite is an absolute must-have! 
+
+cyberguardian: These programs are designed to detect and block all kinds of malicious code before it can infect your devices.
+
+cyberguardian: Let me test you; Should we download free anti-virus software?
+- Yes
+	cyberguardian: You probably shouldn’t! 
+- No
+	cyberguardian: You’re correct!
+
+cyberguardian: As the saying goes, there is no free lunch! 
+
+cyberguardian: Free anti-virus software might seem like a great option to safeguard your computer, but in reality, they're designed to infect your devices with all kinds of nasty malware that I mentioned.
+
+cyberguardian: To be safe, make sure the software is from a reputable cybersecurity provider, not an unknown source
+
+cyberguardian: Even when you’ve accidentally infected your computer and it becomes compromised, there are still some steps you can take, like disconnecting the computer from the local network. Guess why?
+- Malware lags the network
+	cyberguardian: That’s incorrect! Actually, malware can spread to other systems or devices on the same network
+- Malware can spread to other parts of the network
+	cyberguardian: Exactly! We don’t want that happening!
+- Malware provides an optimal internet connection
+	cyberguardian: That’s incorrect! Actually, malware can spread to other systems or devices on the same network
+cyberguardian: We can then use anti-virus software to scan and remove the immediate threat of the malware; It's important to be thorough - malware can be sneaky and well-hidden.
+
+cyberguardian: Once we've eliminated the immediate threat, you'll want to change all your account passwords, especially for any sensitive information like banking or personal files.
+
+cyberguardian: And I'd recommend doing a full system restore. 
+
+cyberguardian: That'll wipe your device clean and ensure there are no lingering traces of the malware. 
+
+- That seems like a lot of work!
+cyberguardian: Yeah… but it's the best way to truly get your system back to a healthy, secure state.
+cyberguardian: It’s best if you tell an adult or a teacher if you face a situation like that!
+.
+cyberguardian: Quick! Deal with the Malware Blight and we’ll reach Malware Master!
+
+[signal arg="exit_cyberguardian"]
+leave cyberguardian

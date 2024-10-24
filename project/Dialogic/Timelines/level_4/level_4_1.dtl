@@ -1,0 +1,30 @@
+cyberguardian: Hi Tim! 
+cyberguardian:Malware Master is right ahead of us, we need to catch up!
+cyberguardian: but it seems like they’ve planted tons of malware blight behind them. 
+
+cyberguardian: Let me give you the knowledge to navigate this world so we can cleanse the blight and get to them.
+cyberguardian: Welcome to the fourth world, the world of cyberattacks. This world is one of the scarier ones in Cyberia,  where tons of dangerous attacks and malware take place. 
+
+cyberguardian: Do you know what cyberattacks are?
+
+- Yes
+	cyberguardian: Great!
+- No
+	cyberguardian: A cyberattack is when cyber baddies try to hack into your digital devices and cause trouble! They could be trying to steal your personal information, freeze your computer, or even trap you in a virtual world like this one.
+cyberguardian: But there is so much more to cyberattacks than we normally consider.
+cyberguardian: A major type of cyberattack is Malware, a type of cyberattack where bad software is designed to infect your devices and wreak havoc. 
+cyberguardian: Malware can do all sorts of awful things - it can steal your personal info, slow down your devices, or even completely take over your systems. 
+- What do they look like 
+	cyberguardian: One common type of malware is ransomware - this malware will lock up your files and demand a ransom payment before unlocking them. Talk about a nightmare!
+cyberguardian: There's also spyware, which secretly monitors your activity and steals your private information. How dangerous do you think this is?
+- It’s not that bad, I don’t type anything that important…
+	cyberguardian: Spyware is very dangerous! 
+- It’s very dangerous!
+	cyberguardian: Exactly!
+cyberguardian: All that password defending we did in World 2 falls if hackers can just read what passwords you type into your accounts.
+cyberguardian: Whether it be your school email, or even your parents bank account, we definitely do not want hackers gaining control of those accounts, where they can impersonate you
+cyberguardian: And don't forget about botnets - those are networks of infected devices that hackers can control remotely. 
+cyberguardian: They can be used to spam others and cause large-scale damage to servers
+cyberguardian: Ok, we have to catch up to Malware Master. Let’s deal with the Malware Blight to our left with your new found knowledge.
+[signal arg="exit_cyberguardian"]
+leave cyberguardian

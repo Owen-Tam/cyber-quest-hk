@@ -383,7 +383,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.529412)
 
 [node name="MCHUD" parent="MCLayer" instance=ExtResource("11_tdusq")]
-anchors_preset = -1
 anchor_left = 0.511
 anchor_top = 0.482
 anchor_right = 0.511

@@ -1,0 +1,300 @@
+[gd_scene load_steps=13 format=3 uid="uid://ccy6saa6bqlq3"]
+
+[ext_resource type="Script" path="res://levels/level_4/BossHUD.gd" id="1_l4grj"]
+[ext_resource type="Texture2D" uid="uid://flu57ugipbh3" path="res://Assets/UI/ui.png" id="2_73qin"]
+[ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="3_goige"]
+[ext_resource type="Theme" uid="uid://dqy205buphvg3" path="res://themes/email.tres" id="4_5gbnk"]
+[ext_resource type="Texture2D" uid="uid://vb38pxbeel3s" path="res://Assets/Texture/timer_icon.png" id="5_nev3k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0l22"]
+bg_color = Color(0.290196, 0.596078, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cv3aj"]
+bg_color = Color(0.247059, 0.505882, 0.74902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i0jtr"]
+bg_color = Color(0.266667, 0.290196, 0.309804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03cpj"]
+bg_color = Color(0.878431, 0.333333, 0.4, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4n7ed"]
+bg_color = Color(0.670588, 0.254902, 0.301961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4so1l"]
+bg_color = Color(0.309804, 0.266667, 0.27451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_au2ak"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 0.843137)
+
+[node name="BossHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(960, 540)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_l4grj")
+
+[node name="Ui" type="Sprite2D" parent="."]
+position = Vector2(955.694, 527)
+scale = Vector2(1.199, 1.199)
+texture = ExtResource("2_73qin")
+
+[node name="CompletedText" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -467.0
+offset_top = -86.0
+offset_right = 467.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_goige")
+theme_override_font_sizes/font_size = 32
+text = "You've blocked Malware Master's attacks"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ObjectiveLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 542.694
+offset_top = 222.0
+offset_right = 1411.69
+offset_bottom = 279.0
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("3_goige")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Objective: Distinguish whether the incoming email is a phishing email or a legitimate one; 0/3 fails"
+
+[node name="Email_Control" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 16.899
+offset_right = 40.0
+offset_bottom = 56.899
+
+[node name="ColorRect" type="ColorRect" parent="Email_Control"]
+layout_mode = 0
+offset_left = 543.0
+offset_top = 331.0
+offset_right = 1412.0
+offset_bottom = 634.0
+color = Color(0.901961, 0.92549, 0.92549, 1)
+
+[node name="from_label" type="RichTextLabel" parent="Email_Control"]
+layout_mode = 0
+offset_left = 582.0
+offset_top = 389.0
+offset_right = 1159.0
+offset_bottom = 412.0
+theme = ExtResource("4_5gbnk")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_goige")
+bbcode_enabled = true
+text = "From: [color=FF6400][u]support@banksecure.com[/u][/color]"
+
+[node name="subject_label" type="RichTextLabel" parent="Email_Control"]
+layout_mode = 0
+offset_left = 582.0
+offset_top = 356.0
+offset_right = 1261.0
+offset_bottom = 379.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_goige")
+bbcode_enabled = true
+text = "Subject: Urgent: Verify Your Account!"
+
+[node name="body_label" type="RichTextLabel" parent="Email_Control"]
+layout_mode = 0
+offset_left = 582.0
+offset_top = 433.101
+offset_right = 1368.0
+offset_bottom = 610.101
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = ExtResource("3_goige")
+bbcode_enabled = true
+text = "Dear Valued Customer,
+We have detected unusual activity on your account. To prevent any unauthorized access, please verify your account information immediately by clicking the link below:
+[color=FF6400][u]Verify My Account[/u][/color]
+
+Thank you,
+Bank Secure Support"
+
+[node name="Button_Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 17.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="legit_button" type="Button" parent="Button_Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -417.0
+offset_top = 94.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_goige")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_w0l22")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cv3aj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i0jtr")
+text = "Legitimate"
+
+[node name="phish_button" type="Button" parent="Button_Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 94.0
+offset_right = 450.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_goige")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_03cpj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4n7ed")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4so1l")
+text = "Phishing"
+
+[node name="Timer_Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 29.0
+offset_top = -16.0
+offset_right = 69.0
+offset_bottom = 24.0
+
+[node name="ColorRect" type="ColorRect" parent="Timer_Control"]
+layout_mode = 0
+offset_left = 819.0
+offset_top = 291.0
+offset_right = 869.0
+offset_bottom = 331.0
+scale = Vector2(3.92, 1.38783)
+color = Color(0.176, 0.197267, 0.22, 1)
+
+[node name="TimerIcon" type="Sprite2D" parent="Timer_Control"]
+position = Vector2(849.5, 318)
+scale = Vector2(1.3125, 1.3125)
+texture = ExtResource("5_nev3k")
+
+[node name="time_left_label" type="Label" parent="Timer_Control"]
+layout_mode = 0
+offset_left = 869.5
+offset_top = 311.0
+offset_right = 999.5
+offset_bottom = 334.0
+theme_override_fonts/font = ExtResource("3_goige")
+text = "Time left:"
+
+[node name="timer_label" type="RichTextLabel" parent="Timer_Control"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 311.0
+offset_right = 1002.0
+offset_bottom = 331.0
+theme_override_fonts/normal_font = ExtResource("3_goige")
+theme_override_font_sizes/normal_font_size = 16
+text = "10s"
+
+[node name="Answer_Control" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -36.0
+offset_right = 20.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Answer_Control"]
+layout_mode = 0
+offset_left = -397.0
+offset_top = 147.0
+offset_right = 472.0
+offset_bottom = 299.0
+color = Color(0.0816, 0.13464, 0.17, 1)
+
+[node name="feedback" type="Label" parent="Answer_Control"]
+layout_mode = 0
+offset_left = -358.0
+offset_top = 182.0
+offset_right = -274.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(0.909804, 0.345098, 0.345098, 1)
+theme_override_fonts/font = ExtResource("3_goige")
+text = "Correct!"
+
+[node name="justification" type="Label" parent="Answer_Control"]
+layout_mode = 0
+offset_left = -358.0
+offset_top = 213.0
+offset_right = 440.0
+offset_bottom = 260.0
+theme_override_fonts/font = ExtResource("3_goige")
+text = "This email creates a sense of urgency and requests sensitive information through a link, which is a common phishing tactic."
+autowrap_mode = 2
+
+[node name="next_button" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 857.0
+offset_top = 285.0
+offset_right = 1035.0
+offset_bottom = 320.0
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
+theme_override_fonts/font = ExtResource("3_goige")
+theme_override_styles/normal = SubResource("StyleBoxFlat_au2ak")
+text = "Next Question"
+
+[node name="leave_button" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 857.0
+offset_top = 567.0
+offset_right = 1035.0
+offset_bottom = 602.0
+theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
+theme_override_fonts/font = ExtResource("3_goige")
+theme_override_styles/normal = SubResource("StyleBoxFlat_au2ak")
+text = "Leave"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[connection signal="pressed" from="Button_Control/legit_button" to="." method="_on_legit_button_pressed"]
+[connection signal="pressed" from="Button_Control/phish_button" to="." method="_on_phish_button_pressed"]
+[connection signal="pressed" from="leave_button" to="." method="_on_leave_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
