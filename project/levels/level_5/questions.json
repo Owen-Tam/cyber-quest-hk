@@ -1,0 +1,86 @@
+[
+	[
+	  {
+			"question": "What is a deepfake?",
+			"answers": [
+				"A type of secure encryption method",
+				"A realistic synthetic media created using artificial intelligence",
+				"A software used for video editing",
+				"A method for enhancing image quality"
+			],
+			"correctIndex": 2
+		},
+		{
+			"question": "What is one major danger associated with deepfakes?",
+			"answers": [
+				"They can improve video quality significantly",
+				"They are always easy to detect",
+				"They can be used to create misleading or harmful content",
+				"They require advanced technical skills to create"
+			],
+			"correctIndex": 3
+		},
+		{
+			"question": "How can deepfakes impact public trust?",
+			"answers": [
+				"By providing only verified information",
+				"By increasing confidence in video evidence",
+				"By making all digital content more reliable",
+				"By eroding trust in authentic media and news sources",
+			],
+			"correctIndex": 4
+		},
+		{
+			"question": "In what way can deepfakes be used maliciously?",
+			"answers": [
+				"To create educational content",
+				"To impersonate individuals for fraud or defamation",
+				"To improve video game graphics",
+				"To enhance virtual reality experiences"
+			],
+			"correctIndex": 2
+		}
+	],
+	[
+	  {
+		"question": "Which strategy is advised to reduce the risk of deepfake creation?",
+		"answers": [
+			"Share more videos on social media",
+			"Post frequently to confuse attackers",
+			"Limit the visual and audio content you post online",
+			"Only share photos, not videos"
+		],
+		"correctIndex": 3
+	  },
+	  {
+		"question": "What signs might indicate that a video has been manipulated using deepfake technology?",
+		"answers": [
+			"Uniform facial expressions throughout",
+			"High-definition clarity",
+			"Consistent audio quality",
+			"Unnatural movements in facial features or lighting mismatches",
+		],
+		"correctIndex": 4
+	  },
+	  {
+		"question": "What action can you take during a video call to verify the authenticity of the person you are speaking with?",
+		"answers": [
+			"Ask them to change their background",
+			"Tell them to smile and nod",
+			"Have them mute themselves for a moment",
+			"Request that they wave their hands in front of their face",
+		],
+		"correctIndex": 4
+	  },
+	  {
+		"question": "How can minimizing your online presence help protect against deepfakes?",
+		"answers": [
+			"It reduces the amount of data hackers can use to create deepfakes",
+			"It ensures you are not seen by anyone online",
+			"It makes it harder for friends to find you",
+			"It allows you to post more personal information"
+		],
+		"correctIndex": 1
+	  },
+	]
+]

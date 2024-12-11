@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1g50h2avck3w"]
+
+[ext_resource type="PackedScene" uid="uid://t2dui8ppm3a4" path="res://addons/maaacks_credits_scene/base/credits.tscn" id="1_n45le"]
+[ext_resource type="Script" path="res://addons/maaacks_credits_scene/examples/scenes/credits/credits.gd" id="2_q7msw"]
+[ext_resource type="Texture2D" uid="uid://kbhy1hqjwbck" path="res://Assets/Texture/opening_background.png" id="3_427w2"]
+
+[node name="Credits" instance=ExtResource("1_n45le")]
+script = ExtResource("2_q7msw")
+attribution_file_path = "res://addons/maaacks_credits_scene/examples/ATTRIBUTION.md"
+
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_427w2")
+
+[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "[center][font_size=64]Credits[/font_size]
+[font_size=48]Development Team[/font_size]
+[font_size=24]Game Director: [url=https://github.com/Owen-Tam]Owen Tam[/url]  [/font_size]
+[font_size=24]Producer: [url=https://github.com/Owen-Tam]Owen Tam[/url]  [/font_size]
+[font_size=24]Writers: [url=https://github.com/Owen-Tam]Owen Tam[/url]  [/font_size]
+
+[font_size=48]Technical Team[/font_size]
+[font_size=24]Head Developer: [url=https://github.com/Owen-Tam]Owen Tam[/url]  [/font_size]
+[font_size=24]Developer: Richard Zhou[/font_size]
+[font_size=24]Tester: Timothy So[/font_size]
+
+[font_size=48]Game Art[/font_size]
+[font_size=24]Animated Portal: [url=https://pixelnauta.itch.io/]Pixelnauta[/url][/font_size]
+[font_size=24]Other assets: [url=https://github.com/Owen-Tam]Owen Tam[/url]  [/font_size]
+
+[font_size=48]Special Thanks[/font_size]
+[font_size=32]DBS IT Development Team[/font_size]
+
+[font_size=48]Tools[/font_size]
+[font_size=32]Godot[/font_size]
+Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]  
+Source: [url=https://godotengine.org/]godotengine.org[/url]  
+License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url] 
+
+[font_size=24]LibreSprite[/font_size]
+Author: [url=https://github.com/LibreSprite/LibreSprite]David Capello, Felipe Manga, and contributers[/url]
+Source: [url=https://libresprite.github.io/#!/]https://libresprite.github.io[/url]
+License: [url=https://github.com/LibreSprite/LibreSprite/blob/master/LICENSE.txt]GPL-2.0 license[/url]
+[/center]"

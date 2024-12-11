@@ -40,7 +40,7 @@ var questionAnswer = [
 	{
 		"from": "support@decesanboysschool.edu",
 		"subject": "Urgent: Account Verification Required",
-		"body": "Dear Student,\n\nWe noticed unusual activity on your school account. Please verify your account here: [u][color=FF6400]https://decesanboysschool.edu/verifyAccount[/color][/u] to avoid suspension.\n\nThank you,\nIT Support",
+		"body": "Dear Student,\n\nWe noticed unusual activity on your school account. Please verify your account here: [u][color=FF6400]https://decesanboysschool.edu/verifyAccount[/color][/u] to avoid suspension.\n\nThank you,\nDiocesan Boys' School IT Support",
 		"phishing": true,
 		"justification": "This email creates a false sense of urgency and directs users to verify their account through a suspicious link. The email address also includes a misspelled school name."
 	},

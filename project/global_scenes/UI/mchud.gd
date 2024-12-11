@@ -13,6 +13,7 @@ var currentLevel = null
 
 func setQuestionDB(level):
 	var file = "res://levels/%s/questions.json" % ("level_" + str(level))
+	print(file)
 	if !FileAccess.file_exists(file):
 		print("Question file not found!")
 		return

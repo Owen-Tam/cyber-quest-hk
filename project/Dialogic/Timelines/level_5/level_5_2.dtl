@@ -1,0 +1,41 @@
+join cyberguardian center
+cyberguardian: Thanks for saving me...
+cyberguardian: But Malware Master has indeed corrupted me deeply. Their malicious code is rapidly taking over, and I'm barely holding on.
+cyberguardian: But you've come so far, and I won't let Malware Master win, not when we're so close. We'll reach him after we get through this last patch of malware blight.
+cyberguardian: We've discussed how deepfakes are pretty harmful, but how do we defend ourselves against it?
+cyberguardian: Now, when it comes to defending against deepfakes, there are a couple of crucial things we need to cover. First and foremost, we have to prevent them from being made.
+cyberguardian: How long do you think a clip of you speaking is needed to generate a minimal deepfake video?
+- 3 seconds
+	cyberguardian: Incorrect! It actually takes 30 seconds to 1 minute of a speaking clip to generate a deepfake of a person!
+- 1 minute
+	cyberguardian: Exactly! It takes 30 seconds to 1 minute of a speaking clip to generate a deepfake of a person.
+- 1 hour
+	cyberguardian: Incorrect! All it takes is for a person to take hold of 30 seconds to 1 minute of a speaking clip to generate a deepfake of you!
+- 24 hours
+	cyberguardian: Incorrect! All it takes is for a person to take hold of 30 seconds to 1 minute of a speaking clip to generate a deepfake of you!
+cyberguardian: The best defense is to be defensive. Try to minimize the amount of visual or audio that you put online. That includes things like social media posts or spoken messages to others.
+cyberguardian: You can even take the next step and be proactive in regularly scanning the internet for any unauthorized use of your image or likeness. There are services that can automate this process and alert you to potential deepfakes.
+- But what if we find deepfakes? How would we identify them?
+cyberguardian: An excellent question, Cybertim.
+cyberguardian: Distinguishing deepfakes from genuine content is crucial, especially as the technology becomes more advanced and we want to be confident in speaking with others online.
+cyberguardian: Look for inconsistencies in facial expressions, lip movements, or even subtle details like lighting and shadows.
+cyberguardian: Oftentimes, deepfaked videos will have defects in those areas where movements are unnatural and something just feels off.
+cyberguardian: In that case, if you are in a video call with the person in question, you may ask them to wave their hands in front of their faces.
+cyberguardian: This oftentimes interrupts the deepfaked projection of the face and allows you to spot the deepfake that is going on.
+cyberguardian: And of course, verifying the source and context of any suspicious media is always a must. If something seems too good - or too bad - to be true, it's always worth digging deeper.
+- I've got to be more careful!
+cyberguardian: That's right! It's time to confront Malware Master. 
+join malwaremaster center
+malwaremaster: Time for you to go, Cyber Guardian. 
+cyberguardian: AHH!
+Cyber Guardian's form suddenly flickers and wavers, her expression filled with regret as she realizes the true extent of Malware Master's corruption
+cyberguardian: I'm... I'm so sorry, Cybertim. I've failed you. Malware Master's grip on me is too strong. I can feel his malicious code overwhelming my very being.
+Cyber Guardian reaches out a trembling hand, pixels of data flaking off her form
+cyberguardian: Please, you have to stop him. I know you can do it. You have to be strong, for all of Cyberia, for the entire digital world.
+cyberguardian: But Cybertim, promise me... promise you'll try to redeem Malware Master. There's still good in him, buried beneath all that corruption. If anyone can bring it out, it's you.
+Cyber Guardian dissolves into a flurry of digital pixels, disappearing from view
+- WHAT DID YOU DO
+malwaremaster: So, the mighty Cyber Guardian has fallen. How delightfully predictable.
+malwaremaster: Now come to me, Cyber Tim, and you can watch as I wreak havoc on the world beyond.
+[signal arg="exit_cyberguardian"]
+leave cyberguardian

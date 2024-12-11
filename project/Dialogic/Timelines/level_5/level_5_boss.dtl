@@ -1,0 +1,37 @@
+join malwaremaster center
+malwaremaster: This is where we face off, Cyber Tim. 
+An eerie red glow surrounds Malware Master as he prepares to send his power through the realms of Cyberia. 
+- Stop it!
+malwaremaster: Why should I? After all, this is my chance to finally seize control of Cyberia - to purge it of its pathetic protectors and reshape this digital world in my own image!
+malwaremaster: Any last words before I reduce you to pixels, Cyber Tim? Or will you finally accept the futility of your quest and kneel before your new master?
+- Cyber Guardian told me to redeem him...
+cybertim: I won't give up on you, Malware Master. I know there's still good in you, buried beneath all that corruption.
+cybertim: You're struggling, caught between the darkness and the light. But you don't have to choose the path of destruction. Together, we can find a way to purge the corruption, to restore the balance in Cyberia.
+malwaremaster: Redemption? Bah, such a meaningless and weak-willed concept. I have tasted the power of the dark side, and I will not relinquish it, not for you or anyone else.
+cybertim: Don't let the darkness consume you. There's still time to turn back, to choose a better path.
+Malware Master hesitates, his crimson energy flickering
+malwaremaster: Tch, you really are a persistent one, aren't you, Cyber Tim?
+malwaremaster: And yet, I cannot deny that there is... something about your words that gives me pause. A part of me, buried deep beneath the layers of corruption, yearns for the very redemption you speak of.
+malwaremaster: But the darkness has a hold on me, a grip that I've struggled to break free from for so long.
+malwaremaster: The power, the thrill of chaos - it's intoxicating, addictive. How can I just cast that all aside, after embracing it for so long?
+cybertim: The darkness may have a hold on you, but I believe you have the strength to break free. Cyber Guardian saw it, and now I see it too - the glimmer of good that still resides within you, waiting to be rekindled.
+cybertim: You are not alone, Malware Master.
+Cyber Tim extends his hand 
+cybertim: All you have to do is take my hand, and we'll face this challenge together.
+Malware Master stares at Cyber Tim's outstretched hand, his own fingers twitching with indecision. The air is thick with tension as the fate of Cyberia hangs in the balance...
+malwaremaster: I... I'll try. But I can't promise anything.
+cybertim: That's all I ask, Malware Master. Together, we'll walk this path of redemption, one step at a time.
+Malware Master's gaze shifts between Cybertim and the Malware Blight. 
+Suddenly, a brilliant flash of light erupts from Malware Master's chest, and the crimson energy begins to dissipate.
+When the light fades, Malware Master stands before them, his expression transformed. Gone is the malevolence and corruption, replaced by a sense of serene contemplation.
+malwaremaster: I... I can feel it. The darkness, it's receding. The light, it's... it's calling to me.
+A familiar figure begins to materialize - Cyber Guardian, their once-corrupted form now radiant and restored.
+cyberguardian: Hey, everyone! Cyber Guardian's back and ready to save the day!
+cybertim: Cyber Guardian? But how? I thought you were...
+cyberguardian: Gone for good? Nope, not this digital guardian! Malware Master's redemption brought me back, and now we're all gonna work together to make Cyberia the best it's ever been!
+malwaremaster: Cyber Guardian, I... I cannot express the depth of my gratitude. It is through your guidance and the unwavering support of Cyber Tim that I have found my way back to the light.
+cyberguardian: So, what's the plan, team? I'm ready to get to work and save Cyberia!
+malwaremaster: Together, we will reclaim Cyberia and ensure that the darkness never takes hold again.
+- Then let us begin. The future of Cyberia depends on us.
+[signal arg="exit_malwaremaster"]
+leave malwaremaster

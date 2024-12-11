@@ -27,5 +27,6 @@ malwaremaster: I am just one step away from controlling the entirety of Cyberia,
 	malwaremaster: Very well. 
 malwaremaster: Your powers have grown so much I must take it as well. You will fall under my control. 
 malwaremaster: Face my true power. Shadow Lure!
+cyberguardian: Careful, Tim! You must distinguish between the Legitimate and Phishing emails!
 [signal arg="exit_malwaremaster"]
 leave malwaremaster

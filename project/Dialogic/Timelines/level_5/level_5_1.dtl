@@ -1,0 +1,31 @@
+join cyberguardian center
+cyberguardian: Alright, Tim, we've made it to the fifth world - the domain of cybersecurity in the age of AI.
+cyberguardian: This is where the true battle against Malware Master will be fought.
+cyberguardian: As you know, artificial intelligence is becoming increasingly integrated into our everyday lives.
+cyberguardian: From virtual assistants to self-driving cars, AI-powered systems are revolutionizing the way we interact with technology.
+cyberguardian: I bet you've already used ChatGPT and have seen just how powerful these AIs are.
+cyberguardian: But with great power comes great responsibility.
+cyberguardian: You see, AI relies on complex algorithms and vast troves of data to function. And that's precisely what makes it vulnerable to Malware Master's insidious attacks.
+cyberguardian: Take deepfakes, for example - a realistic media created using artificial intelligence in forms of audio and visuals. They have become more and more realistic due to developments in AI technology.
+cyberguardian: In the wrong hands, this technology could be used to spread disinformation, impersonate authority figures, or even forge evidence.
+- Surely I'd be able to distinguish between real and deepfaked images
+cyberguardian: I wouldn't be so sure if I were you.
+cyberguardian: In March of 2019, cybercriminals used a deepfake of a company's chief executive to trick an employee into transferring a significant amount of money.
+cyberguardian: The audio was so convincing, the employee didn't even question the request.
+- Wait what?
+cyberguardian: Yeah! Deepfake technology is SUPER realistic.
+cyberguardian: But it's danger isn't limited to just financial crimes, but also spreading disinformation - that is fake news.
+cyberguardian: Deepfake has been used to generate videos of political figures like presidents or famous celebrities saying fake things and causing panic!
+cyberguardian: The worst thing is that it damages the trust that we've built online!
+cyberguardian: Imagine if your sibling calling you for help! Just from their voice and face, you still wouldn't be able to immediately trust them.
+- That's terrifying!
+cyberguardian: Exactly, Cybertim. I think it was no coincidence that Malware Master chose to come here to unleash his attack on the real web.
+join malwaremaster center
+malwaremaster: Ever so smart, are you, Cyberguardian.
+malwaremaster: I'm genuinely surprised you two decided to come here, with cyberguardian's defenses down.
+malwaremaster: With my Malware Blight spreading in your system, I can do this.
+Cyberguardian cries out in pain
+- STOP IT!
+cyberguardian: Quick, Cybertim! Destroy the malware blight nearby to diminish his power!
+[signal arg="exit_cyberguardian"]
+leave cyberguardian

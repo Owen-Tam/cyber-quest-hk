@@ -1,0 +1,16 @@
+join cyberguardian center
+cyberguardian: We've finally done it, Cyber Tim.
+cyberguardian: With Malware Master on our side, we can start to recover Cyberia and return it to its healthy state.
+cyberguardian: But importantly, we can send you back to the real world.
+- Thank you, Cyber Guardian. For all you've done.
+cyberguardian: You don't have to, Cyber Tim. Just promise me you'll never forget Cyberia, and that you'll continue to fight for what's right, no matter where life takes you.
+join malwaremaster center
+malwaremaster: Cyber Tim, your time in Cyberia may be coming to an end, but your legacy here will never be forgotten. You have shown us all the true power of the light.
+- Thank you, Malware Master. Take care of this place, and of Cyber Guardian.
+cyberguardian: Don't be sad! You can visit us at any time.
+cyberguardian: You have a role that is just as important though - you have to spread the cybersecurity practices we learned here, to everyone around you.
+cyberguardian: That makes sure no matter what, Cyberia is kept safe from nefarious forces.
+cyberguardian: Enter the portal besides you to return to the real world.
+cyberguardian: Farewell, my friend. May the light of Cyberia guide you always.
+[signal arg="exit_cyberguardian"]
+leave cyberguardian

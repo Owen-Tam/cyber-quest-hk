@@ -46,7 +46,11 @@ directories/dtl_directory={
 "level_4_2": "res://Dialogic/Timelines/level_4/level_4_2.dtl",
 "level_4_3": "res://Dialogic/Timelines/level_4/level_4_3.dtl",
 "level_4_boss": "res://Dialogic/Timelines/level_4/level_4_boss.dtl",
-"level_4_complete": "res://Dialogic/Timelines/level_4/level_4_complete.dtl"
+"level_4_complete": "res://Dialogic/Timelines/level_4/level_4_complete.dtl",
+"level_5_1": "res://Dialogic/Timelines/level_5/level_5_1.dtl",
+"level_5_2": "res://Dialogic/Timelines/level_5/level_5_2.dtl",
+"level_5_boss": "res://Dialogic/Timelines/level_5/level_5_boss.dtl",
+"level_5_complete": "res://Dialogic/Timelines/level_5/level_5_complete.dtl"
 }
 variables={}
 extensions_folder="res://addons/dialogic_additions"
