@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dwa0pyag7upeo"]
+[gd_scene load_steps=33 format=3 uid="uid://dwa0pyag7upeo"]
 
 [ext_resource type="Script" path="res://levels/level_1/level_1.gd" id="1_sf5xc"]
 [ext_resource type="PackedScene" uid="uid://c8pvcmpbcn3nh" path="res://global_scenes/Asset/atmospheric_particles.tscn" id="2_u0wmy"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://xpd26s8dm5g5" path="res://global_scenes/UI/confirm_layer.tscn" id="15_ypd8s"]
 [ext_resource type="PackedScene" uid="uid://j6bxkhjmwff" path="res://global_scenes/Asset/portal.tscn" id="16_43q1k"]
 [ext_resource type="PackedScene" uid="uid://ch1004wqj36ks" path="res://global_scenes/UI/escape_ui.tscn" id="17_gbgg2"]
+[ext_resource type="AudioStream" uid="uid://bk5g764p8005q" path="res://Assets/Sounds/magic-244951.mp3" id="18_lrc13"]
+[ext_resource type="AudioStream" uid="uid://vyco5g4oeryf" path="res://Assets/Sounds/music.mp3" id="19_aqeh6"]
 
 [sub_resource type="Animation" id="Animation_ok07m"]
 length = 0.001
@@ -569,6 +571,13 @@ A: move left
 S: move downwards
 D: move right"
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_lrc13")
+volume_db = 0.615
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_aqeh6")
+
 [connection signal="startGame" from="." to="." method="_on_start_game"]
 [connection signal="timeout" from="RespawnTimer" to="." method="respawn"]
 [connection signal="completedChallenge" from="MCLayer/MCHUD" to="." method="_on_mchud_completed_challenge"]
@@ -583,3 +592,4 @@ D: move right"
 [connection signal="startedChat" from="Cyberguardian 4" to="." method="_on_cyberguardian_chatting"]
 [connection signal="entered_portal" from="Portal" to="." method="_on_portal_entered_portal"]
 [connection signal="restartGame" from="Escape UI" to="." method="_on_escape_ui_restart_game"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]

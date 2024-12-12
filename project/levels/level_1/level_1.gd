@@ -36,11 +36,12 @@ func DialogicSignal(arg):
 func _ready():
 	spawnPlayer()
 	$Player.isMovementDisabled = true
+	$Music.play()
 	Dialogic.signal_event.connect(DialogicSignal)
 	$MCLayer/MCHUD.setQuestionDB(level)
 	for i in range(numberOfCorruptedAreas):
 		labelList.push_back(get_node("Area" + str(i+1) + "/Label"))
-
+	
 	# Detect corrupted tiles
 	for i in corrupted:
 		var adjCont = []
@@ -206,3 +207,7 @@ func _on_escape_ui_restart_game():
 
 
 
+
+
+func _on_music_finished():
+	$Music.play()

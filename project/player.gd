@@ -43,12 +43,16 @@ func _physics_process(delta):
 				$AnimationPlayer.play("front_walk")
 				$Sprite2D.flip_h = velocity.x > 0
 				facingFront = true
+				
+			if $Timer.time_left <= 0:
+				$AudioStreamPlayer2D.pitch_scale = randf_range(0.8, 1.2)
+				$AudioStreamPlayer2D.play()
+				$Timer.start(0.4)
 		else:
 			if facingFront:
 				$AnimationPlayer.play("idle_front")
 			else:
 				$AnimationPlayer.play("idle_back")
-			
 			velocity = Vector2.ZERO
 	if !isMovementDisabled:
 		move_and_slide()

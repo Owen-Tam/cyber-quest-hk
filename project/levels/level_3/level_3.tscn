@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bkae77amxx8fy"]
+[gd_scene load_steps=33 format=3 uid="uid://bkae77amxx8fy"]
 
 [ext_resource type="Script" path="res://levels/level_3/level_3.gd" id="1_r8pp0"]
 [ext_resource type="PackedScene" uid="uid://c8pvcmpbcn3nh" path="res://global_scenes/Asset/atmospheric_particles.tscn" id="2_ikvq8"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://xpd26s8dm5g5" path="res://global_scenes/UI/confirm_layer.tscn" id="15_5eyfx"]
 [ext_resource type="PackedScene" uid="uid://j6bxkhjmwff" path="res://global_scenes/Asset/portal.tscn" id="16_cil1s"]
 [ext_resource type="PackedScene" uid="uid://ch1004wqj36ks" path="res://global_scenes/UI/escape_ui.tscn" id="17_17tsw"]
+[ext_resource type="AudioStream" uid="uid://bk5g764p8005q" path="res://Assets/Sounds/magic-244951.mp3" id="18_8es61"]
+[ext_resource type="AudioStream" uid="uid://vyco5g4oeryf" path="res://Assets/Sounds/music.mp3" id="19_t2c8b"]
 
 [sub_resource type="Animation" id="Animation_ok07m"]
 length = 0.001
@@ -383,6 +385,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.529412)
 
 [node name="MCHUD" parent="MCLayer" instance=ExtResource("11_tdusq")]
+anchors_preset = -1
 anchor_left = 0.511
 anchor_top = 0.482
 anchor_right = 0.511
@@ -473,6 +476,13 @@ color = Color(0, 0, 0, 0)
 [node name="Escape UI" parent="." instance=ExtResource("17_17tsw")]
 visible = false
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_8es61")
+volume_db = 0.615
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_t2c8b")
+
 [connection signal="timeout" from="RespawnTimer" to="." method="respawn"]
 [connection signal="completedChallenge" from="MCLayer/MCHUD" to="." method="_on_mchud_completed_challenge"]
 [connection signal="completedBoss" from="BossLevelLayer/BossHUD" to="." method="_on_boss_hud_completed_boss"]
@@ -484,3 +494,4 @@ visible = false
 [connection signal="startedChat" from="Cyberguardian 3" to="." method="_on_cyberguardian_chatting"]
 [connection signal="entered_portal" from="Portal" to="." method="_on_portal_entered_portal"]
 [connection signal="restartGame" from="Escape UI" to="." method="_on_escape_ui_restart_game"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]

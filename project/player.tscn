@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://duoyc7oh0whk3"]
+[gd_scene load_steps=12 format=3 uid="uid://duoyc7oh0whk3"]
 
 [ext_resource type="Texture2D" uid="uid://df4d5wudqemj8" path="res://Assets/Characters/cybertim.png" id="1_g3jbs"]
 [ext_resource type="Script" path="res://player.gd" id="1_se3jm"]
 [ext_resource type="Texture2D" uid="uid://dbypnqesgd2ad" path="res://Assets/Texture/circle.png" id="2_g2n5f"]
+[ext_resource type="AudioStream" uid="uid://ukubsfm1ep8j" path="res://Assets/Sounds/Ejimas1.ogg" id="4_aidyq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wwow6"]
 radius = 4.0
@@ -125,3 +126,10 @@ libraries = {
 texture = ExtResource("1_g3jbs")
 hframes = 14
 frame = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_aidyq")
+volume_db = -0.185
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

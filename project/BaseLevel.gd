@@ -25,11 +25,13 @@ func clearArea(corrupted, adjCorrupted, currentCorruptedArea):
 	var curAnimationPlayer = get_node(areaStr + "/AnimationPlayer")
 	get_node(areaStr + "/Label").visible = false
 	curAnimationPlayer.play("clear_area_animation")
+	$AudioStreamPlayer2D.play()
 	await curAnimationPlayer.animation_finished
 	for i in get_node(areaStr + "/corruptedBlocks").get_children():
 		if !i.name.begins_with("Explosion"):
 			i.visible = false
 	adjCorrupted[currentCorruptedArea] = []
+	
 
 func triggerCompleteEffect(currentCorruptedArea):
 	var areaNodes = get_node("Area"+ str(currentCorruptedArea + 1)).get_children()
@@ -45,4 +47,5 @@ func changeCyberguardian(currentCorruptedArea, guardianNumber):
 	var next = get_node("Cyberguardian " + str(currentCorruptedArea + 2))
 	if (next and currentCorruptedArea+2 != guardianNumber):
 		next.visible = true
+
 

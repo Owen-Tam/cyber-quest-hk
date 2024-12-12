@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bnk3k72s61bg7"]
+[gd_scene load_steps=35 format=3 uid="uid://bnk3k72s61bg7"]
 
 [ext_resource type="Script" path="res://levels/level_2/level_2.gd" id="1_jjire"]
 [ext_resource type="PackedScene" uid="uid://c8pvcmpbcn3nh" path="res://global_scenes/Asset/atmospheric_particles.tscn" id="2_ci8pw"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://xpd26s8dm5g5" path="res://global_scenes/UI/confirm_layer.tscn" id="15_x1vty"]
 [ext_resource type="PackedScene" uid="uid://j6bxkhjmwff" path="res://global_scenes/Asset/portal.tscn" id="16_26cmg"]
 [ext_resource type="PackedScene" uid="uid://ch1004wqj36ks" path="res://global_scenes/UI/escape_ui.tscn" id="17_sm2q4"]
+[ext_resource type="AudioStream" uid="uid://bk5g764p8005q" path="res://Assets/Sounds/magic-244951.mp3" id="18_wom8n"]
+[ext_resource type="AudioStream" uid="uid://vyco5g4oeryf" path="res://Assets/Sounds/music.mp3" id="19_1q7t0"]
 
 [sub_resource type="Animation" id="Animation_ok07m"]
 length = 0.001
@@ -480,6 +482,13 @@ color = Color(0, 0, 0, 1)
 [node name="Escape UI" parent="." instance=ExtResource("17_sm2q4")]
 visible = false
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_wom8n")
+volume_db = 0.615
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_1q7t0")
+
 [connection signal="timeout" from="RespawnTimer" to="." method="respawn"]
 [connection signal="completedChallenge" from="MCLayer/MCHUD" to="." method="_on_mchud_completed_challenge"]
 [connection signal="completedBoss" from="BossLevelLayer/BossHUD" to="." method="_on_boss_hud_completed_boss"]
@@ -491,3 +500,4 @@ visible = false
 [connection signal="startedChat" from="Cyberguardian 3" to="." method="_on_cyberguardian_chatting"]
 [connection signal="entered_portal" from="Portal" to="." method="_on_portal_entered_portal"]
 [connection signal="restartGame" from="Escape UI" to="." method="_on_escape_ui_restart_game"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]

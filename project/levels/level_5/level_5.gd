@@ -21,7 +21,7 @@ var cancelled_boss_battle = false
 func _ready():
 	spawnPlayer()
 	$Player.isMovementDisabled = true
-
+	$Music.play()
 	$MCLayer/MCHUD.setQuestionDB(level)
 	for i in range(numberOfCorruptedAreas):
 		labelList.push_back(get_node("Area" + str(i+1) + "/Label"))
@@ -167,3 +167,7 @@ func _on_credits_end_reached():
 		# Main menu
 	global.loadMainWithLevels = true
 	get_tree().change_scene_to_file("res://main_menu/main.tscn")
+
+
+func _on_music_finished():
+	$Music.play()

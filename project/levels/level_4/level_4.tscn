@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cnl7gyedblv7"]
+[gd_scene load_steps=33 format=3 uid="uid://cnl7gyedblv7"]
 
 [ext_resource type="Script" path="res://levels/level_4/level_4.gd" id="1_k5tyj"]
 [ext_resource type="PackedScene" uid="uid://c8pvcmpbcn3nh" path="res://global_scenes/Asset/atmospheric_particles.tscn" id="2_3mxrh"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://xpd26s8dm5g5" path="res://global_scenes/UI/confirm_layer.tscn" id="15_t7ts4"]
 [ext_resource type="PackedScene" uid="uid://j6bxkhjmwff" path="res://global_scenes/Asset/portal.tscn" id="16_cao0q"]
 [ext_resource type="PackedScene" uid="uid://ch1004wqj36ks" path="res://global_scenes/UI/escape_ui.tscn" id="17_q27r0"]
+[ext_resource type="AudioStream" uid="uid://bk5g764p8005q" path="res://Assets/Sounds/magic-244951.mp3" id="18_xo4ae"]
+[ext_resource type="AudioStream" uid="uid://vyco5g4oeryf" path="res://Assets/Sounds/music.mp3" id="19_5x0b7"]
 
 [sub_resource type="Animation" id="Animation_jwvf6"]
 length = 0.001
@@ -526,6 +528,13 @@ texture = ExtResource("4_7irjq")
 [node name="Explosion" parent="Area3" instance=ExtResource("7_y1yes")]
 position = Vector2(-610, -363)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_xo4ae")
+volume_db = 0.615
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_5x0b7")
+
 [connection signal="timeout" from="RespawnTimer" to="." method="respawn"]
 [connection signal="completedChallenge" from="MCLayer/MCHUD" to="." method="_on_mchud_completed_challenge"]
 [connection signal="completedBoss" from="BossLevelLayer/BossHUD" to="." method="_on_boss_hud_completed_boss"]
@@ -539,3 +548,4 @@ position = Vector2(-610, -363)
 [connection signal="startedChat" from="Cyberguardian 4" to="." method="_on_cyberguardian_chatting"]
 [connection signal="entered_portal" from="Portal" to="." method="_on_portal_entered_portal"]
 [connection signal="restartGame" from="Escape UI" to="." method="_on_escape_ui_restart_game"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]
