@@ -16,8 +16,14 @@ func _on_chapter_3_start_chapter():
 func _on_chapter_4_start_chapter():
 	switch_level.emit(4)
 
+func _on_chapter_5_start_chapter():
+	switch_level.emit(5)
+
 func _on_home_button_pressed():
 	home_button_pressed.emit()
+
+
+
 
 
 

@@ -31,40 +31,6 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="ScrollContainer" parent="." index="3"]
-scroll_vertical = 0
-
-[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
-text = "[center]
-[font_size=48]Development Team[/font_size]
-Game Director: [url=https://github.com/Owen-Tam]Owen Tam[/url]  
-Producer: [url=https://github.com/Owen-Tam]Owen Tam[/url]  
-Writers: [url=https://github.com/Owen-Tam]Owen Tam[/url]  
-
-[font_size=48]Technical Team[/font_size]
-Head Developer: [url=https://github.com/Owen-Tam]Owen Tam[/url]  
-Developer: Richard Zhou
-Tester: Timothy So
-
-[font_size=48]Game Art[/font_size]
-Animated Portal: [url=https://pixelnauta.itch.io/]Pixelnauta[/url]
-Other assets: [url=https://github.com/Owen-Tam]Owen Tam[/url]  
-
-[font_size=48]Special Thanks[/font_size]
-DBS IT Development Team
-
-[font_size=48]Tools[/font_size]
-[font_size=24]Godot[/font_size]
-Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]  
-Source: [url=https://godotengine.org/]godotengine.org[/url]  
-License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url] 
-
-[font_size=24]LibreSprite[/font_size]
-Author: [url=https://github.com/LibreSprite/LibreSprite]David Capello, Felipe Manga, and contributers[/url]
-Source: [url=https://libresprite.github.io/#!/]https://libresprite.github.io[/url]
-License: [url=https://github.com/LibreSprite/LibreSprite/blob/master/LICENSE.txt]GPL-2.0 license[/url]
-[/center]"
-
 [node name="CenterContainer" type="CenterContainer" parent="." index="4"]
 layout_mode = 0
 anchor_right = 1.0
@@ -119,6 +85,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Menu"
+
+[node name="ScrollContainer" parent="." index="5"]
+scroll_vertical = 0
 
 [connection signal="pressed" from="CenterContainer/EndMessagePanel/VBoxContainer/CenterContainer/HBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="CenterContainer/EndMessagePanel/VBoxContainer/CenterContainer/HBoxContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
