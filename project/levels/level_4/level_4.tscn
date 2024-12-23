@@ -534,6 +534,7 @@ volume_db = 0.615
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_5x0b7")
+volume_db = 1.074
 
 [connection signal="timeout" from="RespawnTimer" to="." method="respawn"]
 [connection signal="completedChallenge" from="MCLayer/MCHUD" to="." method="_on_mchud_completed_challenge"]

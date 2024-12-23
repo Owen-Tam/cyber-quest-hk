@@ -494,6 +494,8 @@ offset_left = -576.0
 offset_top = -324.0
 offset_right = -576.0
 offset_bottom = -324.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BossLevelLayer"]
 libraries = {
@@ -577,6 +579,7 @@ volume_db = 0.615
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_aqeh6")
+volume_db = 1.1
 
 [connection signal="startGame" from="." to="." method="_on_start_game"]
 [connection signal="timeout" from="RespawnTimer" to="." method="respawn"]
