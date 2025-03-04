@@ -31,7 +31,7 @@
 		"correctIndex": 4
 	  },
 	  {
-		"question": "Is it necessary to keep passwords secure even if they’re easy to remember?",
+		"question": "Is it necessary to keep passwords secure even if they're easy to remember?",
 		"answers": [
 		  "No, because easy-to-remember passwords are inherently secure",
 		  "Yes, because attackers can exploit weak passwords.",

@@ -17,7 +17,7 @@ cyberguardian: Phishing is when cyber criminals send fake emails, messages or we
 
 cyberguardian: They might pretend to be from a legitimate company or organization, like your bank or a government agency. The goal is to get you to click on a malicious link or attachment that will infect your device.
 
-- I won’t fall for them!
+- I won't fall for them!
 	cyberguardian: Well, among the 7,752 reported by HKCERT last year, nearly half of the cases came from phishing!
 	cyberguardian: It seems like Hong Kong citizens are really prone to phishing attacks. 
 
@@ -28,12 +28,12 @@ cyberguardian: They might pretend to be from a legitimate company or organizatio
 - Requests for sensitive info like passwords or credit card numbers
 - Embedded links or attachments that seem out of place
 
-cyberguardian: Yeah! Hackers commonly use small differences like replacing an “O” with a “0” in a link to fool you. It’s very easy to miss these signs if you’re not careful!
+cyberguardian: Yeah! Hackers commonly use small differences like replacing an “O” with a “0” in a link to fool you. It's very easy to miss these signs if you're not careful!
 
 cyberguardian: When scrolling through emails, you have to take note of whether they are intentionally creating a sense of urgency, and asking you for personal information. 
 
 cyberguardian: It's better to be safe than sorry in these cases. Be sure to let an adult know if you have any doubts about the validity of an email. 
 
-cyberguardian: Let’s deal with the Malware Blight besides us and catch up to Malware Master!
+cyberguardian: Let's deal with the Malware Blight besides us and catch up to Malware Master!
 [signal arg="exit_cyberguardian"]
 leave cyberguardian
