@@ -7,8 +7,7 @@
 
 ## Technical Team
 #### Head Developer: [Owen Tam](https://github.com/Owen-Tam)  
-#### Developer: Richard Zhou
-#### Tester: Timothy So, Jacob Low
+#### Tester: Richard Zhou, Timothy So, Jacob Low
 ## Game Art
 #### Animated Portal: [Pixelnauta](https://pixelnauta.itch.io/)
 #### Other assets: [Owen Tam](https://github.com/Owen-Tam)  

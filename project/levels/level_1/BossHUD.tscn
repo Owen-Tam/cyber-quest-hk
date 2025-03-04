@@ -36,25 +36,30 @@ bg_color = Color(1, 0.392157, 0, 1)
 
 [node name="BossHUD" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.5
+anchor_top = 0.476
+anchor_right = 0.5
+anchor_bottom = 0.476
+offset_left = -640.0
+offset_top = -342.72
+offset_right = 640.0
+offset_bottom = 377.28
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(960, 505)
 script = ExtResource("1_h1bs5")
 
 [node name="Ui" type="Sprite2D" parent="."]
-position = Vector2(962, 517.899)
+position = Vector2(642, 360.899)
 scale = Vector2(1.199, 1.199)
 texture = ExtResource("1_wgwur")
 
 [node name="Objective_label" type="Label" parent="."]
 layout_mode = 1
-offset_left = 594.0
-offset_top = 231.0
-offset_right = 1309.0
-offset_bottom = 270.0
+offset_left = 274.0
+offset_top = 74.0
+offset_right = 989.0
+offset_bottom = 113.0
 theme_override_fonts/font = ExtResource("2_fmexr")
 theme_override_font_sizes/font_size = 16
 text = "Objective:  Distinguish whether Malware Master's statements are TRUE or FALSE under the time limit"
@@ -62,10 +67,10 @@ autowrap_mode = 2
 
 [node name="start_button" type="Button" parent="."]
 layout_mode = 1
-offset_left = 872.0
-offset_top = 504.899
-offset_right = 1074.0
-offset_bottom = 554.899
+offset_left = 552.0
+offset_top = 347.899
+offset_right = 754.0
+offset_bottom = 397.899
 theme = ExtResource("4_exv05")
 theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
 theme_override_fonts/font = ExtResource("2_fmexr")
@@ -78,10 +83,10 @@ one_shot = true
 
 [node name="Q&A_UI" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 337.0
-offset_top = 176.899
-offset_right = 377.0
-offset_bottom = 216.899
+offset_left = 17.0
+offset_top = 19.899
+offset_right = 57.0
+offset_bottom = 59.899
 
 [node name="TimerControl" type="Control" parent="Q&A_UI"]
 anchors_preset = 0
@@ -226,7 +231,6 @@ theme_override_fonts/font = ExtResource("2_fmexr")
 text = "Health"
 
 [node name="Completed_UI" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 offset_left = 375.0
 offset_top = 176.899
@@ -235,10 +239,10 @@ offset_bottom = 216.899
 
 [node name="leave_button" type="Button" parent="Completed_UI"]
 layout_mode = 0
-offset_left = 497.0
-offset_top = 362.0
-offset_right = 699.0
-offset_bottom = 412.0
+offset_left = 154.0
+offset_top = 190.101
+offset_right = 356.0
+offset_bottom = 240.101
 theme = ExtResource("4_exv05")
 theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
 theme_override_fonts/font = ExtResource("2_fmexr")
@@ -247,10 +251,10 @@ text = "Leave"
 
 [node name="CompletedText" type="Label" parent="Completed_UI"]
 layout_mode = 0
-offset_left = 139.0
-offset_top = 285.0
-offset_right = 1073.0
-offset_bottom = 321.0
+offset_left = -204.0
+offset_top = 113.101
+offset_right = 730.0
+offset_bottom = 149.101
 theme_override_fonts/font = ExtResource("2_fmexr")
 theme_override_font_sizes/font_size = 32
 text = "You've blocked Malware Master's attacks"
@@ -261,16 +265,16 @@ visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 375.0
-offset_top = 176.899
-offset_right = 415.0
-offset_bottom = 216.899
+offset_top = 177.0
+offset_right = 1074.0
+offset_bottom = 462.0
 
 [node name="failed_button" type="Button" parent="Failed_UI"]
 layout_mode = 0
-offset_left = 497.0
-offset_top = 381.0
-offset_right = 699.0
-offset_bottom = 431.0
+offset_left = 154.0
+offset_top = 186.101
+offset_right = 356.0
+offset_bottom = 236.101
 theme = ExtResource("4_exv05")
 theme_override_colors/font_color = Color(0.87451, 0.443137, 0.14902, 1)
 theme_override_fonts/font = ExtResource("2_fmexr")
@@ -279,10 +283,10 @@ text = "Try again later"
 
 [node name="FailedText" type="Label" parent="Failed_UI"]
 layout_mode = 0
-offset_left = 139.0
-offset_top = 285.0
-offset_right = 1073.0
-offset_bottom = 360.0
+offset_left = -204.0
+offset_top = 90.101
+offset_right = 730.0
+offset_bottom = 165.101
 theme_override_fonts/font = ExtResource("2_fmexr")
 theme_override_font_sizes/font_size = 32
 text = "Malware Master stole all your personal information..."
