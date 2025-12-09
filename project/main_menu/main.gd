@@ -4,13 +4,16 @@ extends Node2D
 func _ready():
 	%initial_ui.visible = !global.loadMainWithLevels
 	%levels_ui.visible = global.loadMainWithLevels
+	%about_ui.visible = false
 
-func swap_ui():
-	%initial_ui.visible = !%initial_ui.visible
-	%levels_ui.visible = !%levels_ui.visible
+func swap_ui(ui1, ui2):
+	ui1.visible = !ui1.visible
+	ui2.visible = !ui2.visible
+
+
 
 func _on_inital_ui_start_pressed():
-	swap_ui()
+	swap_ui(%initial_ui, %levels_ui)
 
 const FILE_FORMAT_STRING = "res://levels/level_{level}/level_{level}.tscn"
 func _on_levels_ui_switch_level(level):
@@ -29,4 +32,10 @@ func _on_levels_ui_switch_level(level):
 
 
 func _on_levels_ui_home_button_pressed():
-	swap_ui()
+	swap_ui(%initial_ui, %levels_ui)
+
+func _on_initial_ui_about_pressed():
+	swap_ui(%initial_ui, %about_ui)
+	
+func _on_about_ui_home_button_pressed():
+	swap_ui(%initial_ui, %about_ui)

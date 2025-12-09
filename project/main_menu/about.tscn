@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://ne5pyouyt85t"]
+
+[ext_resource type="Theme" uid="uid://buvprqdtk5upv" path="res://themes/main_ui_theme.tres" id="1_0qn3h"]
+[ext_resource type="Script" path="res://main_menu/about.gd" id="1_enbj6"]
+[ext_resource type="FontFile" uid="uid://qk6vkam3o8uh" path="res://Fonts/pixelFJ8pt1__.TTF" id="2_t7nrt"]
+
+[node name="About" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_enbj6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.5
+offset_top = -259.5
+offset_right = 190.5
+offset_bottom = -190.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_t7nrt")
+theme_override_font_sizes/font_size = 24
+text = "End-of-year Summary
+2024-2025"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -371.0
+offset_top = -180.0
+offset_right = 372.0
+offset_bottom = 299.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("2_t7nrt")
+text = "This year, Cyber Quest HK has proudly promoted cybersecurity education and awareness among students in Hong Kong through a series of impactful and innovative initiatives. Originally conceived and developed by students within the Diocesan Boys' School's (DBS) IT Development Team (ITDT), Cyber Quest HK has successfully expanded its reach beyond the campus. Our mission to cultivate a cybersecurity-aware generation has seen remarkable success, empowering hundreds of students across various age groups.
+
+At the heart of our year's achievements was the successful development and launch of \"Cyber Quest,\" a novel gamified platform built with the Godot Engine. This interactive platform was meticulously designed to simplify and introduce complex cybersecurity concepts to primary school students in an engaging and accessible format. Collaborating with Diocesan Boys’ School Primary Division, this pioneering initiative reached and educated over 170 students, providing them with a crucial, hands-on foundation in digital safety and responsible online behavior, including up-to-date insights on cutting-edge cybersecurity concepts, such as deepfakes and AI. Complimenting students’ computer literacy curriculum, the platform’s success serves as a testament to our commitment to equipping students with cybersecurity awareness from an early age.
+
+Beyond our innovative platform, Cyber Quest HK also ensured students engaged with the rapidly evolving landscape of cyber threats. We orchestrated a series of expert engagements designed to broaden understanding and highlight career opportunities, including a critical talk with cybersecurity experts from the Hong Kong Police Force and a specialized lecture with the esteemed Professor Paul Smith from Lancaster University in collaboration with DBS’s Center for Further Studies and Careers. This session not only introduced students to the fundamental principles of network security but also provided invaluable guidance on the diverse and dynamic career paths available within the cybersecurity field, inspiring many to consider futures in this critical domain.
+
+Sincerely,
+Owen Tam
+Founder & Lead Developer, Cyber Quest HK
+Chairman, DBS IT Development Team "
+
+[node name="home_button" type="Button" parent="."]
+offset_left = 89.0
+offset_top = 52.0
+offset_right = 369.0
+offset_bottom = 102.0
+theme = ExtResource("1_0qn3h")
+text = "Back to Home"
+
+[connection signal="pressed" from="home_button" to="." method="_on_home_button_pressed"]

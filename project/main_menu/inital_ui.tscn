@@ -24,7 +24,7 @@ script = ExtResource("1_mnfx2")
 position = Vector2(19, -70)
 texture = ExtResource("1_assle")
 
-[node name="Settings" type="Button" parent="."]
+[node name="About" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
@@ -40,7 +40,7 @@ scale = Vector2(1, 0.993112)
 theme = ExtResource("2_e0dhl")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ib114")
-text = "Settings"
+text = "About"
 
 [node name="Start" type="Button" parent="."]
 layout_mode = 1
@@ -60,4 +60,5 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ib114")
 text = "Start Game"
 
+[connection signal="pressed" from="About" to="." method="_on_about_pressed"]
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
