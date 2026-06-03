@@ -1,6 +1,6 @@
 ﻿# Cyber Quest 
 
- Cyber Quest is a game built with the Godot Engine and GDScript that educates students on digital safety principles, Deepfake and AI security risks. 
+ Cyber Quest is a game built with the Godot Engine and GDScript that educates students on digital safety principles, deepfake and AI security risks. 
 
  ## :magic_wand: Technologies
 * GDSCript
